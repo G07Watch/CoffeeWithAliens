@@ -1,5 +1,5 @@
 {
-  "name": "Coffee_with_Aliens",
+  "name": "CoffeeWithAliens",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -23,6 +23,7 @@
     "test": "test"
   },
   "scripts": {
+    "webpack": "webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
