@@ -16,7 +16,6 @@ class Greeting extends React.Component {
     let greeting = <div/>;
 
     if (currentUser != null) {
-      console.log(currentUser);
       greeting = (<div key="greeting">
         <p>Welcome {currentUser.nickname}</p>
         <button onClick={this.logout}>Logout!</button>
