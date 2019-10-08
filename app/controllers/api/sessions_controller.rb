@@ -4,10 +4,9 @@ class Api::SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
-
     if @user 
       login(@user)
-      render json: current_user.nickname
+      render "api/users/show.json.jbuilder"
     else
       render json: ["Invalid email or password"], status: 404
     end
@@ -17,7 +16,7 @@ class Api::SessionsController < ApplicationController
     ensure_logged_in
     if logged_in?
       logout
-      render json: {}
+      render json: {}, status: 200
     else
       render json: ["No current user"], status: 404
     end
