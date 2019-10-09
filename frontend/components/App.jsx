@@ -6,8 +6,8 @@ import {Route} from "react-router-dom";
 import {AuthRoute} from '../util/route_util';
 
 const App = () => (
-<div>
-  <h1>Coffee With Aliens
+<div className="App">
+  <h1 className="primary"> Coffee With Aliens
   <GreetingContainer/>
   </h1>
 

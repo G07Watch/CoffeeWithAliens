@@ -16,16 +16,19 @@ class Greeting extends React.Component {
     let greeting = <div/>;
 
     if (currentUser != null) {
-      greeting = (<div key="greeting">
+      greeting = (
+      <div className="greeting" key="greeting">
         <p>Welcome {currentUser.nickname}</p>
         <button onClick={this.logout}>Logout!</button>
       </div>);
     } else {
-      greeting = (<div key="greeting">
+      greeting = (
+      <div className="greeting" key="greeting">
         <Link to="/signup">Sign Up!</Link>
         or
         <Link to="/login">Log In!</Link>
-      </div>);
+      </div>
+      );
     }
 
     return greeting;

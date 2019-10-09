@@ -4,15 +4,40 @@
 
 
 #root{
-  background-color: black;
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  min-width: 300px;
+  min-height: 500px;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .primary {
-  background-color: cornflowerblue;
-  margin: 30px;
-  height: 40px;
-  width: auto;
-  color: white;
-  font-family: Lucida;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(185, 127, 51, 0.856);
+  width: 100%;
   padding: 1em;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+
+.greeting link {
+  position: absolute;
+  right: 5px;
+  padding: 5px;
+  margin: 5px;
+  color: darkslategrey;
+  font-family: Impact;
 }
