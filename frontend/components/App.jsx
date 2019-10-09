@@ -7,7 +7,7 @@ import {AuthRoute} from '../util/route_util';
 
 const App = () => (
 <div className="App">
-  <h1 className="primary"> Coffee With Aliens
+  <h1 className="primary">Coffee With Aliens
   <GreetingContainer/>
   </h1>
 

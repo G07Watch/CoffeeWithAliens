@@ -5,6 +5,19 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    this.state = {
+      hover: false
+    }
+    this.hoverOn = this.hoverOn.bind(this);
+    this.hoverOff = this.hoverOff.bind(this);
+  }
+
+  hoverOn(){
+    this.setState({hover:true})
+  }
+
+  hoverOff(){
+    this.setState({hover: false})
   }
 
   logout() {
@@ -24,9 +37,11 @@ class Greeting extends React.Component {
     } else {
       greeting = (
       <div className="greeting" key="greeting">
-        <Link to="/signup">Sign Up!</Link>
-        or
-        <Link to="/login">Log In!</Link>
+        <Link to="/login" className="signin-link">SIGN IN</Link>
+        <Link to="/signup" className={ this.state.hover ? "signup-link-hover" : "signup-link-norm" } 
+        onMouseEnter={this.hoverOn}
+        onMouseOut={this.hoverOff}
+        >SIGN UP</Link>
       </div>
       );
     }
