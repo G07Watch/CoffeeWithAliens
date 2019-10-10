@@ -17,12 +17,13 @@
   flex-direction: column;
   justify-content: center;
   height: auto;
-  width: auto;
-  max-width: 500px;
+  width: 100%;
+  max-width: 700px;
+  // overflow: hidden;
 }
 
 .session header{
-
+  margin: 0px 0px 16px 0px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5em;
   font-weight: 700;
@@ -30,37 +31,64 @@
 }
 
 .session p{
+  margin: 0px 0px 16px 0px;
   font-family: 'Courier New', Courier, monospace;
   width: auto;
   // max-width: 490px;
   padding: 12px;
+  
 }
 
 input{
-  margin: 20px;
-  padding: 1em;
-  height: 30px;
-  width: 100%;
+  // display: block;
+  margin: 0px 0px 16px 0px;
+  padding: 1em .5em;
+  // height: 30px;
+  width: 96.4%;
   // max-width: 500px;
   color: black;
   font-size: 20px;
   font-family: sans-serif;
+  
 }
 
+.session select {
+  display: block;
+  margin: 0px 0px 16px 0px;
+  padding: 1em;
+  // height: 30px;
+  width: auto;
+  // max-width: 500px;
+  color: black;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: white;
+  // text-transform: none;
+}
+
+
 .sess-submit-button {
+  display: block;
   color: white;
   font-size: 20px;
   font-weight: 600;
   font-family: Helvetica;
   background-color: rgba(209, 57, 2, 0.918);
   height: fit-content;
+  width: 100%;
   // max-width: 500px;
   border: 2px orangered;
   border-radius: 10px;
-
 }
 
 .altform-prompt {
+  text-decoration: none;
+  color: rgba(209, 57, 2, 0.918);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+}
+
+.sess-errors{
   text-decoration: none;
   color: rgba(209, 57, 2, 0.918);
   font-family: 'Courier New', Courier, monospace;

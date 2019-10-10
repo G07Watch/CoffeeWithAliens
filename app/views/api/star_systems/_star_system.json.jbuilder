@@ -1,0 +1,1 @@
+json.extract! star_system, :id, :name

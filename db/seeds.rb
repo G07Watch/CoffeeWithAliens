@@ -7,7 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-user_one = User.new( nickname: 'Help', email: 'helper@gmail.com', password: '12345678')
+star_one = StarSystem.create( name: 'Sol')
+star_two = StarSystem.create( name: 'Alpha Centauri')
+star_three = StarSystem.create( name: 'Brodo')
+
+
+user_one = User.new( 
+  nickname: 'Garvin',
+  email: 'garvin@gmail.com', 
+  password: '12345678',
+  star_system_id: star_one.id)
 
 user_one.save!
 
+user_two = User.new( 
+  nickname: 'Mystery User',
+  email: 'mystery@gmail.com', 
+  password: '12345678',
+  star_system_id: star_one.id)
+
+user_two.save!

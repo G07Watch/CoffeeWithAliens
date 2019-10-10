@@ -13,7 +13,7 @@
 }
 
 .App {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,8 +42,8 @@
   right: 35px;
   align-content: space-between;
   background-color: transparent;
-  font-family: Gill Sans;
-  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
   font-weight: 700;
   color: beige;
   letter-spacing: 2px;
@@ -76,6 +76,50 @@
   border: 2px;
   border-radius: 3px;
   padding: 0.2em;
+  text-decoration: none;
+  margin: 2px;
+}
+
+.demo-link {
+  color:beige;
+  border: 2px;
+  border-radius: 3px;
+  padding: 0.2em;
+  text-decoration: none;
+  margin: 2px 5px;
+}
+
+.greeting-user{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 18px;
+  right: 35px;
+  align-content: space-between;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+  font-weight: 700;
+  color: beige;
+  letter-spacing: 2px;
+}
+
+.welcome {
+  position: relative;
+  right: 20px;
+}
+
+.Logout {
+  right: 35px;
+  color: beige;
+  padding: 0.2em 4px;
+  border: 2px rgba(185, 127, 51, 0); 
+  border-radius: 3px;
+  background-color:rgba(185, 127, 51, 0);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-decoration: none;
   margin: 2px;
 }

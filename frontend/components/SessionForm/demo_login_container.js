@@ -4,14 +4,14 @@ import {login} from '../../actions/session_actions';
 
 
 const mapStateToProps = (state,ownProps) =>{
-//  let errors = state.errors && state.errors.session && state.errors.session.responseText;
-  let errors = state.errors && state.errors.session && state.errors.session.responseJSON;
+let errors = state.errors && state.errors.session && state.errors.session.responseText;
+
   return({
     errors: errors,
-    formType: 'Log In'
+    formType: 'Demo Log In',
   })
+  }
 
-};
 
 const mapDispatchToProps = dispatch =>{
 

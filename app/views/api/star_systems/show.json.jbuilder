@@ -1,0 +1,1 @@
+json.partial! 'api/star_systems/star_system', star_system: @star_system
