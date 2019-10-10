@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(email: params[:email])
+    @user = User.find_by(id: params[:id])
   end
 
   def update
@@ -37,7 +37,7 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nickname, :email, :password, :star_system_id)
+    params.require(:user).permit( :id, :nickname, :email, :password, :star_system_id, :is_host)
   end
 
 end
