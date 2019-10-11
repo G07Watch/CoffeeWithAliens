@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import { fetchUser, createHost, updateUser } from '../../actions/host_actions';
 import HostForm from './host_form';
-import { cleanErrors } from '../../actions/host_actions';
+import { cleanErrors } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
   let currentUserId = state && state.session && state.session.currentUser && state.session.currentUser.id
