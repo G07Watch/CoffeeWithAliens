@@ -18,7 +18,6 @@ class SessionForm extends React.Component{
         email: "mystery@gmail.com",
         password: "12345678"
       };
-      console.log(this.state)
     }
 
     else if(this.formType === "Log In"){
