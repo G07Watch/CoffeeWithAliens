@@ -2,8 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import configureStore from './store/store';
 import Root from './components/root';
+import {fetchCoffeeTimes} from './util/coffee_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  //TEST ONLY
+  fetchCoffeeTimes;
+  //TEST ONLY
 
   let store;
   if (window.currentUser) {
