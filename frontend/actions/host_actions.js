@@ -30,7 +30,7 @@ export const receiveHost = host =>({
 });
 
 export const receiveErrors = errors =>({
-  type: RECEIVE_HOST_ERRORS,
+  type: RECEIVE_HOST_ERROR,
   errors
 });
 
