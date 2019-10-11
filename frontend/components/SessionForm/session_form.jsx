@@ -60,7 +60,7 @@ class SessionForm extends React.Component{
   
 
   componentWillUnmount(){
-    // this will dispatch an action to reset errors
+    this.props.cleanErrors();
   }
 
   
