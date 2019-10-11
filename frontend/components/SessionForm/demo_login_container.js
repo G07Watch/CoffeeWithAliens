@@ -16,7 +16,8 @@ let errors = state.errors && state.errors.session && state.errors.session.respon
 const mapDispatchToProps = dispatch =>{
 
   return({
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    cleanErrors: ()=> dispatch(cleanErrors())
   })
 };
 
