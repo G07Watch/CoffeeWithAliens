@@ -5,6 +5,13 @@ export const fetchUser = id => (
   })
 )
 
+export const fetchHosts = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/hosts'
+  })
+)
+
 export const fetchHost = (user_id, id) => (
   $.ajax({
     method: 'GET',
@@ -42,3 +49,6 @@ export const deleteHost = host => (
     url: `api/users/${host.user_id}/hosts/${host.id}`
   })
 )
+
+
+window.fetchHosts = fetchHosts;
