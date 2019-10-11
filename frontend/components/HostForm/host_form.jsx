@@ -27,6 +27,10 @@ class HostForm extends React.Component{
     }
   }
 
+  componentWillUnmount(){
+    this.props.cleanErrors();
+  }
+
   render(){
 
     let errors;
