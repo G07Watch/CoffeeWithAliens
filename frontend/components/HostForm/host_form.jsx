@@ -37,7 +37,7 @@ class HostForm extends React.Component{
 
     //ERROR RENDER LOGIC
 
-    if (typeof this.props.errors === "array"){
+    if (Array.isArray(this.props.errors)){
       errors = <ul>
         <h2>Error:</h2>
        this.props.errors.map(
