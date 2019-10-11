@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     end
     resource :session, only: [ :create, :destroy ]
     resources :star_systems, only: [ :index, :show ]
+    resources :coffee_times, only: [ :index, :show, :create, :update, :destroy ]
     
   end
 
