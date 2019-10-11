@@ -6,7 +6,6 @@ import { cleanErrors } from '../../actions/session_actions';
 const mapStateToProps = (state) => {
   let currentUserId = state && state.session && state.session.currentUser && state.session.currentUser.id
   let errors = state.errors && state.errors.session && state.errors.session.responseText;
-  debugger
   return({
     errors: errors,
     currentUserId: currentUserId,
