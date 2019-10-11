@@ -19,4 +19,16 @@ class CoffeeTime < ApplicationRecord
 
   has_many :users, through: :coffee_schedule
 
+ def month
+  self.date.strftime("%B")
+ end
+
+ def meet_date
+  self.date.strftime("%b %e")
+ end
+
+ def day
+  self.date.strftime("%a")
+end
+
 end
