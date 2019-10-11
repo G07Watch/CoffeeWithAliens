@@ -13,23 +13,12 @@ class HostForm extends React.Component{
       topics: 'What are some of the topics you enjoy talking about?'
     }
 
-    this.user;
-
-    if (this.props.user){
-      this.user = this.props.user
-      this.user = this.props.user['is_host'] = 'true';
-    } 
     this.submit = this.submit.bind(this);
-  }
-
-  componentDidMount(){
-    this.props.fetchUser(this.props.currentUserId);
   }
 
   submit(e){
     e.preventDefault();
     this.props.processHost(this.state);
-    this.props.updateUser(this.user);
   }
 
   update(field){

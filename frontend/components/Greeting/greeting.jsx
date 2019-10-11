@@ -27,13 +27,19 @@ class Greeting extends React.Component {
   render() {
     let currentUser = this.props.currentUser;
     let greeting = <div/>;
+    let hosting = 'user';
+
+    if (this.props.hosting){
+     hosting = 'host';
+    }
+    console.log(hosting);
 
     if (currentUser != null) {
       greeting = (
       <div className="greeting-user" key="greeting">
         <p className="welcome">Welcome {currentUser.nickname}</p>
         <button className="Logout" onClick={this.logout}>SIGN OUT</button>
-        <Link to="/hosting" className="hosting-link">HOSTING</Link>
+        <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
       </div>);
     } else {
       greeting = (

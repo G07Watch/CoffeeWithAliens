@@ -8,3 +8,20 @@
   margin: auto;
 }
 
+.hosting-link-user{
+  position: relative;
+  top: 13px;
+  right: 250px;
+  color:beige;
+  border: 2px;
+  border-radius: 3px;
+  padding: 0.2em;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hosting-link-host{
+  display: none;
+}

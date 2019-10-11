@@ -2,8 +2,10 @@ class Api::HostsController < ApplicationController
 
   def create
     @host = Host.new(host_params)
+    @user = User.find_by(id: params[:user_id])
 
     if @host.save 
+      @user.update(is_host: 'true')
       render :show
     else
       render json: @host.errors.full_messages, status: 422

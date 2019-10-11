@@ -18,6 +18,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.new(user_params)
+
       if @user.update
         render :show
       else
