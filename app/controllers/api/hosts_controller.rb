@@ -8,6 +8,7 @@ class Api::HostsController < ApplicationController
       @user.update(is_host: 'true')
       render :show
     else
+      debugger
       render json: @host.errors.full_messages, status: 422
     end
   
