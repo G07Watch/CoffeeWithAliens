@@ -43,7 +43,7 @@ class HostForm extends React.Component{
         <h2>Error:</h2>
        {this.props.errors.map(
         error =>(
-        <p key={error} className="sess-errors">{error}</p>)
+        <p key={error} className="host-errors">{error}</p>)
         )}
       </ul>
       // errors = <p className="sess-errors">Error: {this.props.errors}</p>
