@@ -3,7 +3,7 @@ import * as HostApitUtil from '../util/host_api_util';
 
 export const RECEIVE_HOST = 'RECEIVE_HOST';
 export const RECEIVE_USER = 'RECEIVE_USER';
-export const RECEIVE_ERROR = 'RECEIVE_ERROR';
+export const RECEIVE_HOST_ERROR = 'RECEIVE_HOST_ERROR';
 export const REMOVE_HOST = 'REMOVE_HOST';
 
 
@@ -30,7 +30,7 @@ export const receiveHost = host =>({
 });
 
 export const receiveErrors = errors =>({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_HOST_ERRORS,
   errors
 });
 
