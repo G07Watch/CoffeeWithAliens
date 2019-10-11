@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_11_203244) do
+ActiveRecord::Schema.define(version: 2019_10_11_210925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_10_11_203244) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.bigint "coffee_times_id"
-    t.index ["coffee_times_id"], name: "index_coffee_schedules_on_coffee_times_id"
+    t.bigint "coffee_time_id"
+    t.index ["coffee_time_id"], name: "index_coffee_schedules_on_coffee_time_id"
     t.index ["user_id"], name: "index_coffee_schedules_on_user_id"
   end
 
@@ -72,10 +72,19 @@ ActiveRecord::Schema.define(version: 2019_10_11_203244) do
     t.index ["star_system_id"], name: "index_users_on_star_system_id"
   end
 
-  add_foreign_key "coffee_schedules", "coffee_times", column: "coffee_times_id"
+  create_table "wait_lists", force: :cascade do |t|
+    t.integer "priority"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "coffee_schedule_id"
+    t.index ["coffee_schedule_id"], name: "index_wait_lists_on_coffee_schedule_id"
+  end
+
+  add_foreign_key "coffee_schedules", "coffee_times"
   add_foreign_key "coffee_schedules", "users"
   add_foreign_key "coffee_times", "hosts"
   add_foreign_key "coffee_times", "star_systems"
   add_foreign_key "hosts", "users"
   add_foreign_key "users", "star_systems"
+  add_foreign_key "wait_lists", "coffee_schedules"
 end
