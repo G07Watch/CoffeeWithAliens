@@ -50,8 +50,6 @@ class HostForm extends React.Component{
     }
     else{ errors = <p></p> }
 
-    
-
     return(
       <div className="host-form-clipboard">
         {errors}
