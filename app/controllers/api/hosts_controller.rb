@@ -1,4 +1,4 @@
-class Api::UsersController < ApplicationController
+class Api::HostsController < ApplicationController
 
   def create
     @host = Host.new(host_params)

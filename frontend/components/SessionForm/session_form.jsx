@@ -68,10 +68,13 @@ class SessionForm extends React.Component{
     //ERROR RENDER LOGIC
 
     if (this.props.errors){
-      errors = this.props.errors.map(
+      errors = <ul>
+        <h2>Error:</h2>
+       this.props.errors.map(
         error =>(
-        <p key={error} className="sess-errors">Error: {error}</p>)
+        <p key={error} className="sess-errors">{error}</p>)
         )
+      </ul>
       // errors = <p className="sess-errors">Error: {this.props.errors}</p>
       // window.alert(this.props.errors);
     }

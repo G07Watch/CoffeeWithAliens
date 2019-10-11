@@ -33,6 +33,7 @@ class Greeting extends React.Component {
       <div className="greeting-user" key="greeting">
         <p className="welcome">Welcome {currentUser.nickname}</p>
         <button className="Logout" onClick={this.logout}>SIGN OUT</button>
+        <Link to="/hosting" className="hosting-link">HOSTING</Link>
       </div>);
     } else {
       greeting = (
