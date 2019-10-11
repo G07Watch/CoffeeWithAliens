@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_10_172102) do
+ActiveRecord::Schema.define(version: 2019_10_11_203244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coffee_schedules", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "coffee_times_id"
+    t.index ["coffee_times_id"], name: "index_coffee_schedules_on_coffee_times_id"
+    t.index ["user_id"], name: "index_coffee_schedules_on_user_id"
+  end
+
+  create_table "coffee_times", force: :cascade do |t|
+    t.string "place"
+    t.datetime "date"
+    t.integer "start_time"
+    t.integer "available_seats"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "host_id"
+    t.bigint "star_system_id"
+    t.index ["host_id"], name: "index_coffee_times_on_host_id"
+    t.index ["star_system_id"], name: "index_coffee_times_on_star_system_id"
+  end
 
   create_table "hosts", force: :cascade do |t|
     t.string "facebook"
@@ -50,6 +72,10 @@ ActiveRecord::Schema.define(version: 2019_10_10_172102) do
     t.index ["star_system_id"], name: "index_users_on_star_system_id"
   end
 
+  add_foreign_key "coffee_schedules", "coffee_times", column: "coffee_times_id"
+  add_foreign_key "coffee_schedules", "users"
+  add_foreign_key "coffee_times", "hosts"
+  add_foreign_key "coffee_times", "star_systems"
   add_foreign_key "hosts", "users"
   add_foreign_key "users", "star_systems"
 end
