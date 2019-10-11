@@ -51,16 +51,15 @@ class HostForm extends React.Component{
     return(
       <div className="host-form-clipboard">
         {errors}
-
-        <header>Want to become a Coffee Host?</header>
-
-        <p>
-          Interested in arranging gatherings to make new friends, make
-          people feel welcome and spread interesting conversation?  
-          Just fill out the fields below and submit to become a Coffee Host!
-        </p>
-
         <form className="host-form" onSubmit={this.submit}>
+
+          <header>Want to become a Coffee Host?</header>
+
+          <p>
+            Interested in arranging gatherings to make new friends, make
+            people feel welcome and spread interesting conversation?  
+            Just fill out the fields below and submit to become a Coffee Host!
+          </p>
 
           <input type="text" value={this.state.facebook} onChange={this.update('facebook')}/>
           <textarea value={this.state.intro} onChange={this.update('intro')}></textarea>
