@@ -53,7 +53,7 @@ export const updateHost = host => dispatch =>(
 export const updateUser = user => dispatch =>(
   HostApitUtil.updateUser(user)
   .then(
-    host =>(dispatch(receiveUser(user))),
+    user =>(dispatch(receiveUser(user))),
     errors =>(dispatch(receiveErrors(errors)))
   )
 );
