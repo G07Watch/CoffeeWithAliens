@@ -7,10 +7,10 @@ class HostForm extends React.Component{
 
     this.state ={
       user_id: this.props.currentUserId,
-      facebook: 'Your facebook account login',
-      intro: 'Tell us who you are!',
-      story: 'Tell us what made you decide to have coffee and be a host!',
-      topics: 'What are some of the topics you enjoy talking about?'
+      facebook: "",
+      intro: "",
+      story: "",
+      topics: ""
     }
 
     this.submit = this.submit.bind(this);
@@ -61,10 +61,16 @@ class HostForm extends React.Component{
             Just fill out the fields below and submit to become a Coffee Host!
           </p>
 
-          <input type="text" value={this.state.facebook} onChange={this.update('facebook')}/>
-          <textarea value={this.state.intro} onChange={this.update('intro')}></textarea>
-          <textarea value={this.state.story} onChange={this.update('story')}></textarea>
-          <textarea value={this.state.topics} onChange={this.update('topics')}></textarea>
+          <input type="text" placeholder="Your facebook account login"
+           value={this.state.facebook} onChange={this.update('facebook')}/>
+
+          <textarea placeholder="Tell us who you are!"
+          value={this.state.intro} onChange={this.update('intro')}></textarea>
+
+          <textarea placeholder="Tell us what made you decide to have coffee and be a host!"
+          value={this.state.story} onChange={this.update('story')}></textarea>
+          <textarea placeholder="What are some of the topics you enjoy talking about?"
+          value={this.state.topics} onChange={this.update('topics')}></textarea>
 
           <input className="host-submit-button" type="submit" value="MAKE ME A HOST!"/>
         </form>
