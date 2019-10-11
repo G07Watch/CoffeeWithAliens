@@ -10,4 +10,9 @@
 #
 
 class CoffeeSchedule < ApplicationRecord
+
+  has_many :users
+
+  has_many :coffee_times 
+
 end

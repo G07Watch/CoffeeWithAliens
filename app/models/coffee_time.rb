@@ -14,4 +14,9 @@
 #
 
 class CoffeeTime < ApplicationRecord
+
+  has_one :coffee_schedule
+
+  has_many :users, through: :coffee_schedule
+
 end
