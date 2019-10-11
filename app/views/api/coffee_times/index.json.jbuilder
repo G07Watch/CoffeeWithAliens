@@ -1,4 +1,4 @@
-json.coffee_times @coffee_times.each do |coffee_time|
+json.coffee_times @coffee_times.map do |coffee_time|
   coffee_time.id do
     json.id coffee_time.id 
     json.month coffee_time.month
