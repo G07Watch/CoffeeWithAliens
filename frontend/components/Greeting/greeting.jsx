@@ -32,7 +32,6 @@ class Greeting extends React.Component {
     if (this.props.hosting){
      hosting = 'host';
     }
-    console.log(hosting);
 
     if (currentUser != null) {
       greeting = (
