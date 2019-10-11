@@ -27,5 +27,15 @@
 }
 
 .host-form {
+   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.host-form textarea{
   
 }
