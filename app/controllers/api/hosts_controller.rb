@@ -6,7 +6,7 @@ class Api::HostsController < ApplicationController
 
     if @host.save 
       @user.update(is_host: 'true')
-      render show: @host
+      render :show
     else
       render json: @host.errors.full_messages, status: 422
     end
