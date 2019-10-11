@@ -4,3 +4,5 @@ export const fetchCoffeeTimes = ()=>(
     url: 'api/coffee_times'
   })
 )
+
+window.fetchCoffeeTimes = fetchCoffeeTimes; 
