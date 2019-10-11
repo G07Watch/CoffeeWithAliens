@@ -28,7 +28,7 @@ class CoffeeTime < ApplicationRecord
   end
 
   def day
-    self.date.strftime("%a")
+    self.date.strftime("%A")
   end
 
 end
