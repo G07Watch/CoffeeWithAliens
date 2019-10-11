@@ -67,7 +67,7 @@ class HostForm extends React.Component{
           <textarea value={this.state.story} onChange={this.update('story')}></textarea>
           <textarea value={this.state.topics} onChange={this.update('topics')}></textarea>
 
-          <input type="submit" value="MAKE ME A HOST!"/>
+          <input className="host-submit-button" type="submit" value="MAKE ME A HOST!"/>
         </form>
       </div>
     )
