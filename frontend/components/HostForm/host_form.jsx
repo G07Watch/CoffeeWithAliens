@@ -40,10 +40,10 @@ class HostForm extends React.Component{
     if (Array.isArray(this.props.errors)){
       errors = <ul>
         <h2>Error:</h2>
-       this.props.errors.map(
+       {this.props.errors.map(
         error =>(
         <p key={error} className="sess-errors">{error}</p>)
-        )
+        )}
       </ul>
       // errors = <p className="sess-errors">Error: {this.props.errors}</p>
       // window.alert(this.props.errors);
