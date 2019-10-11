@@ -115,7 +115,7 @@
   right: 50%;
 }
 
-.Logout {
+.Logout-link-norm {
   right: 35px;
   color: beige;
   padding: 0.2em 4px;
@@ -130,6 +130,6 @@
   margin: 2px;
 }
 
-.Logout.pointer{
+.Logout-link-hover {
   cursor: pointer;
 }
