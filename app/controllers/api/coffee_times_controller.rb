@@ -1,7 +1,7 @@
 class Api::CoffeeTimesController < ApplicationController
 
   def index
-    @coffee_times = CoffeeTimes.all
+    @coffee_times = CoffeeTime.all
 
     if @coffee_times
       render :index
