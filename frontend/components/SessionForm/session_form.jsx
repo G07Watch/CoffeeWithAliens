@@ -72,7 +72,7 @@ class SessionForm extends React.Component{
 
     if (Array.isArray(this.props.errors)){
       errors = <ul className="sess-errors">
-        <h2>Error:</h2>
+        {/* <h2>Error:</h2> */}
        {this.props.errors.map(
         error =>(
         <p key={error} >{error}</p>)
