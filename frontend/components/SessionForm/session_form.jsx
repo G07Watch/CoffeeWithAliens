@@ -71,7 +71,7 @@ class SessionForm extends React.Component{
 
     //ERROR RENDER LOGIC
 
-    if (this.props.errors){
+    if (typeof this.props.errors === "array"){
       errors = <ul className="sess-errors">
         <h2>Error:</h2>
        {this.props.errors.map(
