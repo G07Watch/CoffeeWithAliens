@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :users, only: [ :show, :create, :update, :destroy ] do
       resources :hosts, only: [ :create, :show, :update, :destroy ]
     end
-    resources :hosts, only [ :index ]
+    resources :hosts, only: [ :index ]
     resource :session, only: [ :create, :destroy ]
     resources :star_systems, only: [ :index, :show ]
     resources :coffee_times, only: [ :index, :show, :create, :update, :destroy ]
