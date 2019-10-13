@@ -13,7 +13,9 @@ class CoffeeSchedule extends React.Component{
   }
 
   render(){
-
+    console.log(this.props.coffeeTimes)
+    console.log(this.props.currentMonth)
+    
     let stars = this.props.stars;
     let currentMonth = <p> {this.props.currentMonth} </p>;
     let nextMonth = this.props.nextMonth;
