@@ -7,6 +7,11 @@ class CoffeeSchedule extends React.Component{
     super(props)
   }
 
+  componentDidMount(){
+    this.props.fetchStarSystems();
+    this.propm.fetchCoffeeTimes();
+  }
+
   render(){
 
     let stars = this.props.stars;
