@@ -19,13 +19,13 @@ function compareMonths(first, second) {
 }
 
 
-const mapStateToProps = state =>{
+const mapStateToProps = state => {
 
-  let stars = state && state.stars;
+  let stars = state && state.entities && state.entities.stars;
 
   let activeMonths = [];
 
-  let coffeeTimes = state && state.coffeeTimes;
+  let coffeeTimes = state && state.entities && state.entities.coffeeTimes;
 
   if(state.coffeeTimes){
 
