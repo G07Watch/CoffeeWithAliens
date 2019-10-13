@@ -19,3 +19,5 @@ const hostsReducer = (state = {}, action) =>{
 
 
 }
+
+export default hostsReducer;
