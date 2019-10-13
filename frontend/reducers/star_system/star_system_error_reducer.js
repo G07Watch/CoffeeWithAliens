@@ -1,4 +1,4 @@
-import { RECEIVE_ERRORS, RECEIVE_STARSYSTEM, RECEIVE_ALL_STARSYSTEMS } from "../../actions/star_system_actions";
+import { RECEIVE_STAR_ERRORS, RECEIVE_STARSYSTEM, RECEIVE_ALL_STARSYSTEMS } from "../../actions/star_system_actions";
 
 
 const starSystemErrorsReducer = (state = {}, action) => {
