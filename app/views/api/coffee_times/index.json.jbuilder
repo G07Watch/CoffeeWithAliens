@@ -1,4 +1,4 @@
-json.array! @coffee_times.map do |coffee_time|
+json.array! @coffee_times do |coffee_time|
 
     json.id coffee_time.id 
     json.month coffee_time.month
