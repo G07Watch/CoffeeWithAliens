@@ -3,6 +3,8 @@ import GreetingContainer from "./Greeting/greeting_container";
 import LoginFormContainer from "./SessionForm/login_form_container";
 import SignupFormContainer from "./SessionForm/signup_form_container";
 import DemoLoginContainer from "./SessionForm/demo_login_container";
+import CoffeeSchedule from "./CoffeeSchedule/coffee_schedule";
+
 import {Route, Link } from "react-router-dom";
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import HostFormContainer from "./HostForm/host_form_container";
