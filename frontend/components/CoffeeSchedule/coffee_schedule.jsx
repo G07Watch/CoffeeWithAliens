@@ -14,11 +14,8 @@ class CoffeeSchedule extends React.Component{
     let nextMonth = this.props.nextMonth;
     let coffeeTimes = this.props.coffeeTimes // .star to sort
 
-
-
-
-
     return(
+
       <div>
         < div className = "month-display-current">
 
@@ -28,26 +25,10 @@ class CoffeeSchedule extends React.Component{
             Jump
           </div>
 
-          <div className = "currentMonth">
+          <div className = "current">
             Current Month
           </div>
         </div>
-
-        <div className = "month-display-next">
-
-          Month Display
-          {nextMonth}
-
-          <div className="jump">
-            Jump
-          </div>
-
-          <div className="nextMonth">
-            Next Month
-          </div>
-
-        </div>
-
 
 
       </div>
