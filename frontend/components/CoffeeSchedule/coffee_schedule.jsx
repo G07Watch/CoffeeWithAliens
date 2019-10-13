@@ -9,7 +9,7 @@ class CoffeeSchedule extends React.Component{
 
   componentDidMount(){
     this.props.fetchStarSystems();
-    this.propm.fetchCoffeeTimes();
+    this.props.fetchCoffeeTimes();
   }
 
   render(){
