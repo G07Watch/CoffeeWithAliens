@@ -36,7 +36,7 @@ class Greeting extends React.Component {
 
     if (currentUser != null) {
       greeting = (
-      <div  key="greeting">
+      <div className="greeting-user" key="greeting">
         <button className="Logout" onClick={this.logout}
         className={ this.state.hover ? "Logout-link-hover" : "Logout-link-norm" } 
         onMouseEnter={this.hoverOn}
@@ -51,7 +51,7 @@ class Greeting extends React.Component {
       welcome = <p className="welcome">Welcome {currentUser.nickname}</p>;
     } else {
       greeting = (
-      <div key="greeting">
+      <div className="greeting" key="greeting">
         {/* <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link> */}
         <Link to="/login/demo" className="demo-link">DEMO</Link>
         <Link to="/login" className="signin-link">SIGN IN</Link>
@@ -67,7 +67,7 @@ class Greeting extends React.Component {
     }
 
     return(
-      <div className={this.state.currentUser ? "greeting-user" : "greeting" } >
+      <div>
         {greeting}
         {welcome}
       </div>
