@@ -50,12 +50,16 @@ class Greeting extends React.Component {
     } else {
       greeting = (
       <div className="greeting" key="greeting">
+        <Link to="/coffee_schedule" className="coffee-schedule-link">Coffee Schedule</Link>
         <Link to="/login/demo" className="demo-link">DEMO</Link>
         <Link to="/login" className="signin-link">SIGN IN</Link>
         <Link to="/signup" className={ this.state.hover ? "signup-link-hover" : "signup-link-norm" } 
         onMouseEnter={this.hoverOn}
         onMouseOut={this.hoverOff}
         >SIGN UP</Link>
+
+      
+
       </div>
       );
     }
