@@ -58,7 +58,7 @@ user_three.update(is_host: true)
 
 coffee_one = CoffeeTime.create(
   place: 'Earth',
-  date: Time.now,
+  date: DateTime.new(2019,11,1.5),
   start_time: 11.5,
   available_seats: 6,
   host_id: host_one.id,
