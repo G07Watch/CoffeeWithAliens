@@ -39,7 +39,7 @@ const mapStateToProps = state => {
 
   activeMonths.sort(compareMonths);
 
-  let currentMonth = activeMonths[0];
+  let currentMonth = activeMonths;
 
   return({
     currentMonth: currentMonth,
