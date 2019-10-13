@@ -7,8 +7,15 @@ class CoffeeSchedule extends React.Component{
   render(){
 
     return(
+      < div className = "month-display">
+        <div className = "jump">
+          
+        </div>
+        <div className = "currentMonth">
 
-      
+        </div>
+
+      </div>
     )
   }
 
