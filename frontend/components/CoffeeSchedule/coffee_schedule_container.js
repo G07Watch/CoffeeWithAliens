@@ -41,9 +41,8 @@ const mapStateToProps = state =>{
   return({
     currentMonth: activeMonths[0],
     nextMonth: activeMonths[1],
-    stars: '',
-    coffeeTimes: ''
-
+    stars: stars,
+    coffeeTimes: coffeeTimes
   })
 
 }
