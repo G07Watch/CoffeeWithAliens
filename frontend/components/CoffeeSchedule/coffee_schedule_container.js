@@ -1,4 +1,5 @@
-import { stat } from "fs";
+import { connect } from 'react-redux';
+import { fetchStarSystems } from "../../actions/star_system_actions";
 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -45,4 +46,14 @@ const mapStateToProps = state =>{
 
   })
 
+}
+
+
+const mapDispatchToProps = dispatch =>{
+
+  return({
+    fetchStarSystems: ()=> dispatch(fetchStarSystems()),
+
+
+  })
 }
