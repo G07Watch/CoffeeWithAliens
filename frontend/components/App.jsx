@@ -14,11 +14,11 @@ const App = () => (
     <GreetingContainer/>
   </h1>
 
-  {/* Test Only */}
+  
 
-    <Route path="/coffee_schedule" component={CoffeeSchedule} />
+  <Route path="/coffee_schedule" component={CoffeeSchedule} />
 
-  {/* Test Only */}
+  
 
   <ProtectedRoute path="/hosting" component={HostFormContainer} />
   <AuthRoute path="/login/" component={LoginFormContainer} />
