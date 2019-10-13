@@ -33,7 +33,7 @@ class CoffeeSchedule extends React.Component{
           <div className = "current">
             Current Month
             <ul>
-            {coffeeTimes}
+            {/* {coffeeTimes} */}
             </ul>
 
           </div>
