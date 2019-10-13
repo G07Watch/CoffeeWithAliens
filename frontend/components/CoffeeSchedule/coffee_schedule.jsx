@@ -15,7 +15,7 @@ class CoffeeSchedule extends React.Component{
   render(){
 
     let stars = this.props.stars;
-    let currentMonth = this.props.currentMonth;
+    let currentMonth = <p> this.props.currentMonth </p>;
     let nextMonth = this.props.nextMonth;
     let coffeeTimes = this.props.coffeeTimes // .star to sort
 
@@ -32,6 +32,10 @@ class CoffeeSchedule extends React.Component{
 
           <div className = "current">
             Current Month
+            <ul>
+            {coffeeTimes}
+            </ul>
+
           </div>
         </div>
 
