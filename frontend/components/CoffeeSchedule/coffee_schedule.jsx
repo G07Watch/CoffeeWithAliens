@@ -1,3 +1,6 @@
+import React from 'react'
+
+
 class CoffeeSchedule extends React.Component{
 
   constructor(props){
@@ -23,3 +26,5 @@ class CoffeeSchedule extends React.Component{
   }
 
 }
+
+export default CoffeeSchedule;
