@@ -44,6 +44,8 @@ host_one = Host.create(
   user_id: user_one.id
 )
 
+user_one.update(is_host: true)
+
 host_two =  Host.create(
   facebook: 'What is "facebook"?',
   intro: 'ET is alien',
@@ -51,6 +53,8 @@ host_two =  Host.create(
   topics: 'My trip far from home.  Also types of coffee.',
   user_id: user_three.id 
 )
+
+user_three.update(is_host: true)
 
 coffee_one = CoffeeTime.create(
   place: 'Earth',
