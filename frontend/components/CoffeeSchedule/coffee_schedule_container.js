@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchStarSystems } from "../../actions/star_system_actions";
+import { fetchHost } from '../../actions/host_actions';
 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -51,7 +52,10 @@ const mapStateToProps = state =>{
 const mapDispatchToProps = dispatch =>{
 
   return({
-    fetchStarSystems: ()=> dispatch(fetchStarSystems()),
+
+    fetchStarSystems: () => dispatch(fetchStarSystems()),
+    fetchHost: (id) => dispatch(fetchHost(id)),
+    fetchCoffeeTimes: () => (dispatch(fetch))
 
 
   })
