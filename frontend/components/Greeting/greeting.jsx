@@ -66,7 +66,12 @@ class Greeting extends React.Component {
       );
     }
 
-    return greeting;
+    return(
+      <div>
+        {greeting}
+        {welcome}
+      </div>
+    )
   }
 }
 
