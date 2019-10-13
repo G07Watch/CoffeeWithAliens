@@ -27,7 +27,7 @@ const mapStateToProps = state => {
 
   let coffeeTimes = state && state.entities && state.entities.coffeeTimes;
 
-  if(state.coffeeTimes){
+  if(state.entities.coffeeTimes){
 
     for (const meeting of coffeeTimes){
       if ( !activeMonths.includes(meeting.month) ){
