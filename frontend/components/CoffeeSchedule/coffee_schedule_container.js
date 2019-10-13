@@ -60,4 +60,4 @@ const mapDispatchToProps = dispatch =>{
   })
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CoffeeSchedule)
+export default connect(mapStateToProps, mapDispatchToProps)(CoffeeSchedule);
