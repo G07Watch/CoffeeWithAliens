@@ -2,7 +2,7 @@ import * as StarApiUtil from '../util/star_system_api_util';
 
 export const RECEIVE_ALL_STARSYSTEMS = 'RECEIVE_ALL_STARSYSTEMS';
 export const RECEIVE_STARSYSTEM = 'RECEIVE_STARSYSTEM';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_STAR_ERRORS = 'RECEIVE_STAR_ERRORS';
 
 export const fetchStarSystems = () => dispatch =>(
   StarApiUtil.fetchStarSystems()
@@ -18,7 +18,7 @@ export const receiveAllstarSystems = starSystems =>({
 });
 
 export const receiveErrors = errors =>({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_STAR_ERRORS,
   errors
 }) 
 

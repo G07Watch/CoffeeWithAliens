@@ -5,7 +5,7 @@ const starSystemErrorsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch(action.type){
-    case RECEIVE_ERRORS:
+    case RECEIVE_STAR_ERRORS:
       return action.errors;
 
     case RECEIVE_STARSYSTEM:
