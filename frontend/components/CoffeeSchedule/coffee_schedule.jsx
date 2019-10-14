@@ -26,12 +26,12 @@ class CoffeeSchedule extends React.Component{
     if (this.props.coffeeTimes.coffee 
       && this.props.stars.stars 
       && this.props.hosts ) {
-      debugger
-      for (const star of this.props.stars.stars) {
-
-        coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
-        
-        if (coffeeTimes.length != 0 && this.props.hosts[0].name ){
+        for (const star of this.props.stars.stars) {
+          
+          coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
+          
+          if (coffeeTimes.coffee && this.props.hosts[0].name ){
+            debugger
           coffeeTimesArr = coffeeTimes.map( meeting =>{
            let hostId = meeting.host_id 
            let hostName = this.props.hosts[hostId].name
