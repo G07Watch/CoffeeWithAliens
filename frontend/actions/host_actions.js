@@ -10,8 +10,8 @@ export const REMOVE_HOST = 'REMOVE_HOST';
 export const fetchHosts =()=> dispatch => (
   HostApitUtil.fetchHosts()
   .then(
-    hosts => receiveAllHosts(hosts),
-    errors => receiveErrors(errors)
+    hosts => dispatch(receiveAllHosts(hosts)),
+    errors => dispatch(receiveErrors(errors))
   )
 )
 
