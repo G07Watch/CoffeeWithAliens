@@ -44,8 +44,8 @@ class CoffeeSchedule extends React.Component{
     let coffeeTimesArr;
     let currentMonthSchedule =<p></p>;
     let nexMonthSchedule=<p></p>;
-    let currentMonthArr;
-    let nextMonthArr;
+    let currentMonthArr=[];
+    let nextMonthArr=[];
 
   
 
