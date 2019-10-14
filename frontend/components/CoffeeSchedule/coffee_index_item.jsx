@@ -21,7 +21,7 @@ class Meeting extends React.Component {
     return (
 
 
-     <div>
+     <div className="meeting">
        {this.props.meeting.place}
        {this.props.host.name}
      </div>
