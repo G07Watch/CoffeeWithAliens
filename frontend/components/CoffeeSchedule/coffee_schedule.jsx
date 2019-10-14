@@ -21,7 +21,7 @@ class CoffeeSchedule extends React.Component{
     let nextMonth = <p>{this.props.nextMonth}</p>;
     let coffeeTimes = <p></p>;
     let stars = <p></p>;
-    console.log(stars)
+    console.log(this.props.stars);
 
     if (this.props.coffeeTimes.length) {
       coffeeTimes = this.props.coffeeTimes.map(meeting =>
