@@ -42,6 +42,7 @@ class CoffeeSchedule extends React.Component{
       for (const star of this.props.stars.stars) {
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting.star_system_id === star.id )
+        console.log(coffeeTimes);
         coffeeTimesArr = coffeeTimes.map( meeting =>(
           <Meeting
             key={meeting.id}
