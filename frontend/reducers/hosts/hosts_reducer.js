@@ -7,7 +7,6 @@ const hostsReducer = (state = {}, action) =>{
 
   switch(action.type){
     case RECEIVE_ALL_HOSTS:
-      debugger
       newState = merge({}, state)
       Object.values(action.hosts).forEach(host =>{ 
         newState[host.id]= host});
