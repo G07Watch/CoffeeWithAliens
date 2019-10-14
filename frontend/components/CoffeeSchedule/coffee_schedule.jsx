@@ -18,7 +18,19 @@ class CoffeeSchedule extends React.Component{
   render(){
     let currentMonth = <p> {this.props.currentMonth} </p>;
     let nextMonth = <p>{this.props.nextMonth}</p>;
-    let coffeeTimes = <p></p>;
+    let coffeeTimes = 0 ;
+    if (this.props.coffeeTimes.coffee){
+      coffeeTimes = this.props.coffeeTimes.coffee;
+    }
+    let stars = 0;
+    if (this.props.stars.stars){
+      stars = this.props.stars.stars;
+    }
+    let hosts = 0 ;
+    if(this.props.hosts){
+      hosts = this.props.hosts;
+      }
+  
     
     let starCoffeeSchedule=[];
     let coffeeTimesArr;
@@ -26,15 +38,17 @@ class CoffeeSchedule extends React.Component{
     if (this.props.coffeeTimes.coffee 
       && this.props.stars.stars 
       && this.props.hosts ) {
-        for (const star of this.props.stars.stars) {
+        for (const star of stars) {
           
-          coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
+          coffeeTimes = coffeeTimes.filter( meeting => meeting.star_system_id === star.id )
+
+          console.log(hosts)
           
-          if (coffeeTimes.coffee && this.props.hosts[0].name ){
-            debugger
+          if (coffeeTimes.length !=0 && hosts){
+          debugger
           coffeeTimesArr = coffeeTimes.map( meeting =>{
            let hostId = meeting.host_id 
-           let hostName = this.props.hosts[hostId].name
+           let hostName = hosts[hostId].name
 
 
           return(
