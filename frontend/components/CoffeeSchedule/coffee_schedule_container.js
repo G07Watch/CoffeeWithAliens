@@ -9,7 +9,10 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June',
 
 
 function compareMonths(first, second) {
-  if (months[first] < months[second]){
+  const posOne = months.indexOf(first);
+  const posTwo = months.indexOf(second);
+
+  if (posOne < posTwo){
     return -1
   }
 
