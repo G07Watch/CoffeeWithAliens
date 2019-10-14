@@ -84,7 +84,7 @@ class CoffeeSchedule extends React.Component{
     let nexMonthCoffeeSchedule;
 
 
-    for ( starMeetings of starCoffeeSchedule){
+    for (const starMeetings of starCoffeeSchedule){
       if (currentMonth === starMeetings.coffeeTimesArr[0].month) {
         currentMonthCoffeeSchedule = <div className={currentMonth}>
           {starMeetings}
