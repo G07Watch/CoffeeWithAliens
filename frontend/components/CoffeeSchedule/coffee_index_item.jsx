@@ -9,7 +9,6 @@ class Meeting extends React.Component {
   }
 
   
-
   render(){
 
     //   let name;
@@ -18,7 +17,11 @@ class Meeting extends React.Component {
     return (
      <div className="meeting">
        {this.props.meeting.place}
+       {this.props.meeting.day}
+       {this.props.meeting.meet_date}
+       {this.props.start_time}
        {this.props.hostName}
+       {this.meeting.available_seats}
      </div>
     )
   }
