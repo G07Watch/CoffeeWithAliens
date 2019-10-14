@@ -10,7 +10,7 @@ class Meeting extends React.Component {
   }
 
   componentDidMount(){
-    hostId = this.props.meeting.host_id;
+    let hostId = this.props.meeting.host_id;
     this.props.fetchHost(hostId);
   }
 
