@@ -18,7 +18,7 @@ class Meeting extends React.Component {
     return (
      <div className="meeting">
        {this.props.meeting.place}
-       {/* {name} */}
+       {this.props.hostName}
      </div>
     )
   }
