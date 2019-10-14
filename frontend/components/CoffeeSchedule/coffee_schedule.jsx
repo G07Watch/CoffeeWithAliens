@@ -67,7 +67,7 @@ class CoffeeSchedule extends React.Component{
       let count = 2;
       let monthFlag = true;
 
-      while (count < 0){
+      while (count > 0){
 
         let monthArr;
         let month;
@@ -153,7 +153,7 @@ class CoffeeSchedule extends React.Component{
         }
 
 
-
+        console.log(count);
         monthFlag = false;
         count--;
       }
