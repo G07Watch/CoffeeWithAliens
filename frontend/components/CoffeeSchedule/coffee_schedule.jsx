@@ -22,7 +22,7 @@ class CoffeeSchedule extends React.Component{
     let coffeeTimes = <p></p>;
     if (this.props.coffeeTimes.length) {
       coffeeTimes = this.props.coffeeTimes.map( meeting =>
-        <p key={meeting.id}>{meeting}</p>
+        <p key={meeting.id}>{meeting.place}</p>
       )}
      // .star to sort
 
