@@ -43,6 +43,7 @@ class CoffeeSchedule extends React.Component{
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
         debugger
+        if (coffeeTimes.length != 0){
         coffeeTimesArr = coffeeTimes.map( meeting =>(
           <Meeting
             key={meeting.id}
@@ -60,7 +61,8 @@ class CoffeeSchedule extends React.Component{
               {coffeeTimesArr}
             </ul>
           </li>
-        )
+          )
+        }
       }
     }    
 
