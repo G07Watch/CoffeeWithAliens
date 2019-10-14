@@ -17,6 +17,10 @@ class CoffeeSchedule extends React.Component{
 
   render(){
     let currentMonth = <p> {this.props.currentMonth} </p>;
+    if (this.props.currentMonth){
+      currentMonth = this.props.currentMonth;
+    }
+
     let nextMonth = <p>{this.props.nextMonth}</p>;
     let coffeeMeets = 0 ;
     if (this.props.coffeeTimes){
@@ -76,29 +80,51 @@ class CoffeeSchedule extends React.Component{
     }    
 
 
+    let currentMonthCoffeeSchedule;
+    let nexMonthCoffeeSchedule;
+
+
+    for ( starMeetings of starCoffeeSchedule){
+      if (currentMonth === starMeetings.coffeeTimesArr[0].month) {
+        currentMonthCoffeeSchedule = <div className={currentMonth}>
+          {starMeetings}
+        </div>
+      }
+    }
+
+
+
+
+
+
+
 
     return(
-
       <div>
-        < div className = "month-display-current">
-
-          Month Display
-          {currentMonth}
-          {nextMonth}
-          <div className = "jump">
-            Jump
-          </div>
-
-          <div className = "star">
-            <ul>
-            {starCoffeeSchedule}
-            </ul>
-          </div>
-
-        </div>
-
-
+        {currentMonthCoffeeSchedule}
       </div>
+
+
+      // <div>
+      //   < div className = "month-display-current">
+
+      //     Month Display
+      //     {currentMonth}
+      //     {nextMonth}
+      //     <div className = "jump">
+      //       Jump
+      //     </div>
+
+      //     <div className = "star">
+      //       <ul>
+      //       {starCoffeeSchedule}
+      //       </ul>
+      //     </div>
+
+      //   </div>
+
+
+      // </div>
     )
   }
 
