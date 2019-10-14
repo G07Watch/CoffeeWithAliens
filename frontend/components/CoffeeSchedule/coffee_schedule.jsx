@@ -54,12 +54,12 @@ class CoffeeSchedule extends React.Component{
       hosts.constructor === Object)) {
 
 
-      for (meeting of coffeeMeets) {
-        if (meeeting.month === currentMonth) {
-          currentMonthArr.push(meeting);
+      for ( let meetUp of coffeeMeets) {
+        if (meetUp.month === currentMonth) {
+          currentMonthArr.push(meetUp);
         }
 
-        else nextMonthArr.push(meeting);
+        else nextMonthArr.push(meetUp);
       };
 
       let count = 2;
