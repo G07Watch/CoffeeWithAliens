@@ -24,8 +24,8 @@ class CoffeeSchedule extends React.Component{
     console.log(this.props.stars);
     console.log(this.props.coffeeTimes);
 
-    if (this.props.coffeeTimes.length) {
-      coffeeTimes = this.props.coffeeTimes.map(meeting =>
+    if (this.props.coffeeTimes.coffee.length) {
+      coffeeTimes = this.props.coffeeTimes.coffee.map(meeting =>
 
         <Meeting
           key={meeting.id}
@@ -36,7 +36,7 @@ class CoffeeSchedule extends React.Component{
       )
     }
 
-    if (this.props.stars.length){
+    if (this.props.stars.stars.length){
       stars = stars.map( star => (
         <li>
           <h2 key={star.id}>
