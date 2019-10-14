@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchStarSystems } from "../../actions/star_system_actions";
-import { fetchHost } from '../../actions/host_actions';
+import { fetchHosts } from '../../actions/host_actions';
 import { fetchCoffeeTimes } from '../../actions/coffee_actions';
 import CoffeeSchedule from './coffee_schedule';
 
