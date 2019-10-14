@@ -48,6 +48,7 @@ class CoffeeSchedule extends React.Component{
         if (coffeeTimes.length != 0){
         coffeeTimesArr = coffeeTimes.map( meeting =>{
            let hostId = meeting.host_id 
+           let hostName = this.props.hosts[hostId].name
 
 
           return(
@@ -56,6 +57,7 @@ class CoffeeSchedule extends React.Component{
           <Meeting
             key={meeting.id}
             meeting={meeting}
+            hostName = {hostName}
             // host ={this.props.host}
             // fetchHost={this.props.fetchHost}
           />)
