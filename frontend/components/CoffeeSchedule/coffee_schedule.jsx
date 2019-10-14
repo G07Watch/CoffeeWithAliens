@@ -35,18 +35,18 @@ class CoffeeSchedule extends React.Component{
       )
     }
 
-    // if (this.props.stars.length){
-    //   stars = stars.map( star => (
-    //     <li>
-    //       <h2 key={star.id}>
-    //         {star.name}
-    //       </h2>
-    //       <ul>
-    //         { coffeeTimes.filter( coffeeTime => coffeeTime.star_system_id === star.id ) }
-    //       </ul>
-    //     </li>
-    //   ))
-    // }
+    if (this.props.stars.length){
+      stars = stars.map( star => (
+        <li>
+          <h2 key={star.id}>
+            {star.name}
+          </h2>
+          <ul>
+            { coffeeTimes.filter( coffeeTime => coffeeTime.star_system_id === star.id ) }
+          </ul>
+        </li>
+      ))
+    }
 
 
     
