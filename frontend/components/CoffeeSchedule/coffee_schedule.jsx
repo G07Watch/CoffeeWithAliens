@@ -43,7 +43,7 @@ class CoffeeSchedule extends React.Component{
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
         
-        debugger
+        console.log('here')
         if (coffeeTimes.length != 0){
         coffeeTimesArr = coffeeTimes.map( meeting =>{
           return(
