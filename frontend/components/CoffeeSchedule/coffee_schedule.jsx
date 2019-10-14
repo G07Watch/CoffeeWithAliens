@@ -26,7 +26,7 @@ class CoffeeSchedule extends React.Component{
     if (this.props.coffeeTimes.coffee 
       && this.props.stars.stars 
       && this.props.hosts[0] ) {
-      
+      debugger
       for (const star of this.props.stars.stars) {
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
