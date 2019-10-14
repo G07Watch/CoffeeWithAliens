@@ -26,7 +26,8 @@ class Api::HostsController < ApplicationController
 
 
   def show
-    @host = Host.find_by(user_id: params[:user_id])
+    @host = User.find_by(id: params[:user_id]).host
+    # @host = Host.find_by(user_id: params[:user_id])
   end
 
 
