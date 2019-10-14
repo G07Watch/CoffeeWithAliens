@@ -26,9 +26,10 @@ const mapStateToProps = state => {
 
   let stars = state.entities.stars;
   let activeMonths = [];
-  let coffeeTimes = state.entities.coffeeTimes;
+  let coffeeTimes = state.entities.coffeeTimes && state.entities.coffeeTimes.coffee;
 
-  if(state.entities.coffeeTimes.length){
+  if(state.entities.coffeeTimes.coffee){
+   
     for (const meeting of coffeeTimes){
       if ( !activeMonths.includes(meeting.month) ){
         activeMonths.push(meeting.month)
@@ -36,7 +37,7 @@ const mapStateToProps = state => {
     }
 
   }
-
+  
   activeMonths.sort(compareMonths);
 
   // let currentMonth = activeMonths;

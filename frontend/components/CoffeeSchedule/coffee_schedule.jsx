@@ -10,17 +10,17 @@ class CoffeeSchedule extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchStarSystems();
     this.props.fetchCoffeeTimes();
+    this.props.fetchStarSystems();
     this.props.fetchHosts();
   }
 
   render(){
     let currentMonth = <p> {this.props.currentMonth} </p>;
     let nextMonth = <p>{this.props.nextMonth}</p>;
-    let coffeeTimes = 0 ;
-    if (this.props.coffeeTimes.coffee){
-      coffeeTimes = this.props.coffeeTimes.coffee;
+    let coffeeMeets = 0 ;
+    if (this.props.coffeeTimes){
+      coffeeMeets = this.props.coffeeTimes;
     }
     let stars = 0;
     if (this.props.stars.stars){
@@ -34,19 +34,20 @@ class CoffeeSchedule extends React.Component{
     
     let starCoffeeSchedule=[];
     let coffeeTimesArr;
+  
 
-    if (this.props.coffeeTimes.coffee 
-      && this.props.stars.stars 
-      && this.props.hosts ) {
+    if (coffeeMeets&& stars.length && 
+      !(Object.entries(hosts).length === 0 && hosts.constructor === Object)) {
+
         for (const star of stars) {
-          
-          coffeeTimes = coffeeTimes.filter( meeting => meeting.star_system_id === star.id )
-
-          console.log(hosts)
+          debugger
+          let coffeeTimes = coffeeMeets.filter( meeting => meeting.star_system_id === star.id )
           
           if (coffeeTimes.length !=0 && hosts){
-          debugger
-          coffeeTimesArr = coffeeTimes.map( meeting =>{
+            debugger
+         
+          coffeeTimesArr = coffeeTimes.map( meeting => {
+            debugger
            let hostId = meeting.host_id 
            let hostName = hosts[hostId].name
 

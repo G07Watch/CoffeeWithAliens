@@ -10,14 +10,12 @@ class Meeting extends React.Component {
 
   
   render(){
+    let name = this.props.meeting
+    debugger
     return (
      <div className="meeting">
        {this.props.meeting.place}
-       {this.props.meeting.day}
-       {this.props.meeting.meet_date}
-       {this.props.meeting.start_time}
        {this.props.hostName}
-       {this.props.meeting.available_seats}
      </div>
     )
   }
