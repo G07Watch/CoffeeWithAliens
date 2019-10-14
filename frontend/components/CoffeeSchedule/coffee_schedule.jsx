@@ -62,6 +62,8 @@ class CoffeeSchedule extends React.Component{
         else nextMonthArr.push(meetUp);
       };
 
+      debugger
+
       let count = 2;
       let monthFlag = true;
 
@@ -99,6 +101,8 @@ class CoffeeSchedule extends React.Component{
               hostName={hostName}
             />)
           })
+
+          debugger
 
           starCoffeeSchedule.push(
             <li key={star.id}>
@@ -155,6 +159,9 @@ class CoffeeSchedule extends React.Component{
       }
 
     }    
+
+    console.log("current month schedule:",currentMonthSchedule);
+    console.log("next month schedule:", nexMonthSchedule);
 
 
     return(
