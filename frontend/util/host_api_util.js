@@ -12,10 +12,10 @@ export const fetchHosts = () => (
   })
 )
 
-export const fetchHost = (user_id, id) => (
+export const fetchHost = (id) => (
   $.ajax({
     method: 'GET',
-    url: `api/users/${user_id}/hosts/${id}`
+    url: `api/hosts/${id}`
   })
 )
 
