@@ -49,6 +49,7 @@ class CoffeeSchedule extends React.Component{
           <Meeting
             key={meeting.id}
             meeting={meeting}
+            host ={this.props.host}
             fetchHost={this.props.fetchHost}
           />)
         })

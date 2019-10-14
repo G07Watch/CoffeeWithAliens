@@ -23,7 +23,7 @@ class Meeting extends React.Component {
 
      <div>
        {this.props.meeting.place}
-       {this.props.meeting.host_id}
+       {this.props.host.name}
      </div>
     )
   }
