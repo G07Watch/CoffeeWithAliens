@@ -37,7 +37,7 @@ class CoffeeSchedule extends React.Component{
     }
 
     if (this.props.stars.stars){
-      stars = stars.map( star => (
+      stars = this.props.stars.stars.map( star => (
         <li>
           <h2 key={star.id}>
             {star.name}
