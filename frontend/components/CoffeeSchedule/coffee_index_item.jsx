@@ -16,10 +16,14 @@ class Meeting extends React.Component {
 
 
   render(){
+
+      let name;
+    if (this.props.host.host && this.props.host.host.name) name = this.props.host.host.name
+
     return (
      <div className="meeting">
        {this.props.meeting.place}
-       {this.props.host.name}
+       {name}
      </div>
     )
   }
