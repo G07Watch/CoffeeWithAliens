@@ -21,39 +21,45 @@ class CoffeeSchedule extends React.Component{
     let nextMonth = <p>{this.props.nextMonth}</p>;
     let coffeeTimes = <p></p>;
     let stars = <p></p>;
-    console.log(this.props.stars);
-    console.log(this.props.coffeeTimes);
 
-    if (this.props.coffeeTimes.coffee) {
-      coffeeTimes = this.props.coffeeTimes.coffee
-      // .map(meeting =>
+    // if (this.props.stars.stars){
+    //   stars = this.props.stars.stars.map( star => (
+    //     <li key={star.id}>
+    //       <h2 >
+    //         {star.name}
+    //       </h2>
+    //       <ul>
+          
+    //       </ul>
+    //     </li>
+    //   ))
+    // }
 
-      //   <Meeting
-      //     key={meeting.id}
-      //     meeting={meeting}
-      //     fetchHost={this.props.fetchHost}
-      //   />
+    if (this.props.coffeeTimes.coffee && this.props.stars.stars ) {
+      let starCoffeeSchedule = []
+      for (star of this.props.stars.stars) {
 
-      // )
-    }
-
-    console.log(coffeeTimes);
-
-    if (this.props.stars.stars){
-      stars = this.props.stars.stars.map( star => (
-        <li>
-          <h2 key={star.id}>
-            {star.name}
-          </h2>
-          <ul>
-            { coffeeTimes.filter( coffeeTime => coffeeTime.star_system_id === star.id ) }
-          </ul>
-        </li>
-      ))
-    }
-
-
-    
+        coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting.star_system_id === star.id )
+        coffeeTimes = coffeeTimes.map(meeting=>(
+          <Meeting
+            key={meeting.id}
+            meeting={meeting}
+            fetchHost={this.props.fetchHost}
+          />
+          ))
+        
+        starCoffeeSchedule.push(
+          <li key={star.id}>
+            <h2 >
+              {star.name}
+            </h2>
+            <ul>
+              {coffeeTimes}
+            </ul>
+          </li>
+        )
+      }
+    }    
 
     return(
 
@@ -69,7 +75,7 @@ class CoffeeSchedule extends React.Component{
 
           <div className = "star">
             <ul>
-            {stars}
+            {starCoffeeSchedule}
             </ul>
           </div>
 
