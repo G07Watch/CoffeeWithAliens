@@ -34,7 +34,7 @@ class CoffeeSchedule extends React.Component{
       )
     }
 
-    if (stars.length){
+    if (this.props.stars.length){
       stars = stars.map( star => (
         <li>
           <h2 key={star.id}>
@@ -67,7 +67,7 @@ class CoffeeSchedule extends React.Component{
             {stars}
             </ul>
           </div>
-          
+
         </div>
 
 
