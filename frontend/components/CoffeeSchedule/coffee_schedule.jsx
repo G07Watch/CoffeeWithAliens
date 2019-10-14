@@ -38,7 +38,9 @@ class CoffeeSchedule extends React.Component{
     let starCoffeeSchedule = [];
     let coffeeTimesArr;
 
-    if (this.props.coffeeTimes.coffee && this.props.stars.stars ) {
+    if (this.props.coffeeTimes.coffee 
+      && this.props.stars.stars 
+      && this.props.hosts ) {
       
       for (const star of this.props.stars.stars) {
 
