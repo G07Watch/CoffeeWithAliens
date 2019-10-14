@@ -8,7 +8,7 @@ const hostsReducer = (state = {}, action) =>{
   switch(action.type){
     case RECEIVE_ALL_HOSTS:
       debugger
-      hosts = action.hosts.map( host =>  ({[host.id]: host})  )
+      let hosts = Object.values(action.hosts).map(host =>  ({[host.id]: host})  )
 
       newState = merge({}, state, hosts);
       return newState;

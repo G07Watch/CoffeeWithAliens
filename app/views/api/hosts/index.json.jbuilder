@@ -1,4 +1,4 @@
-json.array! @hosts do |host|
+@hosts.each do |host|
   
   json.set! host.id do
 
