@@ -13,7 +13,7 @@ const hostsReducer = (state = {}, action) =>{
       return newState;
 
     case RECEIVE_HOST:
-      newState = merge({} state, {[action.host.id]: action.host};
+      newState = merge({}, state, {[action.host.id]: action.host});
       return newState;
     
     // case RECEIVE_USER:
