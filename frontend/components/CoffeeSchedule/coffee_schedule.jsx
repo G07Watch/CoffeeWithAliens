@@ -21,7 +21,11 @@ class CoffeeSchedule extends React.Component{
       currentMonth = this.props.currentMonth;
     }
 
-    let nextMonth =;
+    let nextMonth;
+    if (this.props.nextMonth){
+      nextMonth = this.props.nextMonth;
+    }
+
     let coffeeMeets = 0 ;
     if (this.props.coffeeTimes){
       coffeeMeets = this.props.coffeeTimes;
