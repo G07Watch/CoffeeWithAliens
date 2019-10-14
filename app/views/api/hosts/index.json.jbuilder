@@ -1,6 +1,6 @@
-json.hosts @hosts.map do |host|
+json.array! @hosts do |host|
   
-  json.set! :host do
+  json.set! host.id do
 
     json.id host.id
     json.user_id host.user_id
