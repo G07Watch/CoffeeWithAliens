@@ -24,12 +24,9 @@ function compareMonths(first, second) {
 
 const mapStateToProps = state => {
 
-  let stars = state && state.entities && state.entities.stars;
-
+  let stars = state.entities.stars;
   let activeMonths = [];
-
-  let coffeeTimes = state && state.entities && state.entities.coffeeTimes;
-  // let hosts = state && state.entities && state.entities.hosts;
+  let coffeeTimes = state.entities.coffeeTimes;
 
   if(state.entities.coffeeTimes.length){
     for (const meeting of coffeeTimes){
