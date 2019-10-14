@@ -10,10 +10,6 @@ class Meeting extends React.Component {
 
   
   render(){
-
-    //   let name;
-    // if () name = this.props.host.host.name
-
     return (
      <div className="meeting">
        {this.props.meeting.place}
