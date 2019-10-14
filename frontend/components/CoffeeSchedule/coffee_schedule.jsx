@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Meeting from './coffee_index_item';
+
 
 class CoffeeSchedule extends React.Component{
 
@@ -22,9 +24,12 @@ class CoffeeSchedule extends React.Component{
     let coffeeTimes = <p></p>;
     if (this.props.coffeeTimes.length) {
       coffeeTimes = this.props.coffeeTimes.map( meeting =>
-        <p key={meeting.id} meeting={meeting} fetchHost={this.props.fetchHost}>{meeting.place}</p>
+        <Meeting
+         key={meeting.id}
+         meeting={meeting} 
+         fetchHost={this.props.fetchHost}
+         />
       )}
-     // .star to sort
 
     return(
 

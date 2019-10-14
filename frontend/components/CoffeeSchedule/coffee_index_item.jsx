@@ -7,15 +7,17 @@ class Meeting extends React.Component {
     super({meeting, fetchHost})
   }
 
-  componentDidMount
+  componentDidMount(){
+
+  }
 
 
   render(){
 
     return (
-      div
-
-
+     <div>
+       {meeting.place}
+     </div>
     )
 
 
@@ -24,3 +26,5 @@ class Meeting extends React.Component {
   
 
 }
+
+export default Meeting;
