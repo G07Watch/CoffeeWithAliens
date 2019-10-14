@@ -60,7 +60,7 @@ const mapDispatchToProps = dispatch =>{
   return({
 
     fetchStarSystems: () => dispatch(fetchStarSystems()),
-    fetchHost: (id) => dispatch(fetchHost(id)),
+    fetchHosts: () => dispatch(fetchHosts()),
     fetchCoffeeTimes: () => (dispatch(fetchCoffeeTimes()))
   })
 }

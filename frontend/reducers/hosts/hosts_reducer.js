@@ -6,6 +6,8 @@ const hostsReducer = (state = {}, action) =>{
   let newState;
 
   switch(action.type){
+    case RECEIVE_
+
     case RECEIVE_HOST:
       newState = action.host;
       return newState;
