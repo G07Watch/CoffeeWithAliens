@@ -43,14 +43,13 @@ class CoffeeSchedule extends React.Component{
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
         debugger
-        coffeeTimesArr = 'here'
-        //  coffeeTimes.map( meeting =>(
-        //   <Meeting
-        //     key={meeting.id}
-        //     meeting={meeting}
-        //     fetchHost={this.props.fetchHost}
-        //   />
-        //   ))
+        coffeeTimesArr = coffeeTimes.map( meeting =>(
+          <Meeting
+            key={meeting.id}
+            meeting={meeting}
+            fetchHost={this.props.fetchHost}
+          />
+          ))
         
         starCoffeeSchedule.push(
           <li key={star.id}>
