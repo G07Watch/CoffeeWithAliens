@@ -1,7 +1,7 @@
 import { RECEIVE_HOST_ERROR, RECEIVE_HOST, RECEIVE_ALL_HOSTS } from "../../actions/host_actions";
 
 
-const starSystemErrorsReducer = (state = {}, action) => {
+const hostErrorsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
@@ -18,3 +18,5 @@ const starSystemErrorsReducer = (state = {}, action) => {
       return state;
   }
 }
+
+export default hostErrorsReducer;
