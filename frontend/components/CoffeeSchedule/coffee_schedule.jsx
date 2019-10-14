@@ -20,7 +20,7 @@ class CoffeeSchedule extends React.Component{
     let currentMonth = <p> {this.props.currentMonth} </p>;
     let nextMonth = <p>{this.props.nextMonth}</p>;
     let coffeeTimes = <p></p>;
-    let stars = this.props.stars;
+    let stars = <p></p>;
     console.log(stars)
 
     if (this.props.coffeeTimes.length) {
