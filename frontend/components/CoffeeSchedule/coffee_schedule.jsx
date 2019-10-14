@@ -37,7 +37,8 @@ class CoffeeSchedule extends React.Component{
   
 
     if (coffeeMeets&& stars.length && 
-      !(Object.entries(hosts).length === 0 && hosts.constructor === Object)) {
+      !(Object.entries(hosts).length === 0 && 
+      hosts.constructor === Object)) {
 
         for (const star of stars) {
           debugger
