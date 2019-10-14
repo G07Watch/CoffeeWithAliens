@@ -66,8 +66,8 @@ class CoffeeSchedule extends React.Component{
             <ul>
             {stars}
             </ul>
-
           </div>
+          
         </div>
 
 
