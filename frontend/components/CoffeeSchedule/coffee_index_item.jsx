@@ -11,7 +11,7 @@ class Meeting extends React.Component {
   
   render(){
     let timespan = this.props.meeting.start_time
-    debugger
+    // debugger
     return (
      <div className="meeting">
         <div className="host-container">{this.props.hostName}</div>

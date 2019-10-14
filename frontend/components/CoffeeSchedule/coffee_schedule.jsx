@@ -45,14 +45,14 @@ class CoffeeSchedule extends React.Component{
       hosts.constructor === Object)) {
 
         for (const star of stars) {
-          debugger
+          // debugger
           let coffeeTimes = coffeeMeets.filter( meeting => meeting.star_system_id === star.id )
           
           if (coffeeTimes.length !=0 && hosts){
-            debugger
+            // debugger
          
           coffeeTimesArr = coffeeTimes.map( meeting => {
-            debugger
+            // debugger
            let hostId = meeting.host_id 
            let hostName = hosts[hostId].name
 
