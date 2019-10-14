@@ -19,9 +19,12 @@ class CoffeeSchedule extends React.Component{
     let stars = this.props.stars;
     let currentMonth = <p> {this.props.currentMonth} </p>;
     let nextMonth = <p>{this.props.nextMonth}</p>;
-    let coffeeTimes = this.props.coffeeTimes.map(meeting=>
-      <p key={meeting.id}>{meeting}</p>
-      ) // .star to sort
+    let coffeeTimes = <p></p>;
+    if (this.props.coffeeTimes.length) {
+      coffeeTimes = this.props.coffeeTimes.map( meeting =>
+        <p key={meeting.id}>{meeting}</p>
+      )}
+     // .star to sort
 
     return(
 
