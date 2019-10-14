@@ -1,4 +1,4 @@
-import { RECEIVE_COFFEE_ERRORS } from "../../actions/coffee_actions";
+import { RECEIVE_COFFEE_ERRORS, RECEIVE_COFFEE_TIMES } from "../../actions/coffee_actions";
 
 
 const coffeeTimesErrorsReducer = (state = {}, action) => {
