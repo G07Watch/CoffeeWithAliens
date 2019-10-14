@@ -35,7 +35,8 @@ class CoffeeSchedule extends React.Component{
         if (coffeeTimes.length != 0){
           coffeeTimesArr = coffeeTimes.map( meeting =>{
            let hostId = meeting.host_id 
-           let hostName = this.props.hosts[hostId].name
+           let host = this.props.hosts[hostId]
+           let hostName = host.name
 
 
           return(
