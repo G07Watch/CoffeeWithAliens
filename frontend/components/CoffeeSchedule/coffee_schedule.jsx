@@ -35,20 +35,16 @@ class CoffeeSchedule extends React.Component{
     }
 
     if (stars.length){
-      stars.map( star => (
-        <div>
+      stars = stars.map( star => (
+        <li>
           <h2 key={star.id}>
             {star.name}
           </h2>
           <ul>
             { coffeeTimes.filter( coffeeTime => coffeeTime.star_system_id === star.id ) }
           </ul>
-        </div>
-      )
-
-      
-        
-
+        </li>
+      ))
     }
 
 
@@ -67,9 +63,8 @@ class CoffeeSchedule extends React.Component{
           </div>
 
           <div className = "star">
-            {stars}
             <ul>
-            {coffeeTimes}
+            {stars}
             </ul>
 
           </div>
