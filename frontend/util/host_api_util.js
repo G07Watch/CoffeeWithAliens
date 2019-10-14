@@ -25,7 +25,7 @@ export const createHost = host => (
     url: `api/users/${host.user_id}/hosts`,
     data: {host}
   })
-)
+);
 
 export const updateUser = user => (
   $.ajax({
