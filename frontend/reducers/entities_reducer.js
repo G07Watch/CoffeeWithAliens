@@ -5,7 +5,7 @@ import hostsReducer from './hosts/hosts_reducer';
 import coffeeTimesReducer from './coffee_times/coffee_times_reducer';
 
 const entitiesReducer = combineReducers({
-  starSystems: starSystemReducer,
+  stars: starSystemReducer,
   host: hostsReducer,
   coffeeTimes: coffeeTimesReducer
 });
