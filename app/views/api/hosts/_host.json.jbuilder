@@ -1,4 +1,4 @@
-json.extract! host, :user_id, :facebook, :intro, :story, :topics
+# json.extract! host, :user_id, :facebook, :intro, :story, :topics
 
 json.set! :host do
 
