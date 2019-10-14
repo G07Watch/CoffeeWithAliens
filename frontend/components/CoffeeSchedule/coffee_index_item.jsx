@@ -3,8 +3,8 @@ import React from 'react'
 
 class Meeting extends React.Component {
 
-  constructor({ meeting, fetchHost }){
-    super({meeting, fetchHost})
+  constructor(props){
+    super(props)
   }
 
   componentDidMount(){
@@ -16,7 +16,7 @@ class Meeting extends React.Component {
 
     return (
      <div>
-       {meeting.place}
+       {this.props.meeting.place}
      </div>
     )
 
