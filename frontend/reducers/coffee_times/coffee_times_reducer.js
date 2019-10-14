@@ -8,7 +8,7 @@ const coffeeTimesReducer  = (state ={}, action) =>{
 
   switch(action.type){
     case RECEIVE_COFFEE_TIMES:
-      newState = (action.coffeeTimes);
+      newState = (action.coffeeTimes);  // {}, state, 
       return newState;
 
     default:
