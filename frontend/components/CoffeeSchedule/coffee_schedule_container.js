@@ -31,7 +31,6 @@ const mapStateToProps = state => {
   let coffeeTimes = state && state.entities && state.entities.coffeeTimes;
 
   if(state.entities.coffeeTimes.length){
-    debugger
     for (const meeting of coffeeTimes){
       if ( !activeMonths.includes(meeting.month) ){
         activeMonths.push(meeting.month)
