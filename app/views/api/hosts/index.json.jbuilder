@@ -10,6 +10,6 @@ json.hosts @hosts.map do |host|
     json.story host.story
     json.topics host.topics
 
-end
+  end
 
 end
