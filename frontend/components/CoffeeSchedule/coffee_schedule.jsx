@@ -45,7 +45,6 @@ class CoffeeSchedule extends React.Component{
         
         if (coffeeTimes.length != 0){
         coffeeTimesArr = coffeeTimes.map( meeting =>{
-          debugger
           return(
           <Meeting
             key={meeting.id}
