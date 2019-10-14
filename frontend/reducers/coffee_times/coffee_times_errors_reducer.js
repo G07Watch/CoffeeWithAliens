@@ -1,3 +1,6 @@
+import { RECEIVE_COFFEE_ERRORS } from "../../actions/coffee_actions";
+
+
 const coffeeTimesErrorsReducer = (state = {}, action) => {
   Object.freeze(state);
 
