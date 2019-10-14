@@ -25,7 +25,7 @@ class CoffeeSchedule extends React.Component{
 
     if (this.props.coffeeTimes.coffee 
       && this.props.stars.stars 
-      && this.props.hosts[0] ) {
+      && this.props.hosts ) {
       debugger
       for (const star of this.props.stars.stars) {
 
