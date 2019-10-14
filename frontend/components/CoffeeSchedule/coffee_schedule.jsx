@@ -34,9 +34,11 @@ class CoffeeSchedule extends React.Component{
     //     </li>
     //   ))
     // }
+    
+    let starCoffeeSchedule = []
 
     if (this.props.coffeeTimes.coffee && this.props.stars.stars ) {
-      let starCoffeeSchedule = []
+      
       for (star of this.props.stars.stars) {
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting.star_system_id === star.id )
