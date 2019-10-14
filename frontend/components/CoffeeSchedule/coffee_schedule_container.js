@@ -29,7 +29,7 @@ const mapStateToProps = state => {
   let activeMonths = [];
 
   let coffeeTimes = state && state.entities && state.entities.coffeeTimes;
-  let host = state && state.entities && state.entities.host;
+  let hosts = state && state.entities && state.entities.hosts;
 
   if(state.entities.coffeeTimes.length){
     for (const meeting of coffeeTimes){
@@ -49,7 +49,7 @@ const mapStateToProps = state => {
     nextMonth: activeMonths[1],
     stars: stars,
     coffeeTimes: coffeeTimes,
-    host: host
+    hosts: hosts
   })
 
 }

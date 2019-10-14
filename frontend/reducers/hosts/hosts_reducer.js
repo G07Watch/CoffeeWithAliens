@@ -1,4 +1,4 @@
-import { RECEIVE_HOST, RECEIVE_USER } from "../../actions/host_actions";
+import { RECEIVE_HOST, RECEIVE_USER, RECEIVE_ALL_HOSTS } from "../../actions/host_actions";
 import merge from 'lodash/merge'
 
 const hostsReducer = (state = {}, action) =>{
@@ -6,10 +6,14 @@ const hostsReducer = (state = {}, action) =>{
   let newState;
 
   switch(action.type){
-    case RECEIVE_
+    case RECEIVE_ALL_HOSTS:
+      hosts = action.hosts.map( host =>  ({[host.id]: host})  )
+
+      newState = merge({}, state, hosts);
+      return newState;
 
     case RECEIVE_HOST:
-      newState = action.host;
+      newState = merge({} state, {[action.host.id]: action.host};
       return newState;
     
     // case RECEIVE_USER:
