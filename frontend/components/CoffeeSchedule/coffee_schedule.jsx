@@ -17,19 +17,42 @@ class CoffeeSchedule extends React.Component{
   render(){
 
     // debugger
-
-    let stars = this.props.stars;
     let currentMonth = <p> {this.props.currentMonth} </p>;
     let nextMonth = <p>{this.props.nextMonth}</p>;
     let coffeeTimes = <p></p>;
+    let stars = this.props.stars;
+
     if (this.props.coffeeTimes.length) {
-      coffeeTimes = this.props.coffeeTimes.map( meeting =>
+      coffeeTimes = this.props.coffeeTimes.map(meeting =>
+
         <Meeting
-         key={meeting.id}
-         meeting={meeting} 
-         fetchHost={this.props.fetchHost}
-         />
-      )}
+          key={meeting.id}
+          meeting={meeting}
+          fetchHost={this.props.fetchHost}
+        />
+
+      )
+    }
+
+    if (stars.length){
+      stars.map( star => (
+        <div>
+          <h2 key={star.id}>
+            {star.name}
+          </h2>
+          <ul>
+            { coffeeTimes.filter( coffeeTime => coffeeTime.star_system_id === star.id ) }
+          </ul>
+        </div>
+      )
+
+      
+        
+
+    }
+
+
+    
 
     return(
 
@@ -43,8 +66,8 @@ class CoffeeSchedule extends React.Component{
             Jump
           </div>
 
-          <div className = "current">
-            Current Month
+          <div className = "star">
+            {stars}
             <ul>
             {coffeeTimes}
             </ul>
