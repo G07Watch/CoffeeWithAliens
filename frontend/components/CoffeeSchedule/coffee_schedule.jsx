@@ -31,20 +31,17 @@ class CoffeeSchedule extends React.Component{
 
         coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
         
-        if (coffeeTimes.length != 0){
+        if (coffeeTimes.length != 0 && this.props.hosts[0].name ){
           coffeeTimesArr = coffeeTimes.map( meeting =>{
            let hostId = meeting.host_id 
-           let host = this.props.hosts[hostId]
-           let hostName = host.name
+           let hostName = this.props.hosts[hostId].name
 
 
           return(
-
-
           <Meeting
             key={meeting.id}
             meeting={meeting}
-            hostName = {hostName}
+            hostName={hostName}
           />)
         })
 
