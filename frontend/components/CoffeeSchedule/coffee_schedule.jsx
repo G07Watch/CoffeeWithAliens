@@ -25,16 +25,19 @@ class CoffeeSchedule extends React.Component{
     console.log(this.props.coffeeTimes);
 
     if (this.props.coffeeTimes.coffee) {
-      coffeeTimes = this.props.coffeeTimes.coffee.map(meeting =>
+      coffeeTimes = this.props.coffeeTimes.coffee
+      // .map(meeting =>
 
-        <Meeting
-          key={meeting.id}
-          meeting={meeting}
-          fetchHost={this.props.fetchHost}
-        />
+      //   <Meeting
+      //     key={meeting.id}
+      //     meeting={meeting}
+      //     fetchHost={this.props.fetchHost}
+      //   />
 
-      )
+      // )
     }
+
+    console.log(coffeeTimes);
 
     if (this.props.stars.stars){
       stars = this.props.stars.stars.map( star => (
