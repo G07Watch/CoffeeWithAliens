@@ -41,7 +41,7 @@ class CoffeeSchedule extends React.Component{
       
       for (const star of this.props.stars.stars) {
 
-        coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting.star_system_id === star.id )
+        coffeeTimes = this.props.coffeeTimes.coffee.filter( meeting => meeting.star_system_id === star.id )
         debugger
         coffeeTimesArr = 'here'
         //  coffeeTimes.map( meeting =>(
