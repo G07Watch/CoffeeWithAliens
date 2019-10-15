@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 import Meeting from './coffee_index_item';
 
 
@@ -63,7 +63,7 @@ class CoffeeSchedule extends React.Component{
     let nextMonthSchedule=<p></p>;
     let currentMonthArr=[];
     let nextMonthArr=[];
-    // let currentStars=[];
+    let currentStars=[];
     let nextStars=[];
   
 
@@ -94,13 +94,13 @@ class CoffeeSchedule extends React.Component{
         if (monthFlag === true) {
           monthArr = currentMonthArr;
           month = currentMonth;
-          // meetStars = currentStars;
+          meetStars = currentStars;
         }
 
         else {
           monthArr = nextMonthArr;
           month = nextMonth;
-          // meetStars = nextStars;
+          meetStars = nextStars;
         }
 
 
@@ -108,7 +108,7 @@ class CoffeeSchedule extends React.Component{
             let coffeeTimes = monthArr.filter( meeting => meeting.star_system_id === star.id )
             
             if (coffeeTimes.length !=0 && hosts){
-              // meetStars.push(star)
+              meetStars.push(star)
           
             coffeeTimesArr = coffeeTimes.map( meeting => {
 
@@ -171,13 +171,18 @@ class CoffeeSchedule extends React.Component{
 
         if (monthFlag === true) {
 
+          let currentStarsLinks = currentStars.map(star =>(
+            <Link to={`/${star}`}>{star}</Link>
+            ))
+
+
           currentMonthSchedule = <div className={month}>
             <p> 📅 {month}Coffee Times</p>
 
             <div className="jump">
               Jump to your star system's coffee times
-              {/* <ul>{currentStars}</ul> */}
-          </div>
+              <ul>{currentStarsLinks}</ul>
+            </div>
 
             <div className="star">
               <ul>
@@ -189,12 +194,18 @@ class CoffeeSchedule extends React.Component{
         }
 
         else {
+          
+          let nextStarsLinks = nextStars.map(star => (
+            <Link to={`/${star}`}>{star}</Link>
+          ))
+
           nextMonthSchedule = <div className={month}>
             <p> 📅 {month}Coffee Times</p>
 
             <div className="jump">
-              Jump links
-          </div>
+              Jump to your star system's coffee times
+              <ul>{nextStarsLinks}</ul>
+           </div>
 
             <div className="star">
               <ul>
