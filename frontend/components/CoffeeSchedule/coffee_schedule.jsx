@@ -245,8 +245,10 @@ class CoffeeSchedule extends React.Component{
           </p>
 
         </div>
-        {currentMonthSchedule} 
-        {nextMonthSchedule}
+        <div className={this.state.display ? "current-month-show" : "current-month-hide" }>
+        {currentMonthSchedule}</div>
+        <div className={this.state.display ? "next-month-show" : "next-month-hide" }>
+        {nextMonthSchedule}</div>
       </div>
     )
   }

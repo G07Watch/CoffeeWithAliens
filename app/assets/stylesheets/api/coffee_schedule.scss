@@ -31,7 +31,7 @@
   padding: 12px;
 }
 
-.October {
+.current-month-show {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,26 +41,26 @@
   margin: auto;
 }
 
-// .October {
-//   display: none;
-// }
-
-
-.November {
+.current-month-hide {
   display: none;
 }
 
-// .November{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-content: space-between;
-//   width: 80%;
-//   vertical-align: top;
-// }
+
+.next-month-hide {
+  display: none;
+}
+
+.next-month-show{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  width: 80%;
+  vertical-align: top;
+}
 
 
-.October p{
+.current-month-show p{
   font-weight: 700;
   font-family: Courier;
   display: flex;
@@ -68,13 +68,13 @@
   justify-content: center;
 }
 
-// .November p{
-//   font-weight: 700;
-//   font-family: Courier;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// }
+.next-month-show p{
+  font-weight: 700;
+  font-family: Courier;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .jump{
   text-align: center;
@@ -283,7 +283,7 @@
   align-content: right;
 }
 
-.coffee-show-norm {
+// .coffee-show-norm {
   display: block;
   color: rgba(230, 137, 16, 0.856);
   font-size: 20px;
