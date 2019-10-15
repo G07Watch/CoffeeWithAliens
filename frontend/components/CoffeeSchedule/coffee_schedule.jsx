@@ -40,10 +40,11 @@ class CoffeeSchedule extends React.Component{
       }
   
     
-    let starCoffeeSchedule=[];
+    let starCoffeeScheduleOne=[];
+    let starCoffeeScheduleTwo=[];
     let coffeeTimesArr;
     let currentMonthSchedule =<p></p>;
-    let nexMonthSchedule=<p></p>;
+    let nextMonthSchedule=<p></p>;
     let currentMonthArr=[];
     let nextMonthArr=[];
 
@@ -103,9 +104,10 @@ class CoffeeSchedule extends React.Component{
           })
 
           debugger
+          if (monthFlag === true){
 
-          starCoffeeSchedule.push(
-            <li key={star.id}>
+            starCoffeeScheduleOne.push(
+              <li key={star.id}>
               <h2 >
                 {star.name}
               </h2>
@@ -115,59 +117,73 @@ class CoffeeSchedule extends React.Component{
             </li>
             )
           }
+
+
+          else{
+            starCoffeeScheduleTwo.push(
+              <li key={star.id}>
+                <h2 >
+                  {star.name}
+                </h2>
+                <ul>
+                  {coffeeTimesArr}
+                </ul>
+              </li>
+            )
+          }
+
+          }
         }
 
-        if (monthFlag === true){
+        if (monthFlag === true) {
 
           currentMonthSchedule = <div className={month}>
             <p>{month}Coffee Times</p>
 
             <div className="jump">
               Jump links
-            </div>
+          </div>
 
             <div className="star">
               <ul>
-                {starCoffeeSchedule}
+                {starCoffeeScheduleOne}
               </ul>
             </div>
 
           </div>
+
+          console.log(currentMonthSchedule)
         }
 
-        else{
+        else {
           nextMonthSchedule = <div className={month}>
             <p>{month}Coffee Times</p>
 
             <div className="jump">
               Jump links
-            </div>
+          </div>
 
             <div className="star">
               <ul>
-                {starCoffeeSchedule}
+                {starCoffeeScheduleTwo}
               </ul>
             </div>
 
           </div>
+
+          console.log(nextMonthSchedule)
         }
-
-
-        console.log(count);
+        
         monthFlag = false;
         count--;
       }
 
     }    
 
-    console.log("current month schedule:",currentMonthSchedule);
-    console.log("next month schedule:", nexMonthSchedule);
-
-
     return(
       <div>
         {currentMonthSchedule}
-        {nexMonthSchedule}
+        {nextMonthSchedule}
       </div>
     )
   }
