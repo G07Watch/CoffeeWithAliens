@@ -63,7 +63,7 @@ class CoffeeSchedule extends React.Component{
     let nextMonthSchedule=<p></p>;
     let currentMonthArr=[];
     let nextMonthArr=[];
-    let currentStars=[];
+    // let currentStars=[];
     let nextStars=[];
   
 
@@ -94,13 +94,13 @@ class CoffeeSchedule extends React.Component{
         if (monthFlag === true) {
           monthArr = currentMonthArr;
           month = currentMonth;
-          meetStars = currentStars;
+          // meetStars = currentStars;
         }
 
         else {
           monthArr = nextMonthArr;
           month = nextMonth;
-          meetStars = nextStars;
+          // meetStars = nextStars;
         }
 
 
@@ -108,7 +108,7 @@ class CoffeeSchedule extends React.Component{
             let coffeeTimes = monthArr.filter( meeting => meeting.star_system_id === star.id )
             
             if (coffeeTimes.length !=0 && hosts){
-              meetStars.push(star)
+              // meetStars.push(star)
           
             coffeeTimesArr = coffeeTimes.map( meeting => {
 
@@ -176,7 +176,7 @@ class CoffeeSchedule extends React.Component{
 
             <div className="jump">
               Jump to your star system's coffee times
-              <ul>{currentStars}</ul>
+              {/* <ul>{currentStars}</ul> */}
           </div>
 
             <div className="star">
