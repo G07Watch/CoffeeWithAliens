@@ -71,7 +71,7 @@ class Meeting extends React.Component {
         </div>
       </div>
         <div>
-          <button className={this.state.hover ? "coffee-show-hover" : "coffee-show-norm" }
+          < input type="button" className={this.state.hover ? "coffee-show-hover" : "coffee-show-norm" }
             value={this.state.hover ? "Check it out →" : "Count me in"}
             onMouseEnter={this.hover}
             onMouseLeave={this.hover}/>
