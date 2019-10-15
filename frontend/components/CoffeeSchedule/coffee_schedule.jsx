@@ -31,12 +31,12 @@ class CoffeeSchedule extends React.Component{
 
 
   render(){
-    let currentMonth;
+    let currentMonth="";
     if (this.props.currentMonth){
       currentMonth = this.props.currentMonth;
     }
 
-    let nextMonth;
+    let nextMonth="";
     if (this.props.nextMonth){
       nextMonth = this.props.nextMonth;
     }
@@ -223,7 +223,11 @@ class CoffeeSchedule extends React.Component{
     }    
 
     return(
-      <div className="toggleDisplay" onClick={this.update}>
+      <div className="toggleDisplay">
+        <input className="display-button" 
+          type="button"
+          value={this.state.display? `${nextMonth}'s Schedule`: `${currentMonth}'s Schedule`}
+          onClick={this.update}/>
         <div className="coffee-intro">
           <h1>
             Coffee With Aliens is coffee, with aliens 
@@ -239,7 +243,7 @@ class CoffeeSchedule extends React.Component{
             sequence is available.  Also, feel free to apply to be a Host!
           </p>
 
-        </div>
+      </div>
         <div className={this.state.display ? "current-month-show" : "current-month-hide" }>
         {currentMonthSchedule}</div>
         <div className={this.state.display ? "next-month-hide" : "next-month-show" }>
