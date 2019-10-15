@@ -180,8 +180,6 @@ class CoffeeSchedule extends React.Component{
             </div>
 
           </div>
-
-          console.log(currentMonthSchedule)
         }
 
         else {

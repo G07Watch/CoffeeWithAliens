@@ -14,16 +14,19 @@ class Meeting extends React.Component {
     let timeEnd = (this.props.meeting.start_time + 2)
     let timespan = `${timeStart}-${timeEnd}`
   
-    let notch = <span className="notch"></span>
+    let notch = <span className="notch">" "</span>
 
     let progressBar =[];
     
     let seatCount = this.props.available_seats;
 
-    while (seatCount>0) {
+    while (seatCount > 0) {
       progressBar.push(notch)
       seatCount--;
     }
+    
+    console.log(notch);
+    console.log(progressBar);
 
 
 
@@ -49,8 +52,8 @@ class Meeting extends React.Component {
         <div className="availability">
           <div className="seats"> {this.props.meeting.available_seats} seats left! </div> 
           <div className="seat-meter">
+            <span className="meter">" "</span>
             <ul>
-            <span className="meter"></span>
             {progressBar}
             </ul>
           </div>
