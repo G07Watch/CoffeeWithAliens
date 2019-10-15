@@ -63,7 +63,7 @@ class CoffeeSchedule extends React.Component{
         else nextMonthArr.push(meetUp);
       };
 
-      debugger
+      
 
       let count = 2;
       let monthFlag = true;
@@ -103,7 +103,7 @@ class CoffeeSchedule extends React.Component{
             />)
           })
 
-          debugger
+          
           if (monthFlag === true){
 
             starCoffeeScheduleOne.push(
