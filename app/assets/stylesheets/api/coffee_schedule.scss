@@ -47,11 +47,23 @@
   box-sizing: inherit;
 }
 
-.meeting {
-  display: block;
-  flex-direction: unset;
-}
 
 .November {
   display: none;
+}
+
+// Meeting Styling
+
+.meeting {
+  display: flex;
+  flex-direction: row-reverse;
+  // flex-direction: unset;
+}
+
+.host-container {
+  font-family: Courier;
+  color: rgba(209, 57, 2, 0.918);
+  font-weight: 700;
+  font-size: 16px;
+
 }
