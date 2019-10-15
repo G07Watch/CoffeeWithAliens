@@ -35,6 +35,7 @@ class Meeting extends React.Component {
 
     // debugger
     return (
+    <div>
      <div className="meeting">
        <div className="tile-top">
 
@@ -60,8 +61,13 @@ class Meeting extends React.Component {
             </ul>
           </div>
         </div>
-
-     </div>
+      </div>
+        <div>
+          <button className="coffee-show-button" >
+            Count Me In 
+          </button>
+        </div>
+    </div>
     )
   }
 
