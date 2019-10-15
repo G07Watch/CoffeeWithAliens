@@ -45,6 +45,9 @@
   padding: 40px;
 }
 
+.star .schedule-tile{
+  margin: 20px;
+}
 .star li h2{
   box-sizing: inherit;
 }
@@ -56,11 +59,15 @@
 
 // Meeting Styling
 
+.schedule-tile{
+
+}
+
 .meeting {
   display: flex;
   flex-direction: row-reverse;
   border: 1px solid gray; 
-      
+
   // flex-direction: unset;
 }
 
