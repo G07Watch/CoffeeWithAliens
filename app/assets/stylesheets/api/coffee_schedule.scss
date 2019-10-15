@@ -32,6 +32,8 @@
   font-family: Courier;
   color: rgba(209, 57, 2, 0.918);
   font-size: 28px;
+  padding: 80px;
+  border: 1px solid  rgba(209, 57, 2, 0.918);
 }
 
 .star li{
@@ -57,6 +59,7 @@
 .meeting {
   display: flex;
   flex-direction: row-reverse;
+  border 
   // flex-direction: unset;
 }
 
