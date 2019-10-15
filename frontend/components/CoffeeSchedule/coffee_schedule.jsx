@@ -30,8 +30,8 @@ class CoffeeSchedule extends React.Component{
     this.setState({display: !this.state.display});
   }
 
-  createLink(name){
-   return(<Link to={`/${name}`}>{name}</Link>)
+  createLink(name, key){
+   return(<Link key={key} to={`/${name}`}>{name}</Link>)
   }
 
 
@@ -134,7 +134,7 @@ class CoffeeSchedule extends React.Component{
             starCoffeeScheduleOne.push(
               <li key={star.id}>
                 <div className="schedule-tile">
-                  <h2 >
+                  <h2 name={star.name}>
                     {star.name}
                     <br/>
                     👉
@@ -154,7 +154,7 @@ class CoffeeSchedule extends React.Component{
             starCoffeeScheduleTwo.push(
               <li key={star.id}>
                 <div className="schedule-tile">
-                  <h2 >
+                  <h2 name={star.name} >
                     {star.name}
                     <br />
                       👉
@@ -176,7 +176,7 @@ class CoffeeSchedule extends React.Component{
         if (monthFlag === true) {
 
           let currentStarsLinks = currentStars.map(star =>(
-            this.createLink(star.name)
+            this.createLink(star.name, star.id)
             ))
 
 
@@ -200,7 +200,7 @@ class CoffeeSchedule extends React.Component{
         else {
           
           let nextStarsLinks = nextStars.map(star => (
-            this.createLink(star.name)
+            this.createLink(star.name, star.id)
           ))
 
           nextMonthSchedule = <div className={month}>

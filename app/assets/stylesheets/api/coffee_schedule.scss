@@ -82,6 +82,18 @@
   font-family: Courier;
   text-transform: uppercase;
   font-weight: bold;
+  text-decoration: none;
+}
+.jump ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.jump a{
+  border: 1px solid rgba(230, 137, 16, 0.856);
+  border-radius: 3px;
+  background-color: white;
 }
 
 .star ul{ 
