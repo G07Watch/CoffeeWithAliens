@@ -7,6 +7,10 @@ class CoffeeSchedule extends React.Component{
 
   constructor(props){
     super(props)
+    this.state={
+      display: true
+    };
+    
   }
 
   componentDidMount(){
@@ -14,6 +18,18 @@ class CoffeeSchedule extends React.Component{
     this.props.fetchStarSystems();
     this.props.fetchHosts();
   }
+
+
+  update(e){
+    let firstTab = document.getElementsByClassName(this.props.currentMonth)
+    let secondTab = document.getElementsByClassName(this.props.nextMonth)
+
+    firstTab.style.display = this.state.display ? 'block' : 'none';
+    secondTab.style.display = !this.state.display ? 'block' : 'none';
+
+    this.setState({display: !this.state.display});
+  }
+
 
   render(){
     let currentMonth;
@@ -181,8 +197,9 @@ class CoffeeSchedule extends React.Component{
     }    
 
     return(
-      <div>
-        {currentMonthSchedule}
+      <div className="toggleDisplay" onClick={this.updateDisplay}>
+        <p> Month Toggle </p> 
+        {currentMonthSchedule} 
         {nextMonthSchedule}
       </div>
     )

@@ -1,0 +1,57 @@
+.toggleDisplay {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.October {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+  width: 50%;
+  vertical-align: top;
+}
+
+.October p{
+  font-weight: 700;
+  font-family: Courier;
+  
+}
+
+.star ul{ 
+  display: flex;
+  box-sizing: inherit;
+  margin: auto;
+  display: block;
+}
+
+.star h2{
+  font-weight: 700;
+  font-family: Courier;
+  color: rgba(209, 57, 2, 0.918);
+  font-size: 28px;
+}
+
+.star li{
+  display: flex;
+  flex-direction: row;
+  box-sizing: inherit;
+  position: relative;
+  margin: 20px;
+  padding: 40px;
+}
+
+.star li h2{
+  box-sizing: inherit;
+}
+
+.meeting {
+  display: block;
+  flex-direction: unset;
+}
+
+.November {
+  display: none;
+}
