@@ -48,9 +48,11 @@ class Meeting extends React.Component {
         <br/>
         <div className="availability">
           <div className="seats"> {this.props.meeting.available_seats} seats left! </div> 
-          <div>
+          <div className="seat-meter">
+            <ul>
             <span className="meter"></span>
             {progressBar}
+            </ul>
           </div>
         </div>
 
