@@ -14,7 +14,10 @@ class Meeting extends React.Component {
     // debugger
     return (
      <div className="meeting">
+       <div className="tile-top">
+
         <div className="host-container">{this.props.hostName}</div>
+
         <div className="date-time" >
           <p className="day">{this.props.meeting.day}</p>
           <br/>
@@ -22,6 +25,8 @@ class Meeting extends React.Component {
           <br/>
           <p className="timespan"> {timespan}</p> 
         </div>
+        
+       </div>
         <br/>
         <div className="place">
           {this.props.meeting.place}
