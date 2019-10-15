@@ -126,6 +126,8 @@ class CoffeeSchedule extends React.Component{
               <li key={star.id}>
               <h2 >
                 {star.name}
+                <br/>
+                👉
               </h2>
               <ul>
                 {coffeeTimesArr}
