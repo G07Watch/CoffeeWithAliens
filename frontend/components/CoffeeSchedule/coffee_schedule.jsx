@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Meeting from './coffee_index_item';
 
 
@@ -10,7 +10,7 @@ class CoffeeSchedule extends React.Component{
     this.state={
       display: true
     };
-    
+    this.createLink = this.createLink.bind(this);
   }
 
   componentDidMount(){
@@ -28,6 +28,10 @@ class CoffeeSchedule extends React.Component{
     secondTab.style.display = !this.state.display ? 'block' : 'none';
 
     this.setState({display: !this.state.display});
+  }
+
+  createLink(name){
+   return(<Link to={`/${name}`}>{name}</Link>)
   }
 
 
@@ -172,7 +176,8 @@ class CoffeeSchedule extends React.Component{
         if (monthFlag === true) {
 
           let currentStarsLinks = currentStars.map(star =>(
-            <Link to={`/${star}`}>{star}</Link>
+            this.createLink(star)
+            // <Link to={`/${star}`}>{star}</Link>
             ))
 
 
@@ -196,7 +201,8 @@ class CoffeeSchedule extends React.Component{
         else {
           
           let nextStarsLinks = nextStars.map(star => (
-            <Link to={`/${star}`}>{star}</Link>
+            this.createLink(star)
+            // <Link to={`/${star}`}>{star}</Link>
           ))
 
           nextMonthSchedule = <div className={month}>
