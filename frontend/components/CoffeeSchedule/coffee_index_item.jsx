@@ -5,7 +5,15 @@ class Meeting extends React.Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      hover: false
+    }
 
+    this.hover = this.hover.bind(this);
+  }
+
+  hover(){
+    this.setState({hover: !this.state.hover})
   }
 
   
@@ -63,9 +71,8 @@ class Meeting extends React.Component {
         </div>
       </div>
         <div>
-          <button className="coffee-show-button" >
-            Count Me In 
-          </button>
+          <button className={this.state.hover ? "coffee-show-hover" : "coffee-show-norm" }
+            value={this.state.hover ? "Check it out →" : "Count me in"}/>
         </div>
     </div>
     )
