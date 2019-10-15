@@ -16,11 +16,11 @@ class Meeting extends React.Component {
      <div className="meeting">
         <div className="host-container">{this.props.hostName}</div>
         <div className="date-time" >
-          {this.props.meeting.day}
+          <p className="day">{this.props.meeting.day}</p>
           <br/>
-          {this.props.meeting.meet_date}
+          <p className="meet-date">{this.props.meeting.meet_date}</p>
           <br/>
-          {timespan}
+          <p className="timespan"> {timespan}</p> 
         </div>
         <br/>
         <div className="place">
