@@ -10,7 +10,13 @@ class Meeting extends React.Component {
 
   
   render(){
-    let timespan = this.props.meeting.start_time
+    let timeStart = this.props.meeting.start_time
+
+     let timeEnd = this.props.meeting.start_time + 2
+
+     let timespan = `${timeStart}-${timeEnd}`
+
+
     // debugger
     return (
      <div className="meeting">
@@ -20,12 +26,10 @@ class Meeting extends React.Component {
 
         <div className="date-time" >
           <p className="day">{this.props.meeting.day}</p>
-          <br/>
           <p className="meet-date">{this.props.meeting.meet_date}</p>
-          <br/>
           <p className="timespan"> {timespan}</p> 
         </div>
-        
+
        </div>
         <br/>
         <div className="place">
