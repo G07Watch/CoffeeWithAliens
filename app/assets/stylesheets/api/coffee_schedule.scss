@@ -28,6 +28,10 @@
 
 .jump{
   text-align: center;
+  color:  rgba(230, 137, 16, 0.856);
+  font-family: Courier;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .star ul{ 
@@ -91,5 +95,28 @@
   color: gray;
   font-family: Courier;
   font-weight: bold;
+  text-transform: uppercase;
+}
+
+.meet-date {
+  font-size: 24px;
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timespan {
+  font-size: 16px;
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.availability {
+  font-size: 20px;
+  color: gray;
+  font-family: Courier;
   text-transform: uppercase;
 }

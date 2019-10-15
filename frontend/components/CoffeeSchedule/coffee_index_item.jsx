@@ -28,7 +28,7 @@ class Meeting extends React.Component {
         </div>
         <br/>
         <div className="availability">
-          Seats Left: {this.props.meeting.available_seats}
+          {this.props.meeting.available_seats} seats left!
         </div>
 
      </div>
