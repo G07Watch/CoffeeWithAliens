@@ -170,7 +170,7 @@ class CoffeeSchedule extends React.Component{
             <p>{month}Coffee Times</p>
 
             <div className="jump">
-              Jump links
+              Jump to your star system's coffee times
           </div>
 
             <div className="star">

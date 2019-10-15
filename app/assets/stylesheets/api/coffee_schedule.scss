@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: center;
+  margin-left: 15%;
+  margin-right:15%;
 }
 
 .October {
@@ -17,7 +20,14 @@
 .October p{
   font-weight: 700;
   font-family: Courier;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
+}
+
+.jump{
+  text-align: center;
 }
 
 .star ul{ 
@@ -32,8 +42,9 @@
   font-family: Courier;
   color: rgba(209, 57, 2, 0.918);
   font-size: 28px;
-  padding: 80px;
-  border: 1px solid  rgba(209, 57, 2, 0.918);
+  padding: 60px;
+  border: 2px solid  rgba(209, 57, 2, 0.918);
+  width: 23%;
 }
 
 .star li{
@@ -47,9 +58,10 @@
 
 .star .schedule-tile{
   margin: 20px;
+  // width: 20%;
 }
 .star li h2{
-  box-sizing: inherit;
+  // box-sizing: inherit;
 }
 
 
@@ -58,10 +70,6 @@
 }
 
 // Meeting Styling
-
-.schedule-tile{
-
-}
 
 .meeting {
   display: flex;
