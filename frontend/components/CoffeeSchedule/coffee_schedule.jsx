@@ -198,7 +198,6 @@ class CoffeeSchedule extends React.Component{
 
           </div>
 
-          console.log(nextMonthSchedule)
         }
         
         monthFlag = false;
