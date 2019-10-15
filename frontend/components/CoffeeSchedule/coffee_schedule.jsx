@@ -167,7 +167,7 @@ class CoffeeSchedule extends React.Component{
         if (monthFlag === true) {
 
           currentMonthSchedule = <div className={month}>
-            <p>{month}Coffee Times</p>
+            <p> 📅 {month}Coffee Times</p>
 
             <div className="jump">
               Jump to your star system's coffee times
@@ -184,7 +184,7 @@ class CoffeeSchedule extends React.Component{
 
         else {
           nextMonthSchedule = <div className={month}>
-            <p>{month}Coffee Times</p>
+            <p> 📅 {month}Coffee Times</p>
 
             <div className="jump">
               Jump links
@@ -208,7 +208,22 @@ class CoffeeSchedule extends React.Component{
 
     return(
       <div className="toggleDisplay" onClick={this.updateDisplay}>
-        <p> Month Toggle </p> 
+        <div className="coffe-intro">
+          <h1>
+            Coffee With Aliens is coffee, with aliens 
+          </h1>
+
+          <p>
+            For .083 of an Earth cycle, five aliens and their host(no
+            not that kind) sit to converse.  Perhaps a tad strange, 
+            but we're fostering galactic goodwill.
+
+            If you are already preoccupied during all of the given times,
+            sign up and we'll email you when the next month in the annual
+            sequence is available.  Also, feel free to apply to be a Host!
+          </p>
+
+        </div>
         {currentMonthSchedule} 
         {nextMonthSchedule}
       </div>

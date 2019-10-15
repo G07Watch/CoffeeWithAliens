@@ -8,8 +8,46 @@
   margin-right:15%;
 }
 
-.October {
+.coffee-intro {
   display: flex;
+  flex-direction: column;
+}
+
+.coffee-intro h1 {
+  margin: 0px 0px 16px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgba(209, 57, 2, 0.918);
+}
+
+.coffee-intro p {
+  margin: 0px 0px 16px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  padding: 12px;
+}
+
+// .October {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-content: space-between;
+//   width: 80%;
+//   vertical-align: top;
+// }
+
+.October {
+  display: none;
+}
+
+
+// .November {
+//   display: none;
+// }
+
+.November{
+   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: space-between;
@@ -17,13 +55,21 @@
   vertical-align: top;
 }
 
-.October p{
+
+// .October p{
+//   font-weight: 700;
+//   font-family: Courier;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+.November p{
   font-weight: 700;
   font-family: Courier;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .jump{
@@ -71,10 +117,6 @@
   align-content: center;
 }
 
-
-.November {
-  display: none;
-}
 
 // Meeting Styling
 
