@@ -149,6 +149,7 @@
 }
 
 .availability {
+  margin: 10px;
   display: flex;
   flex-direction: column;
   font-size: 20px;
@@ -157,6 +158,7 @@
   text-transform: uppercase;
   text-align: center;
   align-content: center;
+  overflow: hidden;
 }
 
 .seats{
@@ -167,16 +169,40 @@
   text-align: center;  
 }
 
-.seat-meter ul {
+
+.seat-meter{
   align-content: center;
+  
+}
+
+.seat-meter ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  overflow: hidden;
 }
 
 .meter {
+  color: transparent;
   display: flex;
   flex-grow: inherit;
-  border: 1px gray;
   border-radius: 2px;
-  background-color: gray;
-  height: 100%;
-  width: 83.3%;
+  // border-right: 2px solid white;
+  background-color:gray;
+  height: 12px;
+  width: 15%;
+  align-content: right;
+}
+
+.notch {
+  color: transparent;
+  display: flex;
+  flex-grow: inherit;
+  border-radius: 2px;
+  // border-right: 2px solid white;
+  background-color: rgba(230, 137, 16, 0.856);
+  height: 12px;
+  width: 15%;
+  align-content: right;
 }
