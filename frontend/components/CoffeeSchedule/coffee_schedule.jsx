@@ -176,8 +176,7 @@ class CoffeeSchedule extends React.Component{
         if (monthFlag === true) {
 
           let currentStarsLinks = currentStars.map(star =>(
-            this.createLink(star)
-            // <Link to={`/${star}`}>{star}</Link>
+            this.createLink(star.name)
             ))
 
 
@@ -201,8 +200,7 @@ class CoffeeSchedule extends React.Component{
         else {
           
           let nextStarsLinks = nextStars.map(star => (
-            this.createLink(star)
-            // <Link to={`/${star}`}>{star}</Link>
+            this.createLink(star.name)
           ))
 
           nextMonthSchedule = <div className={month}>
