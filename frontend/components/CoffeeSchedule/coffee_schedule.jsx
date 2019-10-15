@@ -124,14 +124,18 @@ class CoffeeSchedule extends React.Component{
 
             starCoffeeScheduleOne.push(
               <li key={star.id}>
-              <h2 >
-                {star.name}
-                <br/>
-                👉
-              </h2>
-              <ul>
-                {coffeeTimesArr}
-              </ul>
+                <div className="schedule-tile">
+                  <h2 >
+                    {star.name}
+                    <br/>
+                    👉
+                  </h2>
+                </div>
+                <div className="schedule-tile">
+                  <ul>
+                    {coffeeTimesArr}
+                  </ul>
+                </div>
             </li>
             )
           }
@@ -140,12 +144,19 @@ class CoffeeSchedule extends React.Component{
           else{
             starCoffeeScheduleTwo.push(
               <li key={star.id}>
-                <h2 >
-                  {star.name}
-                </h2>
-                <ul>
-                  {coffeeTimesArr}
-                </ul>
+                <div className="schedule-tile">
+                  <h2 >
+                    {star.name}
+                    <br />
+                      👉
+                  </h2>
+                </div>
+
+                <div className="schedule-tile">
+                  <ul>
+                    {coffeeTimesArr}
+                  </ul>
+                </div>
               </li>
             )
           }
