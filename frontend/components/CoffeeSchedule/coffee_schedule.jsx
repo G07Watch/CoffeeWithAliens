@@ -11,6 +11,7 @@ class CoffeeSchedule extends React.Component{
       display: true
     };
     this.createLink = this.createLink.bind(this);
+    this.update = this.update.bind(this);
   }
 
   componentDidMount(){
@@ -20,13 +21,7 @@ class CoffeeSchedule extends React.Component{
   }
 
 
-  update(e){
-    let firstTab = document.getElementsByClassName(this.props.currentMonth)
-    let secondTab = document.getElementsByClassName(this.props.nextMonth)
-
-    firstTab.style.display = this.state.display ? 'block' : 'none';
-    secondTab.style.display = !this.state.display ? 'block' : 'none';
-
+  update(){
     this.setState({display: !this.state.display});
   }
 
@@ -228,7 +223,7 @@ class CoffeeSchedule extends React.Component{
     }    
 
     return(
-      <div className="toggleDisplay" onClick={this.updateDisplay}>
+      <div className="toggleDisplay" onClick={this.update}>
         <div className="coffee-intro">
           <h1>
             Coffee With Aliens is coffee, with aliens 
@@ -247,7 +242,7 @@ class CoffeeSchedule extends React.Component{
         </div>
         <div className={this.state.display ? "current-month-show" : "current-month-hide" }>
         {currentMonthSchedule}</div>
-        <div className={this.state.display ? "next-month-show" : "next-month-hide" }>
+        <div className={this.state.display ? "next-month-hide" : "next-month-show" }>
         {nextMonthSchedule}</div>
       </div>
     )
