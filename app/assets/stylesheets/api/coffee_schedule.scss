@@ -1,20 +1,23 @@
 .toggleDisplay {
-  // margin: auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   justify-content: center;
-  margin-left: 15%;
-  margin-right:15%;
+  // margin-left: 15%;
+  // margin-right:15%;
 }
 
 .coffee-intro {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  width: fit-content;
 }
 
 .coffee-intro h1 {
-  margin: 0px 0px 16px 0px;
+  margin: auto;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5em;
   font-weight: 700;
@@ -22,55 +25,56 @@
 }
 
 .coffee-intro p {
-  margin: 0px 0px 16px 0px;
+  margin: auto;
   font-family: 'Courier New', Courier, monospace;
-  width: auto;
+  width: 80%;
   padding: 12px;
 }
 
-// .October {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-content: space-between;
-//   width: 80%;
-//   vertical-align: top;
-// }
-
 .October {
-  display: none;
-}
-
-
-// .November {
-//   display: none;
-// }
-
-.November{
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: space-between;
   width: 80%;
   vertical-align: top;
+  margin: auto;
 }
 
+// .October {
+//   display: none;
+// }
 
-// .October p{
-//   font-weight: 700;
-//   font-family: Courier;
+
+.November {
+  display: none;
+}
+
+// .November{
 //   display: flex;
 //   flex-direction: column;
 //   justify-content: center;
+//   align-content: space-between;
+//   width: 80%;
+//   vertical-align: top;
 // }
 
-.November p{
+
+.October p{
   font-weight: 700;
   font-family: Courier;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+// .November p{
+//   font-weight: 700;
+//   font-family: Courier;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
 
 .jump{
   text-align: center;
@@ -102,7 +106,7 @@
   flex-direction: column;
   margin: 5px;
   width: 23%;
-  justify-content: space-between;
+  // justify-content: space-between;
   // box-sizing: inherit; // last
 }
 
