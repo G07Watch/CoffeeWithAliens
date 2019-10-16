@@ -5,4 +5,10 @@ export const fetchCoffeeTimes = ()=>(
   })
 )
 
-window.fetchCoffeeTimes = fetchCoffeeTimes; 
+export const fetchCoffeeTime = id =>(
+  $.ajax({
+    method: 'GET',
+    url: `api/coffee_times/${id}`
+  })
+)
+
