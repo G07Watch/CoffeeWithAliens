@@ -1,4 +1,4 @@
-import { RECEIVE_COFFEE_TIMES } from "../../actions/coffee_actions";
+import { RECEIVE_COFFEE_TIMES, RECEIVE_COFFEE_ERRORS, RECEIVE_COFFEE } from "../../actions/coffee_actions";
 import merge from 'lodash/merge';
 
 
@@ -8,7 +8,11 @@ const coffeeTimesReducer  = (state ={}, action) =>{
 
   switch(action.type){
     case RECEIVE_COFFEE_TIMES:
-      newState = merge({}, state,  { coffee: action.coffeeTimes} );  // {}, state, 
+      newState = merge( {}, state,  { coffee: action.coffeeTimes} );  // {}, state, 
+      return newState;
+
+    case RECEIVE_COFFEE:
+      newState = merge( {}, state, {coffee_show: action.coffeeTime} );
       return newState;
 
     default:
