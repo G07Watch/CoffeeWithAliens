@@ -5,11 +5,11 @@ import CoffeeShow from './coffee_show';
 
 const mapStateToProps = (state,ownProps) => {
 
-  let coffeeShowId = ownProps.match.params.id 
+  // let coffeeShowId = ownProps.match.params.id 
   let coffeeShow = state.entities && state.entities.coffeeTimes && state.entities.coffeeTimes.coffeeShow
 
   return({
-    coffeeShowId: coffeeShowId,
+    // coffeeShowId: coffeeShowId,
     coffeeShow: coffeeShow,
     hosts: state.entities.hosts
   })
