@@ -62,7 +62,7 @@ class CoffeeShow extends React.Component{
     //PAGE RENDERING FUNCTIONS 
 
     showSeats(){
-      return() =>{
+      const seats = () =>{
         let seatDisplay;
         let meter = <span className="meter">" "</span>
         let notch = <span className="notch">" "</span>
@@ -83,19 +83,27 @@ class CoffeeShow extends React.Component{
           extraSeats--;
         }
 
+        
         seatDisplay= <div className="seatDisplay">
-          <p>{this.state.available_seats} seats left!</p>
-          <ul>
-            {progressBar}
-          </ul>
+          <p className="seats">{this.state.available_seats} seats left!</p>
+          <div className="seat-meter">
+            <ul>
+              {progressBar}
+            </ul>
+          </div>
         </div>
-
+       
+       return seatDisplay;
       }
+
+      return seats();
     }
 
 
 
   render(){
+
+    let sidebar = <p></p>;
 
     this.saveCoffeeTime();
     this.getHosts();
@@ -111,13 +119,12 @@ class CoffeeShow extends React.Component{
           // console.log('HAVE ALL ATTRIBUTES!')
 
 
-      let sidebar;
       let hostProfile;
 
       sidebar = <div>
 
-
-
+        <p>{document.location.href}</p>
+        {this.showSeats()}
 
       </div>
 
@@ -129,7 +136,7 @@ class CoffeeShow extends React.Component{
     return(
       <div>
         COFFEE SHOW RENDERED
-        {/* {sidebar} */}
+        {sidebar}
         {/* {hostProfile} */}
       </div>
     )
