@@ -54,7 +54,7 @@
   position: absolute;
   top: 28px;
   right: 35px;
-  align-content: space-between;
+  align-content: space-evenly;
   background-color: transparent;
   font-family: 'Courier New', Courier, monospace;
   font-size: 19px;
@@ -69,7 +69,7 @@
   position: absolute;
   top: 28px;
   right: 35px;
-  align-content: space-between;
+  align-content: space-evenly;
   background-color: transparent;
   font-family: 'Courier New', Courier, monospace;
   font-size: 19px;
@@ -125,7 +125,7 @@
  left: 275px;
 }
 
-.Logout-link-norm {
+.signout-link-norm {
   right: 35px;
   color: beige;
   padding: 0.2em 4px;
@@ -140,7 +140,7 @@
   margin: 2px;
 }
 
-.Logout-link-hover {
+.signout-link-hover {
   cursor: pointer;
   right: 35px;
   color: beige;
