@@ -12,6 +12,11 @@ class Api::CoffeeTimesController < ApplicationController
   end
 
   def show
+    @coffee_time = CoffeeTime.find_by(id: params[:id])
+
+    if @coffee_time
+      
+
   end
 
   def create
@@ -21,6 +26,12 @@ class Api::CoffeeTimesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def coffee_time_params
+    params.require(:coffee_times).permit()
   end
 
 end

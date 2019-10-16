@@ -1,0 +1,1 @@
+json.partial! 'api/coffee_times/coffee_time', coffee_time: @coffee_time
