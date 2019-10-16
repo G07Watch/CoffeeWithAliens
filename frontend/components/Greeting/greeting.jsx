@@ -37,6 +37,8 @@ class Greeting extends React.Component {
     if (currentUser != null) {
       greeting = (
       <div className="greeting-user" key="greeting">
+        <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link>
+        <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
         <button className="Logout" onClick={this.logout}
         className={ this.state.hover ? "Logout-link-hover" : "Logout-link-norm" } 
         onMouseEnter={this.hoverOn}
@@ -45,14 +47,14 @@ class Greeting extends React.Component {
         >SIGN OUT</button>
 
 
-        <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
+        
       </div>);
 
       welcome = <p className="welcome">Welcome {currentUser.nickname}</p>;
     } else {
       greeting = (
       <div className="greeting" key="greeting">
-        {/* <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link> */}
+        <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link>
         <Link to="/login/demo" className="demo-link">DEMO</Link>
         <Link to="/login" className="signin-link">SIGN IN</Link>
         <Link to="/signup" className={ this.state.hover ? "signup-link-hover" : "signup-link-norm" } 
@@ -67,7 +69,7 @@ class Greeting extends React.Component {
     }
 
     return(
-      <div>
+      <div className="nav-bar">
         {greeting}
         {welcome}
       </div>
