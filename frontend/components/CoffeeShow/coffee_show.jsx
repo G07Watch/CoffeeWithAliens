@@ -175,15 +175,15 @@ class CoffeeShow extends React.Component{
       if(this.checkNotEmpty(this.props.currentUser)){
         ifUser=<div className='User'>
           <h2>NAME</h2>
-          <input type="text" readOnly placeholder={this.currentUser.nickname}/> 
+          <input type="text" readOnly placeholder={this.props.currentUser.nickname}/> 
 
           <h2>EMAIL</h2>
-          <input type="text" readOnly placeholder={this.currentUser.email}/> 
+          <input type="text" readOnly placeholder={this.props.currentUser.email}/> 
 
           <h2>MOBILE NUMBER</h2>
           <p>Optional, but helps {this.host.name} contact you
           on your meeting day</p>
-          <input type="text" readOnly placeholder={this.currentUser.phone_number}/> 
+          <input type="text" readOnly placeholder={this.props.currentUser.phone_number}/> 
 
         </div>
       }
