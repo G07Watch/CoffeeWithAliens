@@ -44,14 +44,15 @@
 .nav-bar {
   display: flex;
   flex-direction: row;
-  align-content: flex-end;
-  justify-content: space-evenly;
+  // align-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .greeting {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  // position: absolute;
   top: 28px;
   right: 35px;
   align-content: space-evenly;
@@ -66,7 +67,7 @@
 .greeting-user {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  // position: absolute;
   top: 28px;
   right: 35px;
   align-content: stretch;

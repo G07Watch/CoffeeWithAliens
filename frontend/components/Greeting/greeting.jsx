@@ -73,8 +73,8 @@ class Greeting extends React.Component {
     return(
       <div className="nav-bar">
         <Link className="Home-link" to="/">Coffee With Aliens</Link>
-        {greeting}
         {welcome}
+        {greeting}
       </div>
     )
   }

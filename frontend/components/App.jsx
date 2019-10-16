@@ -12,7 +12,7 @@ import HostFormContainer from "./HostForm/host_form_container";
 const App = () => (
 <div className="App">
   <h1 className="primary">
-    <Link className="Home-link" to="/">Coffee With Aliens</Link>
+    {/* <Link className="Home-link" to="/">Coffee With Aliens</Link> */}
     {/* <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link> */}
     <GreetingContainer/>
   </h1>
