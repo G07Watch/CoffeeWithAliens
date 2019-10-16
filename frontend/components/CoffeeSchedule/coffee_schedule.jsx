@@ -176,11 +176,14 @@ class CoffeeSchedule extends React.Component{
 
 
           currentMonthSchedule = <div className={month}>
-            <p> 📅 {month}Coffee Times</p>
-            <input className="display-button"
-              type="button"
-              value={this.state.display ? `${nextMonth}'s Schedule` : `${currentMonth}'s Schedule`}
-              onClick={this.update} />
+            <div className="month-header" >
+              <p key="c-f1"> 📅 {month}Coffee Times</p>
+              <input className="display-button"
+                key="ds1"
+                type="button"
+                value={this.state.display ? `${nextMonth}'s Schedule` : `${currentMonth}'s Schedule`}
+                onClick={this.update} />
+            </div>
             <div className="jump">
               Jump to your star system's coffee times
               <ul>{currentStarsLinks}</ul>
@@ -202,11 +205,14 @@ class CoffeeSchedule extends React.Component{
           ))
 
           nextMonthSchedule = <div className={month}>
-            <p> 📅 {month}Coffee Times</p>
-            <input className="display-button"
-              type="button"
-              value={this.state.display ? `${nextMonth}'s Schedule` : `${currentMonth}'s Schedule`}
-              onClick={this.update} />
+            <div className="month-header" >
+              <p key="c-f2"> 📅 {month}Coffee Times</p>
+              <input className="display-button"
+                key="ds2"
+                type="button"
+                value={this.state.display ? `${nextMonth}'s Schedule` : `${currentMonth}'s Schedule`}
+                onClick={this.update} />
+            </div>
             <div className="jump">
               Jump to your star system's coffee times
               <ul>{nextStarsLinks}</ul>
