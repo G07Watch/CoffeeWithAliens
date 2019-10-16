@@ -1,20 +1,22 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CoffeeShow extends React.Component{
 
     constructor(props){
       super(props);
 
-      this.state={};
+      this.state = {};
+      this.host = {};
+
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
     }
 
     componentDidMount(){
       let coffeeShowId = this.props.match.params.id // this.props.coffeeShowId 
       this.props.fetchCoffeeTime(coffeeShowId);
+      // this.props.fetchHosts();
     }
-
 
     saveCoffeeTime(){
       // sets state to incoming coffee_time attributes
@@ -25,11 +27,11 @@ class CoffeeShow extends React.Component{
       return savedCT();
     }
     
-
     checkNotEmpty(object){
       return(
-        !(Object.entries(object).length === 0 &&
-          object.constructor === Object)
+        // !(Object.entries(object).length === 0 &&
+        //   object.constructor === Object)
+       !jQuery.isEmptyObject(object)
       ) 
     }
 
@@ -57,53 +59,78 @@ class CoffeeShow extends React.Component{
       return ourHost();
     }
 
+    //PAGE RENDERING FUNCTIONS 
+
+    showSeats(){
+      return() =>{
+        let seatDisplay;
+        let meter = <span className="meter">" "</span>
+        let notch = <span className="notch">" "</span>
+
+        const progressBar = [];
+
+        let seatCount = this.state.available_seats;
+        let extraSeats = 6 - this.state.available_seats;
+
+
+        while (seatCount > 0) {
+          progressBar.push(notch)
+          seatCount--;
+        }
+
+        while (extraSeats) {
+          progressBar.push(meter)
+          extraSeats--;
+        }
+
+        seatDisplay= <div className="seatDisplay">
+          <p>{this.state.available_seats} seats left!</p>
+          <ul>
+            {progressBar}
+          </ul>
+        </div>
+
+      }
+    }
+
+
+
   render(){
 
     this.saveCoffeeTime();
     this.getHosts();
-    
+
+    // setsHost for page
     if(this.checkNotEmpty(this.props.hosts)){
       this.setHost();
-      console.log(this.host);
     }
 
+    //After getting CoffeeShow data and Host data do the following:
 
-  
+    if (this.checkNotEmpty(this.state)  && this.checkNotEmpty(this.host)){
+          // console.log('HAVE ALL ATTRIBUTES!')
 
-    // checks to see if there are hosts in the props and gets the host if not
-    // if (this.state.host_id && 
-    //   (Object.entries(this.props.hosts).length === 0)) {
-    //   this.props.fetchHost(this.state.host_id);
-    // }
 
-    //checks to see if there are hosts in the props and if there 
+      let sidebar;
+      let hostProfile;
 
-    // if (this.state.host_id && (!(Object.entries(this.props.hosts).length === 0 &&
-    //   this.props.hosts.constructor === Object))){
-    //   this.host = this.hosts[this.state.host_id]
-    // }
-    
+      sidebar = <div>
 
-    let date;
-    if (this.state && this.state.meet_date){
 
-      date = 'HERE'
+
+
+      </div>
+
+
+
     }
-    let time; 
-    if (this.state){
-      time = this.state.start_time
-    }
-    let place;
-    if (this.state){
-      place = this.state.place
-    }
+
 
     return(
       <div>
-        HERE
-        {date}
-        {time}
-        {place}
+        COFFEE SHOW RENDERED
+        {/* {sidebar} */}
+        {/* {hostProfile} */}
       </div>
     )
     
