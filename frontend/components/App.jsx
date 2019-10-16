@@ -4,6 +4,7 @@ import LoginFormContainer from "./SessionForm/login_form_container";
 import SignupFormContainer from "./SessionForm/signup_form_container";
 import DemoLoginContainer from "./SessionForm/demo_login_container";
 import CoffeeScheduleContainer from "./CoffeeSchedule/coffee_schedule_container";
+import CoffeeShowContainer from "./CoffeeShow/coffee_show_container";
 
 import {Route, Link } from "react-router-dom";
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
@@ -17,6 +18,7 @@ const App = () => (
 
   <Route path="/coffee_schedule" component={CoffeeScheduleContainer} />
   <Route path="/coffee_schedule/:star" component={CoffeeScheduleContainer}/>
+  <Route path="/coffee_show/:id" component={CoffeeShowContainer}/>
  
 
   
