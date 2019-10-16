@@ -8,6 +8,7 @@ class CoffeeShow extends React.Component{
 
       this.state = {};
       this.host = {};
+      this.star ={};
 
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
     }
@@ -123,7 +124,7 @@ class CoffeeShow extends React.Component{
 
       sidebar = <div>
 
-
+        {}
         <p className="coffee-show-link" >{document.location.href}</p>
         {this.showSeats()}
 
