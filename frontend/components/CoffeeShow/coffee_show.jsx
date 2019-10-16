@@ -206,6 +206,8 @@ class CoffeeShow extends React.Component{
 
         <input className='CoffeeSignUp' type="button" value="Sign Me Up" />
 
+        <Link to='/coffee_schedule' >See Other Coffee Times</Link>
+
       </div>
 
 
