@@ -36,7 +36,8 @@ class User < ApplicationRecord
   has_many :coffee_schedules
 
   has_many :coffee_times, through: :coffee_schedules
-  belongs_to :coffee_schedule
+
+
 
   # FeGrip
 
