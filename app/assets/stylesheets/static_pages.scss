@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: row;
   align-content: flex-end;
-  // justify-content: stretch;
+  justify-content: space-evenly;
 }
 
 .greeting {
@@ -128,7 +128,7 @@
 }
 
 .welcome {
- position: relative;
+//  position: relative;
  left: 275px;
 }
 
