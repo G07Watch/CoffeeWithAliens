@@ -9,6 +9,7 @@ class CoffeeShow extends React.Component{
       this.state = {};
       this.host = {};
       this.star ={};
+      console.log(this.props.currentUser);
 
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
       this.hasAllAttributes = this.hasAllAttributes.bind(this);
@@ -70,7 +71,6 @@ class CoffeeShow extends React.Component{
         for ( let starElement of this.props.stars){
           if (starElement.id === this.state.star_system_id ){
             this.star = starElement.name
-            console.log(starElement.name)
           }
         }
       }
@@ -165,7 +165,6 @@ class CoffeeShow extends React.Component{
     // setStar for page
     if(this.checkNotEmpty(this.props.stars)){
       this.setStar();
-      console.log(this.star);
     }
 
     //After getting CoffeeShow data and Host data do the following:
@@ -173,10 +172,10 @@ class CoffeeShow extends React.Component{
     if (this.hasAllAttributes()){
           // console.log('HAVE ALL ATTRIBUTES!')
 
-      if(this.props.currentUser){
+      if(this.checkNotEmpty(this.props.currentUser)){
         ifUser=<div className='User'>
           <h2>NAME</h2>
-          <input type="text" readOnly placeholder={this.currentUser.name}/> 
+          <input type="text" readOnly placeholder={this.currentUser.nickname}/> 
 
           <h2>EMAIL</h2>
           <input type="text" readOnly placeholder={this.currentUser.email}/> 
