@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import Meeting from './coffee_index_item';
 
 
@@ -26,7 +26,7 @@ class CoffeeSchedule extends React.Component{
   }
 
   createLink(name, key){
-   return(<Link key={key} to={`/${name}`}>{name}</Link>)
+    return (<Link key={key} to={`/coffee_schedule/#${name}`}>{name}</Link>)
   }
 
 
@@ -129,6 +129,7 @@ class CoffeeSchedule extends React.Component{
             starCoffeeScheduleOne.push(
               <li key={star.id}>
                 <div className="schedule-tile">
+                  <a name={`/coffee_schedule/#${star.name}`}></a>
                   <h2 name={star.name}>
                     {star.name}
                     <br/>
@@ -149,6 +150,7 @@ class CoffeeSchedule extends React.Component{
             starCoffeeScheduleTwo.push(
               <li key={star.id}>
                 <div className="schedule-tile">
+                  <a name={`/coffee_schedule/#${star.name}`}></a>
                   <h2 name={star.name} >
                     {star.name}
                     <br />
@@ -177,7 +179,7 @@ class CoffeeSchedule extends React.Component{
 
           currentMonthSchedule = <div className={month}>
             <div className="month-header" >
-              <p key="c-f1"> 📅 {month}Coffee Times</p>
+              <p key="c-f1"> 📅 {month} Coffee Times</p>
               <input className="display-button"
                 key="ds1"
                 type="button"
@@ -206,7 +208,7 @@ class CoffeeSchedule extends React.Component{
 
           nextMonthSchedule = <div className={month}>
             <div className="month-header" >
-              <p key="c-f2"> 📅 {month}Coffee Times</p>
+              <p key="c-f2"> 📅 {month} Coffee Times</p>
               <input className="display-button"
                 key="ds2"
                 type="button"

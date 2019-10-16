@@ -41,13 +41,13 @@
 .display-button{
   display: block;
   color: rgba(230, 137, 16, 0.856);
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 600;
   font-family: Courier;
   background-color: rgb(245, 242, 210);
   height: fit-content;
   width: fit-content;
-  padding: 0.8em 0.2em;
+  padding: 0.5em 1.0em;
   border: 1px solid rgba(230, 137, 16, 0.856);
   border-radius: 10px;
   letter-spacing: 0;
@@ -85,19 +85,24 @@
 
 
 .current-month-show p{
+  margin-bottom: 12px;
+  font-size: 1em;
   font-weight: 700;
   font-family: Courier;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .next-month-show p{
+  font-size: 1em;
   font-weight: 700;
   font-family: Courier;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .jump{
@@ -181,7 +186,10 @@
 .meeting {
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  // border-bottom: 1px solid gray;
   width: 100%;
 }
 
@@ -317,7 +325,10 @@
   height: fit-content;
   width: 101%;
   padding: 0.8em 0.2em;
-  border: 1px solid rgba(230, 137, 16, 0.856);
+  border-top: 1px solid gray;
+  border-left: 1px solid rgba(230, 137, 16, 0.856);
+  border-bottom: 1px solid rgba(230, 137, 16, 0.856);
+  border-right: 1px solid rgba(230, 137, 16, 0.856);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   letter-spacing: 0;
@@ -334,7 +345,10 @@
   height: fit-content;
   width: 101%;
   padding: 0.8em 0.2em;
-  border: 1px solid rgba(230, 137, 16, 0.856);
+  border-top: 1px solid gray;
+  border-left: 1px solid rgba(230, 137, 16, 0.856);
+  border-bottom: 1px solid rgba(230, 137, 16, 0.856);
+  border-right: 1px solid rgba(230, 137, 16, 0.856);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   letter-spacing: 0;
