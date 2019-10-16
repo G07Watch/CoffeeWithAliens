@@ -123,7 +123,8 @@ class CoffeeShow extends React.Component{
 
       sidebar = <div>
 
-        <p>{document.location.href}</p>
+
+        <p className="coffee-show-link" >{document.location.href}</p>
         {this.showSeats()}
 
       </div>
