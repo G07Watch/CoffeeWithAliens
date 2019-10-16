@@ -174,8 +174,18 @@ class CoffeeShow extends React.Component{
           // console.log('HAVE ALL ATTRIBUTES!')
 
       if(this.props.currentUser){
-        ifUser=<div>
-          
+        ifUser=<div className='User'>
+          <h2>NAME</h2>
+          <input type="text" readOnly placeholder={this.currentUser.name}/> 
+
+          <h2>EMAIL</h2>
+          <input type="text" readOnly placeholder={this.currentUser.email}/> 
+
+          <h2>MOBILE NUMBER</h2>
+          <p>Optional, but helps {this.host.name} contact you
+          on your meeting day</p>
+          <input type="text" readOnly placeholder={this.currentUser.phone_number}/> 
+
         </div>
       }
 
@@ -194,6 +204,8 @@ class CoffeeShow extends React.Component{
         </div>
 
         {ifUser}
+
+        <input className='CoffeeSignUp' type="button" value="Sign Me Up" />
 
       </div>
 
