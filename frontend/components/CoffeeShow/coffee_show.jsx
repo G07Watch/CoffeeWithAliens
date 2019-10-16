@@ -5,7 +5,12 @@ class CoffeeShow extends React.Component{
 
 
   render(){
-    'here'
+    return(
+      <div>
+        COFFEE SHOW HERE
+      </div>
+    )
+    
   }
 }
 
