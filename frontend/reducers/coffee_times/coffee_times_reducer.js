@@ -12,7 +12,7 @@ const coffeeTimesReducer  = (state ={}, action) =>{
       return newState;
 
     case RECEIVE_COFFEE:
-      newState = merge( {}, state, {coffee_show: action.coffeeTime} );
+      newState = merge( {}, state, {coffeeShow: action.coffeeTime} );
       return newState;
 
     default:
