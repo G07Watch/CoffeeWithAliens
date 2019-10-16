@@ -16,7 +16,8 @@ class CoffeeShow extends React.Component{
     componentDidMount(){
       let coffeeShowId = this.props.match.params.id // this.props.coffeeShowId 
       this.props.fetchCoffeeTime(coffeeShowId);
-      // this.props.fetchHosts();
+      this.props.fetchHosts();
+      this.props.fetchStarSystems();
     }
 
     saveCoffeeTime(){
@@ -60,7 +61,34 @@ class CoffeeShow extends React.Component{
       return ourHost();
     }
 
+    setStar(){
+      //locates our star from the array of stars using the star_system_id and
+      //saves to this.star key
+
+      const ourStar = () =>{
+        for ( let starElement of this.props.stars){
+          if (starElement.id === this.state.star_system_id ){
+            this.star = starElement.name
+          }
+        }
+      }
+
+      return ourStar();
+    }
+
     //PAGE RENDERING FUNCTIONS 
+
+    time(){
+      const timePrint=() =>{
+      let timeStart = this.state.start_time
+      let timeEnd = (this.state.start_time + 2)
+      let timespan = `${timeStart}-${timeEnd}`
+
+      return timespan;
+      }
+
+      return timePrint;
+    }
 
     showSeats(){
       const seats = () =>{
@@ -113,6 +141,11 @@ class CoffeeShow extends React.Component{
     if(this.checkNotEmpty(this.props.hosts)){
       this.setHost();
     }
+    // setStar for page
+    if(this.checkNotEmpty(this.props.stars)){
+      this.setStar();
+      console.log(this.star);
+    }
 
     //After getting CoffeeShow data and Host data do the following:
 
@@ -124,7 +157,9 @@ class CoffeeShow extends React.Component{
 
       sidebar = <div>
 
-        {}
+        <h3 className='show-time'>{this.time}</h3>
+        <p className='show-place'>{this.state.place}</p>
+        <p className='show-star'>{this.star}</p>
         <p className="coffee-show-link" >{document.location.href}</p>
         {this.showSeats()}
 
