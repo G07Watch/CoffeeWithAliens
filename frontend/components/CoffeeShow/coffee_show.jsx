@@ -173,6 +173,12 @@ class CoffeeShow extends React.Component{
     if (this.hasAllAttributes()){
           // console.log('HAVE ALL ATTRIBUTES!')
 
+      if(this.props.currentUser){
+        ifUser=<div>
+          
+        </div>
+      }
+
       sidebar = <div>
 
         <div className='coffee-card'>

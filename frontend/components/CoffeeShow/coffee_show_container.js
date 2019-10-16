@@ -9,11 +9,14 @@ const mapStateToProps = (state,ownProps) => {
   // let coffeeShowId = ownProps.match.params.id 
   let coffeeShow = state.entities && state.entities.coffeeTimes && state.entities.coffeeTimes.coffeeShow
   let stars = state.entities.stars && state.entities.stars.stars;
+  let currentUser = state.session && state.session.currentUser
+
   return({
     // coffeeShowId: coffeeShowId,
     coffeeShow: coffeeShow,
     hosts: state.entities.hosts,
-    stars: stars
+    stars: stars,
+    currentUser: currentUser
   })
 
 }
