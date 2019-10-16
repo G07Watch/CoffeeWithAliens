@@ -11,6 +11,7 @@ class CoffeeShow extends React.Component{
       this.star ={};
 
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
+      this.hasAllAttributes = this.hasAllAttributes.bind(this);
     }
 
     componentDidMount(){
@@ -69,6 +70,7 @@ class CoffeeShow extends React.Component{
         for ( let starElement of this.props.stars){
           if (starElement.id === this.state.star_system_id ){
             this.star = starElement.name
+            console.log(starElement.name)
           }
         }
       }
@@ -77,6 +79,23 @@ class CoffeeShow extends React.Component{
     }
 
     //PAGE RENDERING FUNCTIONS 
+
+    hasAllAttributes(){
+      return (
+        this.checkNotEmpty(this.state)
+        && this.checkNotEmpty(this.host)
+        && this.checkNotEmpty(this.star)
+      )
+    }
+
+    meetingDay(){
+      const ourDate =()=>{
+        let fullDate = `${this.state.day}, ${this.state.meet_date}`
+        return fullDate;
+      }
+
+      return ourDate();
+    }
 
     time(){
       const timePrint=() =>{
@@ -87,7 +106,7 @@ class CoffeeShow extends React.Component{
       return timespan;
       }
 
-      return timePrint;
+      return timePrint();
     }
 
     showSeats(){
@@ -133,6 +152,8 @@ class CoffeeShow extends React.Component{
   render(){
 
     let sidebar = <p></p>;
+    let ifUser = <p></p>;
+    let hostProfile = <p></p>;
 
     this.saveCoffeeTime();
     this.getHosts();
@@ -149,19 +170,24 @@ class CoffeeShow extends React.Component{
 
     //After getting CoffeeShow data and Host data do the following:
 
-    if (this.checkNotEmpty(this.state)  && this.checkNotEmpty(this.host)){
+    if (this.hasAllAttributes()){
           // console.log('HAVE ALL ATTRIBUTES!')
-
-
-      let hostProfile;
 
       sidebar = <div>
 
-        <h3 className='show-time'>{this.time}</h3>
-        <p className='show-place'>{this.state.place}</p>
-        <p className='show-star'>{this.star}</p>
-        <p className="coffee-show-link" >{document.location.href}</p>
-        {this.showSeats()}
+        <div className='coffee-card'>
+
+          <h1>Join {this.host.name} for Coffee Time</h1>
+          <h3 className='show-date'>{this.meetingDay()}</h3>
+          <h3 className='show-time'>{this.time()}</h3>
+          <p className='show-place'>{this.state.place}</p>
+          <p className='show-star'>{this.star}</p>
+          <p className="coffee-show-link" >{document.location.href}</p>
+          {this.showSeats()}
+
+        </div>
+
+        {ifUser}
 
       </div>
 
@@ -174,7 +200,7 @@ class CoffeeShow extends React.Component{
       <div>
         COFFEE SHOW RENDERED
         {sidebar}
-        {/* {hostProfile} */}
+        {hostProfile}
       </div>
     )
     
