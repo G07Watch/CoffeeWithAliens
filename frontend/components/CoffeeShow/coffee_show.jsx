@@ -78,6 +78,27 @@ class CoffeeShow extends React.Component{
       return ourStar();
     }
 
+    coffeeSubmit(){
+
+      if(this.props.currentUser){
+        //this.props.coffeeSignUp(this.state.id, this.props.currentUser.id)
+        console.log("hi, I'm signing you up to have coffee!")
+
+       return(
+          // <input className='CoffeeSignUp'
+          //  type="button" value="Sign Me Up" />
+          <Link></Link>
+       )
+      }
+
+      else{
+        return(
+          <Link to="/signup">Sign Me Up</Link>
+        )
+      }
+
+    }
+
     //PAGE RENDERING FUNCTIONS 
 
     hasAllAttributes(){
@@ -204,8 +225,9 @@ class CoffeeShow extends React.Component{
 
         {ifUser}
 
-        <input className='CoffeeSignUp' type="button" value="Sign Me Up" />
 
+        {this.coffeeSubmit()}
+        
         <Link to='/coffee_schedule' >See Other Coffee Times</Link>
 
       </div>

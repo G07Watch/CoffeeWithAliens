@@ -18,6 +18,8 @@ class CoffeeTime < ApplicationRecord
   has_one :coffee_schedule
 
   has_many :users, through: :coffee_schedule
+  belongs_to :coffee_schedule
+  
 
   def month
     self.date.strftime("%B")
