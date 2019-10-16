@@ -31,6 +31,23 @@
   padding: 12px;
 }
 
+.display-button{
+  display: block;
+  color: rgba(230, 137, 16, 0.856);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Courier;
+  background-color: rgb(245, 242, 210);
+  height: fit-content;
+  width: 101%;
+  padding: 0.8em 0.2em;
+  border: 1px solid rgba(230, 137, 16, 0.856);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .current-month-show {
   display: flex;
   flex-direction: column;
@@ -283,7 +300,7 @@
   align-content: right;
 }
 
-// .coffee-show-norm {
+.coffee-show-norm {
   display: block;
   color: rgba(230, 137, 16, 0.856);
   font-size: 20px;

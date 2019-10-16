@@ -177,7 +177,10 @@ class CoffeeSchedule extends React.Component{
 
           currentMonthSchedule = <div className={month}>
             <p> 📅 {month}Coffee Times</p>
-
+            <input className="display-button"
+              type="button"
+              value={this.state.display ? `${nextMonth}'s Schedule` : `${currentMonth}'s Schedule`}
+              onClick={this.update} />
             <div className="jump">
               Jump to your star system's coffee times
               <ul>{currentStarsLinks}</ul>
@@ -200,7 +203,10 @@ class CoffeeSchedule extends React.Component{
 
           nextMonthSchedule = <div className={month}>
             <p> 📅 {month}Coffee Times</p>
-
+            <input className="display-button"
+              type="button"
+              value={this.state.display ? `${nextMonth}'s Schedule` : `${currentMonth}'s Schedule`}
+              onClick={this.update} />
             <div className="jump">
               Jump to your star system's coffee times
               <ul>{nextStarsLinks}</ul>
@@ -224,10 +230,7 @@ class CoffeeSchedule extends React.Component{
 
     return(
       <div className="toggleDisplay">
-        <input className="display-button" 
-          type="button"
-          value={this.state.display? `${nextMonth}'s Schedule`: `${currentMonth}'s Schedule`}
-          onClick={this.update}/>
+        
         <div className="coffee-intro">
           <h1>
             Coffee With Aliens is coffee, with aliens 
