@@ -162,9 +162,14 @@ class CoffeeShow extends React.Component{
         console.log("hi, I'm signing you up to have coffee!")
 
         return (
+          
+          // <Link to="/coffee_schedule"
+          // onClick={this.coffeeSubmit}
+          // >Sign Me Up</Link>
+
+          //TEMP
           <input className='CoffeeSignUp'
             type="button" value="Sign Me Up"
-            on
             onClick={this.coffeeSubmit()} />
           
        )
@@ -251,6 +256,14 @@ class CoffeeShow extends React.Component{
         {this.submitButton()}
         
         <Link to='/coffee_schedule' >See Other Coffee Times</Link>
+
+        <div className="show-exactly">
+          Coffee With Aliens is coffee, with aliens
+          For .083 of an Earth cycle, five aliens and their host(no not that kind) sit to converse.
+          Perhaps a tad strange, but we're fostering galactic goodwill. 
+          Sit and chat with the unknown.  To get started learn a bit about your host.
+          👉
+        </div>
 
       </div>
 
