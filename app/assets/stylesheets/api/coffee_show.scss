@@ -10,14 +10,18 @@
 .sidebar{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 32%;
+  height: auto;
+  margin-top: 1em;
 }
 
 .host-profile{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 64%;
+  margin-top: 1em;
 }
 
 // Sidebar element styling
@@ -67,8 +71,23 @@
   margin: 0.8em;
 }
 
+.User{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 1em;
+}
+
+.User h2{
+  padding-top: 1em;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
 
 .coffee-signup-button{
+  margin-top: 1em;
   display: block;
   color: white;
   font-size: 20px;
@@ -80,6 +99,7 @@
   // max-width: 500px;
   border: 2px orangered;
   border-radius: 10px;
+  text-transform: uppercase;
 }
 
 .coffee-signup-link{
@@ -87,6 +107,47 @@
   text-decoration: none;
 }
 
+.show-schedule{
+  margin-top: 1em;
+  text-decoration: none;
+  color: rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  text-align: center;
+  
+}
 
+.show-exactly{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 1em;
+  padding: 2em;
+  color: rgba(230, 137, 16, 0.856);
+  background-color: rgba(238, 189, 124, 0.801);
+  font-family: Courier;
+}
+
+.show-exactly hr {
+  border-bottom: 1px solid rgba(230, 137, 16, 0.856);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 0.8em auto;
+  width: 30%;
+}
+
+.show-exactly h4{
+  text-decoration: none;
+  text-align: center;
+  color:  rgba(230, 137, 16, 0.856);
+  font-family: Courier;  
+  font-size: 20px;
+  font-weight: 600;
+}
+.show-exactly p{
+  font-family: Courier;
+  font-weight: 600;
+}
 
 //Host Profile element styling
