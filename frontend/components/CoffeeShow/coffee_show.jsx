@@ -180,9 +180,14 @@ class CoffeeShow extends React.Component{
     this.getHosts();
 
     // setsHost for page
-    if(this.checkNotEmpty(this.props.hosts)){
+
+    if (this.props.hosts && this.props.hosts.length && this.state.host_id){
       this.setHost();
     }
+
+    // if(this.checkNotEmpty(this.props.hosts)){
+    //   this.setHost();
+    // }
     // setStar for page
     if(this.checkNotEmpty(this.props.stars)){
       this.setStar();
