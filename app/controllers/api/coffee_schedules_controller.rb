@@ -5,11 +5,11 @@ class Api::CoffeeSchedulesController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:user_id])
-    @coffee_time = CoffeeTime.find_by(id: params[:coffee_time_id])
+    @coffee_time = CoffeeTime.find_by(id: params[:id])
 
     @coffee_time.users << @user
 
-    @coffee_signed= @user.coffee_times.find_by(id: params[:coffee_time_id])
+    @coffee_signed= @user.coffee_times.find_by(id: params[:id])
 
     if @coffee_signed
       @user_coffee_times = @user.coffee_times
