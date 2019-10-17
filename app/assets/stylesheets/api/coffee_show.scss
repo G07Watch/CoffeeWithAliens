@@ -28,12 +28,13 @@
   width: 100%;
   border: 1px solid gray;
   padding: 10px;
+  background-color: white;
 }
 
 .coffee-card h1{
   height: fit-content;
   font-size: 24px;
-  color:  rgba(209, 57, 2, 0.918)
+  color:  rgba(209, 57, 2, 0.918);
   font-family: Courier;
   font-weight: bold;
   text-transform: uppercase;
@@ -47,7 +48,7 @@
   font-family: Courier;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 }
 
 .coffee-card p{
@@ -57,7 +58,7 @@
   font-family: Courier;
   // font-weight: bold;
   // text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   overflow: auto;
 }
 

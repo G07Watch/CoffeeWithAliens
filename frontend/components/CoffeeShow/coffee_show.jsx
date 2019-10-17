@@ -246,9 +246,10 @@ class CoffeeShow extends React.Component{
         <div className='coffee-card'>
 
           <h1>Join {this.host.name} for Coffee Time</h1>
-          <h3 className='show-date'>{this.meetingDay()}</h3>
-          <h3 className='show-time'>{this.time()}</h3>
-          <p className='show-place'>{this.state.place}</p>
+          <hr/>
+          <h3 className='show-date'>📅 {this.meetingDay()}</h3>
+          <h3 className='show-time'>⌚ {this.time()}</h3>
+          <p className='show-place'>📌 {this.state.place}</p>
           <p className='show-star'>{this.star}</p>
           <p className="coffee-show-link" >{document.location.href}</p>
           <p>Send to a friend that would like some coffee in your place!</p>
