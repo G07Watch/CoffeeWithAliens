@@ -8,7 +8,7 @@ const mapStateToProps = state =>{
   return({
     hosts: state.entities.hosts,
     currentUser: currentUser,
-    user_coffee_times:
+    userEvents: userEvents
   })
 
 }
