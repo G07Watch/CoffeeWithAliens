@@ -19,4 +19,6 @@ export const coffeeSignUp = (userId, coffeeTimeId) =>(
   })
 )
 
-window.coffeeSignUp = coffeeSignUp;
+export const userCoffeeEvents = (id) =>()
+
+// window.coffeeSignUp = coffeeSignUp;
