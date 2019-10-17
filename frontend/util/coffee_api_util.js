@@ -19,6 +19,11 @@ export const coffeeSignUp = (userId, coffeeTimeId) =>(
   })
 )
 
-export const userCoffeeEvents = (id) =>()
+export const userCoffeeEvents = (id) =>(
+  $ajax({
+    method: 'GET',
+    url:``
+  })
+)
 
 // window.coffeeSignUp = coffeeSignUp;
