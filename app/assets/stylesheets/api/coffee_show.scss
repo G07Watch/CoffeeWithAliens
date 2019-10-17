@@ -21,7 +21,7 @@
 .host-profile{
   display: flex;
   flex-direction: column;
-  align-content: center;
+  // align-content: center;
   justify-content: space-between;
   width: 64%;
   margin-top: 3em;
@@ -200,6 +200,8 @@
 
 .facebook{
   margin: auto;
+  // margin-top: 1em;
+  // margin-bottom: 1em;
   text-decoration: none;
   color: white;
   font-weight: 600;
