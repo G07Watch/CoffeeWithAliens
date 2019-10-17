@@ -185,7 +185,7 @@ class CoffeeShow extends React.Component{
 
 
     componentDidUpdate(){
-
+      //setting all render checks here
     }
 
 
@@ -212,7 +212,7 @@ class CoffeeShow extends React.Component{
     }
 
     // setStar for page
-    if(this.checkNotEmpty(this.props.stars)){
+    if (this.checkNotEmpty(this.props.stars) && this.state && this.state.star_system_id){
       this.setStar();
     }
 
