@@ -4,4 +4,11 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 1020px;
+  margin: auto;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 32%
 }

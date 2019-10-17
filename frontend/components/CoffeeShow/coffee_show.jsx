@@ -298,7 +298,6 @@ class CoffeeShow extends React.Component{
 
     return(
       <div className="coffee-show">
-        COFFEE SHOW RENDERED
         {sidebar}
         {hostProfile}
       </div>
