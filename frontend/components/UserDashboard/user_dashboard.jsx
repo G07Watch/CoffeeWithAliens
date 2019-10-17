@@ -41,6 +41,10 @@ class UserDashboard extends React.Component{
            {event.meet_date}
            {this.time(event.start_time)}
            {event.place}
+         </div>
+
+         <div className="host-card">
+           <h4>Get to know your host</h4>
 
          </div>
 
