@@ -1,6 +1,15 @@
 class Api::CoffeeSchedulesController < ApplicationController
 
-  def create
+  def index
+    @user = User.find_by(id: params[:user_id])
+
+    if @user
+      @user_coffee_times = @user.coffee_times
+      render :index
+    else
+      render json:["No valid user"], status: 404
+    end
+    
   end
 
   def update
