@@ -5,6 +5,6 @@ class CreateWaitLists < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    # add_reference :wait_lists, :coffee_schedule, foreign_key: true
+    add_reference :wait_lists, :coffee_schedule, foreign_key: true
   end
 end

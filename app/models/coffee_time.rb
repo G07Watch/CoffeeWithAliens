@@ -17,7 +17,7 @@ class CoffeeTime < ApplicationRecord
 
   has_many :coffee_schedules
 
-  has_many :users, through: :coffee_schedule
+  has_many :users, through: :coffee_schedules
 
   # belongs_to :coffee_schedule
 

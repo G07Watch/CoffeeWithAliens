@@ -85,9 +85,9 @@ class CoffeeShow extends React.Component{
         console.log("hi, I'm signing you up to have coffee!")
 
        return(
-          // <input className='CoffeeSignUp'
-          //  type="button" value="Sign Me Up" />
-          <Link></Link>
+          <input className='CoffeeSignUp'
+           type="button" value="Sign Me Up"
+           onClick={this.props.coffeeSignUp(this.props.currentUser.id,this.state.id)} />
        )
       }
 

@@ -27,7 +27,8 @@ const mapDispatchToProps = dispatch => {
   return({
     fetchCoffeeTime: id => dispatch(fetchCoffeeTime(id)),
     fetchHosts: () => dispatch(fetchHosts()),
-    fetchStarSystems: () => dispatch(fetchStarSystems())
+    fetchStarSystems: () => dispatch(fetchStarSystems()),
+    coffeeSignUp: (userId, coffeeId) => dispatch(coffeeSignUp(userId, coffeeId)
   })
 
 }
