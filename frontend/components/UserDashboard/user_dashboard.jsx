@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class UserDashboard extends React.Component{
   constructor(props){
@@ -6,6 +7,7 @@ class UserDashboard extends React.Component{
 
     this.buildCoffeeArr = this.buildCoffeeArr.bind(this);
     this.time = this.time.bind(this);
+    this.hostPic = this.hostPic.bind(this);
   }
 
   componentDidMount(){
@@ -24,6 +26,22 @@ class UserDashboard extends React.Component{
     }
 
     return timePrint();
+  }
+
+  hostPic(id){
+    switch(id){
+      case 1:
+        return 'haha';
+      
+      case 2: 
+        return window.mysteryURL;
+
+      case 3:
+        return 'teehee';
+
+      default: 
+        return 'HI';
+    }
   }
 
 
@@ -45,17 +63,14 @@ class UserDashboard extends React.Component{
 
          <div className="host-card">
            <h4>Get to know your host</h4>
-
+            <img src={this.hostPic(event.host_id)} alt=""/>
          </div>
 
        </div>
 
+    })
 
-
-
-    }
-
-    )
+    this.state.coffeeEvents = coffeeEvents;
 
   }
 
@@ -69,9 +84,34 @@ class UserDashboard extends React.Component{
 
   render(){
 
+    let dashIntro = <p ></p>;
+    let dashBody = <p ></p>;
+
+    let dashNav = <div>
+
+
+    </div>
+
+      if(this.state.coffeeEvents){
+        dashIntro = <div className="dash-intro">
+          <h1>Welcome home, {this.props.currentUser.nickname}</h1>
+          <h3>What are you thankful for this cycle?</h3>
+          
+        </div>
+
+        dashBody = <div className="dash-body">
+
+        </div>
+      }
+
+
     return(
       <div>
-        USER DASHBOARD RENDERING
+        {dashNav}
+        {dashIntro}
+        <ul>
+          {}
+        </ul>
 
       </div>
     )
