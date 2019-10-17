@@ -4,6 +4,10 @@ export const RECEIVE_COFFEE_TIMES = 'RECEIVE_COFFEE_TIMES';
 export const RECEIVE_COFFEE = 'RECEIVE_COFFEE';
 export const RECEIVE_COFFEE_ERRORS = 'RECEIVE_COFFEE_ERRORS';
 
+export const coffeeSignUp = () => dispatch =>(
+  
+)
+
 export const fetchCoffeeTimes = () => dispatch =>(
   CoffeeApiUtil.fetchCoffeeTimes()
   .then(
