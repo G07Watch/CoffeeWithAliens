@@ -13,6 +13,7 @@ class CoffeeShow extends React.Component{
 
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
       this.hasAllAttributes = this.hasAllAttributes.bind(this);
+      this.submitButton = this.submitButton.bind(this);
     }
 
     componentDidMount(){
@@ -79,24 +80,10 @@ class CoffeeShow extends React.Component{
     }
 
     coffeeSubmit(){
-
-      if(this.props.currentUser){
-        //this.props.coffeeSignUp(this.state.id, this.props.currentUser.id)
-        console.log("hi, I'm signing you up to have coffee!")
-
-       return(
-          <input className='CoffeeSignUp'
-           type="button" value="Sign Me Up"
-           onClick={this.props.coffeeSignUp(this.props.currentUser.id,this.state.id)} />
-       )
+      return(e) =>{
+        e.preventDefault();
+        this.props.coffeeSignUp(this.props.currentUser.id, this.state.id);
       }
-
-      else{
-        return(
-          <Link to="/signup">Sign Me Up</Link>
-        )
-      }
-
     }
 
     //PAGE RENDERING FUNCTIONS 
@@ -168,6 +155,35 @@ class CoffeeShow extends React.Component{
       return seats();
     }
 
+    submitButton(){
+
+      if (this.props.currentUser) {
+        //this.props.coffeeSignUp(this.state.id, this.props.currentUser.id)
+        console.log("hi, I'm signing you up to have coffee!")
+
+        return (
+          <input className='CoffeeSignUp'
+            type="button" value="Sign Me Up"
+            on
+            onClick={this.coffeeSubmit()} />
+          
+       )
+      }
+
+      else {
+        return (
+          <Link to="/signup">Sign Me Up</Link>
+        )
+      }
+
+    }
+
+
+    componentDidUpdate(){
+
+    }
+
+
 
 
   render(){
@@ -181,13 +197,14 @@ class CoffeeShow extends React.Component{
 
     // setsHost for page
 
-    if (this.props.hosts && this.props.hosts.length && this.state.host_id){
+    // if (this.props.hosts && this.props.hosts.length && this.state.host_id){
+    //   this.setHost();
+    // }
+
+    if (this.checkNotEmpty(this.props.hosts) && this.state && this.state.host_id){
       this.setHost();
     }
 
-    // if(this.checkNotEmpty(this.props.hosts)){
-    //   this.setHost();
-    // }
     // setStar for page
     if(this.checkNotEmpty(this.props.stars)){
       this.setStar();
@@ -231,7 +248,7 @@ class CoffeeShow extends React.Component{
         {ifUser}
 
 
-        {this.coffeeSubmit()}
+        {this.submitButton()}
         
         <Link to='/coffee_schedule' >See Other Coffee Times</Link>
 
