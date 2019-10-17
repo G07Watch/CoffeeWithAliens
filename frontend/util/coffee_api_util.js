@@ -18,3 +18,5 @@ export const coffeeSignUp = (userId, coffeeTimeId) =>(
     url:`api/users/${userId}/coffee_schedules/${coffeeTimeId}`
   })
 )
+
+window.coffeeSignUp = coffeeSignUp;
