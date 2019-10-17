@@ -5,6 +5,15 @@ export const RECEIVE_COFFEE = 'RECEIVE_COFFEE';
 export const RECEIVE_ALL_USER_COFFEE = 'RECEIVE_ALL_USER_COFFEE';
 export const RECEIVE_COFFEE_ERRORS = 'RECEIVE_COFFEE_ERRORS';
 
+
+export const fetchUserCoffee = (id) => dispatch =>(
+  CoffeeApiUtil.fetchUserCoffee(id)
+  .then(
+    userCoffees => dispatch(receiveAllUserCoffee(userCoffees)),
+    errors => dispatch(receiveCoffeeErrors(errors))
+  )
+);
+
 export const coffeeSignUp = (userId, coffeeTimeId) => dispatch =>(
   CoffeeApiUtil.coffeeSignUp(userId, coffeeTimeId)
   .then(
