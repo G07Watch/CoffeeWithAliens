@@ -21,6 +21,44 @@
 
 // Sidebar element styling
 
+.coffee-card{ 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.coffee-card h1{
+  height: fit-content;
+  font-size: 24px;
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.coffee-card h3{
+  height: fit-content;
+  font-size: 24px;
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.coffee-card p{
+  height: fit-content;
+  font-size: 16px;
+  color: gray;
+  font-family: Courier;
+  // font-weight: bold;
+  // text-transform: uppercase;
+  text-align: center;
+}
+
+
 .coffee-signup-button{
   display: block;
   color: white;
@@ -36,7 +74,8 @@
 }
 
 .coffee-signup-link{
-  
+  display: hidden;
+  text-decoration: none;
 }
 
 
