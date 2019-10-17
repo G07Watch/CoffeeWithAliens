@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import { fetchUserCoffee } from '../../actions/coffee_actions';
 import UserDashboard from './user_dashboard';
+import { fetchHosts } from '../../actions/host_actions';
 
 const mapStateToProps = state =>{
   let currentUser = state.session && state.session.currentUser;

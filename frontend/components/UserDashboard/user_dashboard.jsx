@@ -92,7 +92,7 @@ class UserDashboard extends React.Component{
 
     </div>
 
-      if(this.state.coffeeEvents){
+      if( this.state && this.state.coffeeEvents){
         dashIntro = <div className="dash-intro">
           <h1>Welcome home, {this.props.currentUser.nickname}</h1>
           <h3>What are you thankful for this cycle?</h3>
