@@ -12,6 +12,6 @@ export const fetchCoffeeTime = id =>(
   })
 )
 
-export const coffeeSignUp = () =>(
-  $.ajax
+export const coffeeSignUp = (userId, coffeeTimeId) =>(
+  $.ajax({})
 )
