@@ -39,6 +39,8 @@ class Greeting extends React.Component {
       <div className="greeting-user" key="greeting">
         <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link>
         <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
+        <Link to="/profile" className="user-dash-link">DASHBOARD</Link>
+
         <button className="signout" onClick={this.logout}
         className={ this.state.hover ? "signout-link-hover" : "signout-link-norm" } 
         onMouseEnter={this.hoverOn}
