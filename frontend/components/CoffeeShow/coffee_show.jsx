@@ -251,6 +251,8 @@ class CoffeeShow extends React.Component{
           <p className='show-place'>{this.state.place}</p>
           <p className='show-star'>{this.star}</p>
           <p className="coffee-show-link" >{document.location.href}</p>
+          <p>Send to a friend that would like some coffee in your place!</p>
+          <hr/>
           {this.showSeats()}
 
         </div>

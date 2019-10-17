@@ -10,6 +10,7 @@
 .sidebar{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 32%;
 }
 
@@ -26,12 +27,13 @@
   flex-direction: column;
   width: 100%;
   border: 1px solid gray;
+  padding: 10px;
 }
 
 .coffee-card h1{
   height: fit-content;
   font-size: 24px;
-  color: black;
+  color:  rgba(209, 57, 2, 0.918)
   font-family: Courier;
   font-weight: bold;
   text-transform: uppercase;
@@ -56,6 +58,12 @@
   // font-weight: bold;
   // text-transform: uppercase;
   text-align: center;
+  overflow: auto;
+}
+
+.coffee-card hr{
+  border-bottom: 1px solid gray;
+  margin: 0.8em;
 }
 
 
