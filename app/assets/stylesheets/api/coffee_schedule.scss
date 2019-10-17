@@ -315,8 +315,9 @@
   align-content: right;
 }
 
-.coffee-show-link{
-  text-transform: none;
+.coffee-show-link {
+  display: hidden;
+  text-decoration: none;
 }
 
 .coffee-show-norm {
