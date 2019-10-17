@@ -275,8 +275,9 @@ class CoffeeShow extends React.Component{
             For .083 of an Earth cycle, five aliens and their host(no not that kind) sit to converse.
             Perhaps a tad strange, but we're fostering galactic goodwill. 
             Sit and chat with the unknown.  To get started learn a bit about your host.
-            👉
           </p>
+
+          <p className="show-pointer">👉</p>
 
         </div>
 

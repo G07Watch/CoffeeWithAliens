@@ -5,6 +5,7 @@
   justify-content: space-between;
   max-width: 1020px;
   margin: auto;
+  background-color: beige;
 }
 
 .sidebar{
@@ -86,6 +87,11 @@
   font-size: 20px;
 }
 
+.User input{
+  color: black;
+  background-color: rgba(240, 194, 134, 0.801);
+}
+
 .coffee-signup-button{
   margin-top: 1em;
   display: block;
@@ -124,7 +130,7 @@
   margin-top: 1em;
   padding: 2em;
   color: rgba(230, 137, 16, 0.856);
-  background-color: rgba(238, 189, 124, 0.801);
+  background-color: rgb(246, 225, 197);
   font-family: Courier;
 }
 
@@ -150,4 +156,25 @@
   font-weight: 600;
 }
 
+.show-pointer{
+  text-align: center;
+  font: outline;
+  text-decoration: solid;
+}
+
 //Host Profile element styling
+
+
+.show-host-header{
+  height: fit-content;
+  font-size: 34px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: bold;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+.show-host-image{
+  width: 50%;
+}
