@@ -284,14 +284,17 @@ class CoffeeShow extends React.Component{
       </div>
 
       if(this.host.facebook){
-        facebook = <a href={this.host.facebook}>FACEBOOK</a>
+        facebook = <a className="facebook" href={this.host.facebook}>FACEBOOK</a>
       }
 
       hostProfile = <div className="host-profile">
 
         <h1 className="show-host-header">Meet your Host, {this.host.name}</h1>
 
+        <div className="show-image-portrait">
+
         <img className="show-host-image" src={window.mysteryURL} alt=""/>
+        </div>
 
         {facebook}
 

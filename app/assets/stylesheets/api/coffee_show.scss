@@ -14,15 +14,19 @@
   justify-content: space-around;
   width: 32%;
   height: auto;
-  margin-top: 1em;
+  margin-top: 3em;
 }
 
 .host-profile{
   display: flex;
   flex-direction: column;
+  align-content: center;
   justify-content: space-between;
   width: 64%;
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 10em;
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
 // Sidebar element styling
@@ -167,14 +171,52 @@
 
 .show-host-header{
   height: fit-content;
-  font-size: 34px;
+  font-size: 30px;
   color:  rgba(209, 57, 2, 0.918);
   font-family: Courier;
-  font-weight: bold;
+  font-weight: 1000;
   // text-transform: uppercase;
   // text-align: center;
 }
 
+.show-image-portrait{
+  margin: auto;
+  border: 2px solid gray;
+  width: 60%;
+  // height: 60%;
+  background-color: white;
+  padding-left: .5em;
+  padding-top: .5em;
+  padding-right: .5em;
+  padding-bottom: 1.5em;
+}
+
 .show-host-image{
-  width: 50%;
+  image-rendering: auto;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+.facebook{
+  margin: auto;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background-color: darkblue;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.show-host-synopsis{
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid gray;
+  background-color: white;
+}
+
+.show-host-synopsis h3{
+  font-weight: bold;
+
 }
