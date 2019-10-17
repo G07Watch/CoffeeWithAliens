@@ -28,17 +28,13 @@ const sessionReducer = (state = _nullUser, action) => {
       return newState;
 
     case RECEIVE_ALL_USER_COFFEE:
-      let allUsers = {}
+      let allUsers = {};
        Object.values(action.userCoffees).forEach(user =>{
         allUsers[user.id]= user}
       )
-
       let coffeeTimes = { user_coffee_times: allUsers  }  
-
-
       newState = merge({}, state, coffeeTimes)
       return newState;
-
 
     case LOGOUT_CURRENT_USER:
       newState = _nullUser;
