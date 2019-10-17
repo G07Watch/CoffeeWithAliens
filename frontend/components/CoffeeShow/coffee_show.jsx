@@ -196,6 +196,7 @@ class CoffeeShow extends React.Component{
     let sidebar = <p></p>;
     let ifUser = <p></p>;
     let hostProfile = <p></p>;
+    let facebook=<p></p>;
 
     this.saveCoffeeTime();
     this.getHosts();
@@ -267,6 +268,21 @@ class CoffeeShow extends React.Component{
 
       </div>
 
+      if(this.host.facebook){
+        facebook = <a href={this.host.facebook}>FACEBOOK</a>
+      }
+
+      hostProfile = <div>
+
+        <h1 className="show-host-header">Meet your Host, {this.host.name}</h1>
+
+        <img className="show-host-image" src="" alt=""/>
+
+        {facebook}
+
+        
+
+      </div>
 
 
     }
