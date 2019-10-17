@@ -237,7 +237,7 @@ class CoffeeShow extends React.Component{
         </div>
       }
 
-      sidebar = <div>
+      sidebar = <div className="sidebar">
 
         <div className='coffee-card'>
 
@@ -272,7 +272,7 @@ class CoffeeShow extends React.Component{
         facebook = <a href={this.host.facebook}>FACEBOOK</a>
       }
 
-      hostProfile = <div>
+      hostProfile = <div className="host-profile">
 
         <h1 className="show-host-header">Meet your Host, {this.host.name}</h1>
 
@@ -280,7 +280,15 @@ class CoffeeShow extends React.Component{
 
         {facebook}
 
-        
+        <div className="show-host-synopsis">
+          <p>{this.host.intro}</p>
+          <h3>What's your story?</h3>
+          <p>{this.host.story}</p>
+          <h3>What might we talk about?</h3>
+          <p>{this.host.topics}</p>
+          <p>Witty line here!</p>
+
+        </div>
 
       </div>
 
