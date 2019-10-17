@@ -78,7 +78,7 @@ class CoffeeShow extends React.Component{
 
       return ourStar();
     }
-
+    // creates a function to submit user to CoffeeTime
     coffeeSubmit(){
       return(e) =>{
         e.preventDefault();
