@@ -21,8 +21,8 @@ const App = () => (
   <Route path="/coffee_show/:id" component={CoffeeShowContainer}/>
  
 
-  
-
+  <ProtectedRoute path="/user/edit"/>
+  <ProtectedRoute path="/profile"/>
   <ProtectedRoute path="/hosting" component={HostFormContainer} />
   <AuthRoute path="/login/" component={LoginFormContainer} />
   <AuthRoute path="/login/demo" component={DemoLoginContainer} />
