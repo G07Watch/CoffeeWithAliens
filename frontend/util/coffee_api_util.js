@@ -22,7 +22,7 @@ export const coffeeSignUp = (userId, coffeeTimeId) =>(
 export const userCoffeeEvents = (id) =>(
   $ajax({
     method: 'GET',
-    url:``
+    url:`api/users/${id}/coffee_schedules`
   })
 )
 
