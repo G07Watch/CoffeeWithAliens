@@ -3,11 +3,12 @@ import { fetchUserCoffee } from '../../actions/coffee_actions';
 import UserDashboard from './user_dashboard';
 
 const mapStateToProps = state =>{
-  let currentUser = state.session && state.session.currentUser
-
+  let currentUser = state.session && state.session.currentUser;
+  let userEvents = state.session && state.session.user_coffee_times;
   return({
     hosts: state.entities.hosts,
-    currentUser: currentUser
+    currentUser: currentUser,
+    user_coffee_times:
   })
 
 }
@@ -20,4 +21,4 @@ const mapDispatchToProps = dispatch =>{
   })
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserDashboard);
+export default connect(mapStateToProps, mapDispatchToProps)(UserDashboard); 

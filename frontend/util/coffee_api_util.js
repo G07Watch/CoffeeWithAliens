@@ -20,10 +20,10 @@ export const coffeeSignUp = (userId, coffeeTimeId) =>(
 )
 
 export const fetchUserCoffee = (id) =>(
-  $ajax({
+  $.ajax({
     method: 'GET',
     url:`api/users/${id}/coffee_schedules`
   })
 )
 
-window.fetchUserCoffee = fetchUserCoffee;
+// window.fetchUserCoffee = fetchUserCoffee;

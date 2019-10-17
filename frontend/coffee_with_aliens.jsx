@@ -10,7 +10,7 @@ import { coffeeSignUp } from './util/coffee_api_util';
 document.addEventListener('DOMContentLoaded', () => {
 
   //TEST ONLY
-  fetchUserCoffee;
+  
   //TEST ONLY
 
   let store;
