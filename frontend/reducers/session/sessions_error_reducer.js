@@ -13,6 +13,9 @@ const sessionErrorsReducer = (state = {}, action) => {
     case CLEAN_ERRORS:
       return action.errors;
 
+    case RECEIVE_COFFEE_ERRORS:
+      return action.errors;
+
     case RECEIVE_CURRENT_USER:
       return {};
 
