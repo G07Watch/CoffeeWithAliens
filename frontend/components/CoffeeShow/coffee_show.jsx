@@ -168,7 +168,7 @@ class CoffeeShow extends React.Component{
           // >Sign Me Up</Link>
 
           //TEMP
-          <input className='CoffeeSignUp'
+          <input className='coffee-signup'
             type="button" value="Sign Me Up"
             onClick={this.coffeeSubmit()} />
           
@@ -177,7 +177,7 @@ class CoffeeShow extends React.Component{
 
       else {
         return (
-          <Link to="/signup">Sign Me Up</Link>
+          <Link className='coffee-signup' to="/signup">Sign Me Up</Link>
         )
       }
 
