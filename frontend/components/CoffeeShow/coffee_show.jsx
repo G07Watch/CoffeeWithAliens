@@ -82,7 +82,10 @@ class CoffeeShow extends React.Component{
     coffeeSubmit(){
       return(e) =>{
         e.preventDefault();
-        this.props.coffeeSignUp(this.props.currentUser.id, this.state.id);
+        this.props.coffeeSignUp(this.props.currentUser.id, this.state.id)
+        .then(
+          this.props.history.push("/profile")
+        )
       }
     }
 
@@ -168,12 +171,10 @@ class CoffeeShow extends React.Component{
           // >Sign Me Up</Link>
 
           //TEMP
-          <Link className='coffee-signup-link' to="/profile">
-            <input className='coffee-signup-button'
+            <button className='coffee-signup-button'
             type="button" value="Sign Me Up"
-            onClick={this.coffeeSubmit()} />
-          </Link>
-          
+              onClick={this.coffeeSubmit()} />
+         
        )
       }
 

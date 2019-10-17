@@ -26,4 +26,4 @@ export const fetchUserCoffee = (id) =>(
   })
 )
 
-// window.coffeeSignUp = coffeeSignUp;
+window.fetchUserCoffee = fetchUserCoffee;
