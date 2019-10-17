@@ -71,10 +71,14 @@ class Meeting extends React.Component {
         </div>
       </div>
         <div>
+          <a href={`/coffee_show/${this.props.meeting.id}`}>
+
           < input type="button" className={this.state.hover ? "coffee-show-hover" : "coffee-show-norm" }
             value={this.state.hover ? "Check it out →" : "Count me in"}
             onMouseEnter={this.hover}
             onMouseLeave={this.hover}/>
+
+            </a>
         </div>
     </div>
     )
