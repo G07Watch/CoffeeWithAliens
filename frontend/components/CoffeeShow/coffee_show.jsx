@@ -168,9 +168,11 @@ class CoffeeShow extends React.Component{
           // >Sign Me Up</Link>
 
           //TEMP
+          <Link className='coffee-signup-link' to="/profile">
           <input className='coffee-signup-button'
             type="button" value="Sign Me Up"
             onClick={this.coffeeSubmit()} />
+          </Link>
           
        )
       }
