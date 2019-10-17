@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchCoffeeTime } from '../../actions/coffee_actions';
+import { fetchCoffeeTime, coffeeSignUp } from '../../actions/coffee_actions';
 import { fetchHosts } from '../../actions/host_actions';
 import { fetchStarSystems } from "../../actions/star_system_actions";
 import CoffeeShow from './coffee_show';
