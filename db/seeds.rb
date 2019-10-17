@@ -37,7 +37,7 @@ user_three = User.new(
 user_three.save!
 
 host_one = Host.create(
-  facebook: 'Nope',
+  facebook: 'https://www.facebook.com/',
   intro: "Hi I'm Garvin
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
   Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
@@ -59,7 +59,7 @@ host_one = Host.create(
 user_one.update(is_host: true)
 
 host_two =  Host.create(
-  facebook: 'What is "facebook"?',
+  facebook: '',
   intro: 'ET is alien
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
   Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
