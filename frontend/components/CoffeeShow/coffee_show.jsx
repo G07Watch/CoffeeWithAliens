@@ -291,7 +291,7 @@ class CoffeeShow extends React.Component{
 
         <h1 className="show-host-header">Meet your Host, {this.host.name}</h1>
 
-        <img className="show-host-image" src="" alt=""/>
+        <img className="show-host-image" src={window.mysteryURL} alt=""/>
 
         {facebook}
 
