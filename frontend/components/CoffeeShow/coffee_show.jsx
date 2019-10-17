@@ -287,7 +287,7 @@ class CoffeeShow extends React.Component{
           <h3>What might we talk about?</h3>
           <p>{this.host.topics}</p>
           <p>Witty line here!</p>
-
+  
         </div>
 
       </div>

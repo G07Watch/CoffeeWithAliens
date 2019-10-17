@@ -38,9 +38,21 @@ user_three.save!
 
 host_one = Host.create(
   facebook: 'Nope',
-  intro: "Hi I'm Garvin",
-  story: "Born in Trinidad, raised in NYC.",
-  topics: "Space travel, military strategy, philosophy",
+  intro: "Hi I'm Garvin
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
+   quaerat, error dolorem mollitia voluptatibus assumenda.
+   Recusandae voluptate impedit labore aut nihil?",
+  story: "Born in Trinidad, raised in NYC.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
+   quaerat, error dolorem mollitia voluptatibus assumenda.
+   Recusandae voluptate impedit labore aut nihil?",
+  topics: "Space travel, military strategy, philosophy
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
+   quaerat, error dolorem mollitia voluptatibus assumenda.
+   Recusandae voluptate impedit labore aut nihil?",
   user_id: user_one.id
 )
 
@@ -48,9 +60,21 @@ user_one.update(is_host: true)
 
 host_two =  Host.create(
   facebook: 'What is "facebook"?',
-  intro: 'ET is alien',
-  story: 'Glad to be home.  Crashed.  Tired.  Coffee good.',
-  topics: 'My trip far from home.  Also types of coffee.',
+  intro: 'ET is alien
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
+   quaerat, error dolorem mollitia voluptatibus assumenda.
+   Recusandae voluptate impedit labore aut nihil?',
+  story: 'Glad to be home.  Crashed.  Tired.  Coffee good.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
+   quaerat, error dolorem mollitia voluptatibus assumenda.
+   Recusandae voluptate impedit labore aut nihil?',
+  topics: 'My trip far from home.  Also types of coffee.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
+   quaerat, error dolorem mollitia voluptatibus assumenda.
+   Recusandae voluptate impedit labore aut nihil?',
   user_id: user_three.id 
 )
 
