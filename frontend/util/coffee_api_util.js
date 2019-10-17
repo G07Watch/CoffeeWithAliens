@@ -13,5 +13,8 @@ export const fetchCoffeeTime = id =>(
 )
 
 export const coffeeSignUp = (userId, coffeeTimeId) =>(
-  $.ajax({})
+  $.ajax({
+    method: 'PATCH',
+    url:`api/users/${userId}/coffee_schedules/${coffeeTimeId}`
+  })
 )
