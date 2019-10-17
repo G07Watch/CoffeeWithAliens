@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [ :show, :create, :update, :destroy ] do
       resources :hosts, only: [ :create, :update, :destroy ]
+      resources :coffee_schedules, only: [ :update ]
     end
     resources :hosts, only: [ :index, :show ]
     resource :session, only: [ :create, :destroy ]
