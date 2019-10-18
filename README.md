@@ -6,6 +6,8 @@ Table of Contents
 1.   Overview
 2.   Technologies 
 3.   Features
+4.   Upcoming Features
+
 
 
 ## OVERVIEW
@@ -73,3 +75,34 @@ if (this.hasAllAttributes()){
 ![alt text][User]
 
 [User]: https://github.com/G07Watch/CoffeeWithAliens/blob/user_dash/app/assets/images/user_view.png  "Member View"
+
+
+* Chooses how to handle errors or submissions on User Update
+
+```javascript
+
+  submitUser(e) {
+    e.preventDefault();
+
+    if(this.state.new_password === this.state.confirm_password){
+
+      this.props.updateUser(this.state)
+      
+      setTimeout( ()=>{
+      if(this.props.errors){
+        this.setState({ errors: this.props.errors })
+        window.alert(this.props.errors);
+      }
+      else{
+        this.props.history.push("/profile");
+      }}, 500)
+
+    }
+
+
+```
+
+
+## UPCOMING FEATURES
+1. User History
+2. Automated Emails
