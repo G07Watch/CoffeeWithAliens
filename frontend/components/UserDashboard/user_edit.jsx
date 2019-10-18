@@ -23,6 +23,11 @@ class UserEdit extends React.Component{
   }
 
 
+  componentDidMount(){
+    
+  }
+
+
   update(field) {
     return (e) => {
       this.setState({ [field]: e.target.value })

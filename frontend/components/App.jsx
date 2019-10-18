@@ -10,6 +10,7 @@ import {Route, Link } from "react-router-dom";
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import HostFormContainer from "./HostForm/host_form_container";
 import UserDashboardContainer from "./UserDashboard/user_dashboard_container";
+import UserEditContainer from "./UserDashboard/user_edit_container";
 
 const App = () => (
 <div className="App">
@@ -22,7 +23,7 @@ const App = () => (
   <Route path="/coffee_show/:id" component={CoffeeShowContainer}/>
  
 
-  <ProtectedRoute path="/user/edit" component={UserDashboardContainer} />
+  <ProtectedRoute path="/user/edit" component={UserEditContainer} />
   <ProtectedRoute path="/profile" component={UserDashboardContainer}/>
   <ProtectedRoute path="/hosting" component={HostFormContainer} />
   <AuthRoute path="/login/" component={LoginFormContainer} />

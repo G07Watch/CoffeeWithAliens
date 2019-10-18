@@ -17,7 +17,6 @@ class UserDashboard extends React.Component {
     this.buildCoffeeArr = this.buildCoffeeArr.bind(this);
     this.time = this.time.bind(this);
     this.hostPic = this.hostPic.bind(this);
-    this.submitUser =this.submitUser.bind(this);
   }
 
   componentDidMount(){
@@ -125,6 +124,7 @@ class UserDashboard extends React.Component {
   }
 
   render(){
+    
 
     if (this.props.hosts) {
       this.state.hosts = this.props.hosts
@@ -141,16 +141,15 @@ class UserDashboard extends React.Component {
 
 
     if (this.hasAllAttributes()) {
-
-      let dashIntro;
       let dashBody;
+      let dashIntro;
       let dashNav;
 
       dashNav = <div className="dash-nav">
         <div className="nav-block">
           <Link to="/profile">QUICK LOOK</Link>
           {/* <Link to="/profile">HISTORY</Link> */}
-          <Link to="/profile">ACCOUNT DETAILS</Link>
+          <Link to="/user/edit">ACCOUNT DETAILS</Link>
         </div>
       </div>
 
@@ -173,16 +172,19 @@ class UserDashboard extends React.Component {
       this.state.dashBody = dashBody;
       this.state.dashNav = dashNav;
 
+
+      // if (document.location.hash = "#/users/edit") {
+      //   dashBody = <UserEdit
+      //     currentUser={this.props.currentUser}
+      //     updateUser={this.props.updateUser}
+      //   />
+      //   this.state.dashBody = dashBody
+      // }
+
     }
     
 
-    if (document.location.hash = "#/users/edit"){
-      dashBody = <UserEdit
-       currentUser={this.props.currentUser} 
-       updateUser={this.props.updateUser}
-       />
-      this.state.dashBody = dashBody
-    }
+    
 
       return (
       <div className="dashboard" >
