@@ -92,7 +92,7 @@ coffee_three = CoffeeTime.create(
 
 coffee_four = CoffeeTime.create(
   place: 'Earth',
-  date: DateTime.new(2019,11,5.5),
+  date: DateTime.new(2019,10,5.5),
   start_time: 11.5,
   available_seats: 5,
   host_id: host_one.id,
@@ -101,7 +101,7 @@ coffee_four = CoffeeTime.create(
 
 coffee_five = CoffeeTime.create(
   place: 'Brodo Asogi',
-  date: DateTime.new(2019,17,5.5),    
+  date: DateTime.new(2019,11,5.5),    
   start_time: 3,
   available_seats: 4,
   host_id: host_two.id,
@@ -111,7 +111,7 @@ coffee_five = CoffeeTime.create(
 
 coffee_six = CoffeeTime.create(
   place: 'Brodo Asogi',
-  date: DateTime.new(2019,20,7.5),    
+  date: DateTime.new(2019,10,7.5),    
   start_time: 3,
   available_seats: 3,
   host_id: host_two.id,
