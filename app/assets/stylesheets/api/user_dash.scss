@@ -15,6 +15,33 @@
   max-width: 1020px;
 }
 
+
+//INTRO STYLING
+
+
+.user-schedule{
+  margin-top: 1em;
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Helvetica;
+  background-color: rgba(209, 57, 2, 0.918);
+  height: fit-content;
+  width: 80%;
+  // max-width: 500px;
+  border: 2px orangered;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+
+}
+
+
+
+//EVENT STYLING
+
 .event-element{
   display: flex;
   flex-direction: row;
