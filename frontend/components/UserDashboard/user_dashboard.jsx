@@ -10,7 +10,7 @@ class UserDashboard extends React.Component {
       hosts: {},
       dashNav : <p></p>,
       dashIntro : <p></p>,
-      dashBody : <p></p>
+      dashBody : <p>Here</p>
     };
 
     this.buildCoffeeArr = this.buildCoffeeArr.bind(this);
@@ -40,32 +40,33 @@ class UserDashboard extends React.Component {
   hostPic(id){
     switch(id){
       case 1:
-        return 'haha';
+        return window.mysteryURL;
       
       case 2: 
         return window.mysteryURL;
 
       case 3:
-        return 'teehee';
+        return window.mysteryURL;
 
       default: 
-        return 'HI';
+        return null;
     }
   }
 
 
   buildCoffeeArr(){
-    let coffeeEvents=[];
 
+    let coffeeEvents=[];
+    let count = 135;
     Object.values(this.state.userEvents).forEach(event =>{
       let eventElement;
-
-       eventElement = <div className="event-element">
+      count++;
+       eventElement = <div key={count} className="event-element">
                           <div className="event-card">
-                            {event.day}
-                            {event.meet_date}
-                            {this.time(event.start_time)}
-                            {event.place}
+                            <h4>{event.day}</h4> 
+                            <h2>{event.meet_date}</h2>
+                            <h2>{this.time(event.start_time)}</h2>
+                            <h4>{event.place}</h4>    
                           </div>
 
                           <div className="host-card">
@@ -84,6 +85,7 @@ class UserDashboard extends React.Component {
     })
 
     this.state.coffeeEvents = coffeeEvents;
+    // console.log(this.state.coffeeEvents);
 
   }
 
@@ -113,21 +115,20 @@ class UserDashboard extends React.Component {
 
     if (this.hasAllAttributes()){
       this.buildCoffeeArr();
-      console.log(this.hasAllAttributes());
     }
 
 
 
-    if (this.hasAllAttributes) {
+    if (this.hasAllAttributes()) {
 
       let dashIntro;
       let dashBody;
       let dashNav;
 
       dashNav = <div>
-        <Link>QUICK LOOK</Link>
-        <Link>HISTORY</Link>
-        <Link>ACCOUNT DETAILS</Link>
+        <Link to="/profile">QUICK LOOK</Link>
+        <Link to="/profile">HISTORY</Link>
+        <Link to="/profile">ACCOUNT DETAILS</Link>
       </div>
 
 
@@ -143,6 +144,7 @@ class UserDashboard extends React.Component {
         </ul>
       </div>
 
+      console.log(dashBody);
       this.state.dashIntro = dashIntro;
       this.state.dashBody = dashBody;
       this.state.dashNav = dashNav;
@@ -152,35 +154,64 @@ class UserDashboard extends React.Component {
 
   render(){
 
-    // let dashIntro = <p ></p>;
-    // let dashBody = <p ></p>;
+    if (this.props.hosts) {
+      this.state.hosts = this.props.hosts
+    }
+
+    if (this.props.userEvents) {
+      this.state.userEvents = this.props.userEvents
+    }
+
+    if (this.hasAllAttributes()) {
+      this.buildCoffeeArr();
+    }
 
 
-    // if( this.hasAllAttributes){
 
-    //   console.log("the attributes", this.hasAllAttributes);
-    //   console.log("the events", this.state.coffeeEvents)
+    if (this.hasAllAttributes()) {
 
-    //   dashIntro = <div className="dash-intro">
-    //     <h1>Welcome home, {this.props.currentUser.nickname}</h1>
-    //     <h3>What are you thankful for this cycle?</h3>
-    //     <Link className="user-schedule" to="/coffee_schedule"> Sign up for a Coffee Time!</Link>
-    //   </div>
+      let dashIntro;
+      let dashBody;
+      let dashNav;
 
-    //   dashBody = <div className="dash-body">
-    //     <ul>
-    //       {this.state.coffeeEvents}
-    //     </ul>
-    //   </div>
+      dashNav = <div>
+        <Link to="/profile">QUICK LOOK</Link>
+        <Link to="/profile">HISTORY</Link>
+        <Link to="/profile">ACCOUNT DETAILS</Link>
+      </div>
 
-    return (
-      <div>
+
+      dashIntro = <div className="dash-intro">
+        <h1>Welcome home, {this.props.currentUser.nickname}</h1>
+        <h3>What are you thankful for this cycle?</h3>
+        <Link className="user-schedule" to="/coffee_schedule"> Sign up for a Coffee Time!</Link>
+      </div>
+
+      dashBody = <div className="dash-body">
+        <ul>
+          {this.state.coffeeEvents}
+        </ul>
+      </div>
+
+      console.log(dashBody);
+      this.state.dashIntro = dashIntro;
+      this.state.dashBody = dashBody;
+      this.state.dashNav = dashNav;
+
+    }
+    
+
+      return (
+      <div className="dashboard" >
         {this.state.dashNav}
-        {this.state.dashIntro}
-        {this.state.dashBody}
+        <div className="dash-clipboard">
+          {this.state.dashIntro}
+          {this.state.dashBody}
+        </div>
+        
       </div>
     )
-
+    
   }
 }
 
