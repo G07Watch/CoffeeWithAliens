@@ -60,7 +60,7 @@ class UserEdit extends React.Component{
 
     if(this.state.new_password === this.state.confirm_password){
 
-      this.props.updateUser(this.state.user);
+      this.props.updateUser(this.state);
       this.props.history.push("/profile");
     }
 
