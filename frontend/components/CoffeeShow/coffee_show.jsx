@@ -184,8 +184,7 @@ class CoffeeShow extends React.Component{
       else {
         return (
           <Link className='coffee-signup-link' to="/signup">
-            <input className='coffee-signup-button' 
-            type="button" value="Sign Me Up"/>
+            Sign Me Up
           </Link>
 
         )
@@ -204,10 +203,11 @@ class CoffeeShow extends React.Component{
         return window.garvinURL;
 
       case 2:
-        return window.mysteryURL;
+        return window.etURL;
+    
 
       case 3:
-        return window.etURL;
+        return window.mysteryURL;
 
       default:
         return null;
@@ -335,9 +335,9 @@ class CoffeeShow extends React.Component{
       </div>
 
 
+      }
+
     }
-
-
     return(
       <div className="coffee-show">
         {sidebar}
@@ -345,7 +345,8 @@ class CoffeeShow extends React.Component{
       </div>
     )
     
-  }
+    }
+  
 }
 
 export default CoffeeShow;

@@ -43,10 +43,10 @@ class UserDashboard extends React.Component {
         return window.garvinURL;
       
       case 2: 
-        return window.mysteryURL;
-
-      case 3:
         return window.etURL;
+      
+      case 3:
+        return window.mysteryURL;
 
       default: 
         return null;
