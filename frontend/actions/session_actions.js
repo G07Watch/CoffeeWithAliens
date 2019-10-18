@@ -15,7 +15,6 @@ export const signup = user => dispatch =>(
   )
 );
 
-
 export const updateUser = user => dispatch =>(
   SessionApiUtil.update(user)
   .then(

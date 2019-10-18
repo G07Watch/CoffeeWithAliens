@@ -63,14 +63,6 @@ export const updateHost = host => dispatch =>(
   )
 );
 
-export const updateUser = user => dispatch =>(
-  HostApitUtil.updateUser(user)
-  .then(
-    user =>(dispatch(receiveUser(user))),
-    errors =>(dispatch(receiveErrors(errors)))
-  )
-);
-
 export const receiveUser = user => {
   return({
     type: RECEIVE_USER,

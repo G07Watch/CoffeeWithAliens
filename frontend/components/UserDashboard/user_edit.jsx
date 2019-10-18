@@ -43,7 +43,6 @@ class UserEdit extends React.Component{
 
   }
 
-
   componentDidMount(){
 
 
@@ -67,8 +66,24 @@ class UserEdit extends React.Component{
 
   render(){
 
+    //ERROR RENDER LOGIC
+
+    if (Array.isArray(this.props.errors)) {
+      errors = <ul className="sess-errors">
+        {this.props.errors.map(
+          error => (
+            <p key={error} >{error}</p>)
+        )}
+      </ul>
+
     return(
+      
+
       <form onSubmit={this.submitUser}> 
+
+        <div>
+          {errors}
+        </div>
 
         <div className="user-id">
           <input type="text" value={this.state.nickname} onChange={this.update('nickname')}/>
@@ -105,6 +120,7 @@ class UserEdit extends React.Component{
 
       </form>
     )
+          
 
 
   }
