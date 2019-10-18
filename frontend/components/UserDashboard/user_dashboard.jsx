@@ -11,7 +11,7 @@ class UserDashboard extends React.Component {
       hosts: {},
       dashNav : <p></p>,
       dashIntro : <p></p>,
-      dashBody : <p>Here</p>
+      dashBody : <p></p>
     };
 
     this.buildCoffeeArr = this.buildCoffeeArr.bind(this);
@@ -57,13 +57,16 @@ class UserDashboard extends React.Component {
 
 
   buildCoffeeArr(){
+    let coffeeEvents;
+    
+    if(this.checkNotEmpty(this.state.userEvents)){
+      coffeeEvents = [];
+      let count = 135;
 
-    let coffeeEvents=[];
-    let count = 135;
-    Object.values(this.state.userEvents).forEach(event =>{
-      let eventElement;
-      count++;
-       eventElement = <div key={count} className="event-element">
+      Object.values(this.state.userEvents).forEach(event =>{
+        let eventElement;
+        count++;
+        eventElement = <div key={count} className="event-element">
                           <div className="event-card">
                             <h4>{event.day}</h4> 
                             <h2>{event.meet_date}</h2>
@@ -82,12 +85,12 @@ class UserDashboard extends React.Component {
 
                         </div>
 
-      coffeeEvents.push(eventElement);
-
+    coffeeEvents.push(eventElement);
+    
     })
+      this.state.coffeeEvents = coffeeEvents;
+  }
 
-    this.state.coffeeEvents = coffeeEvents;
-    // console.log(this.state.coffeeEvents);
 
   }
 
@@ -100,7 +103,7 @@ class UserDashboard extends React.Component {
   hasAllAttributes() {
     return (
       this.checkNotEmpty(this.state.hosts)
-      && this.checkNotEmpty(this.state.userEvents)
+      // && this.checkNotEmpty(this.state.userEvents)
     )
   }
 
@@ -160,12 +163,31 @@ class UserDashboard extends React.Component {
         <Link className="user-schedule" to="/coffee_schedule"> Sign up for a Coffee Time!</Link>
       </div>
 
-      dashBody = <div className="dash-body">
+      if (this.state.coffeeEvents){        
+        dashBody = <div className="dash-body">
         <h1>Coffee times you're attending</h1>
         <ul>
           {this.state.coffeeEvents}
         </ul>
       </div>
+      }
+
+      else{
+        dashBody = <div className="dash-body">
+          <h1>
+            You have no coffee times coming up!
+            Let's change that.
+          </h1>
+          <ul>
+            <li>
+              <Link className="blank-coffee" to="/coffee_schedule">
+                <h1>+</h1>  
+                <h3>JOIN A COFFEE TIME</h3>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      }
 
       console.log(dashBody);
       this.state.dashIntro = dashIntro;

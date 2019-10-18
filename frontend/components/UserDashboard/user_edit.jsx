@@ -17,13 +17,34 @@ class UserEdit extends React.Component{
       confirmPassword: '',
     }
 
+    this.star;
+
     this.currentPassword;
 
     this.submitUser = this.submitUser.bind(this);
+
+    switch(this.state.star_system_id){
+      case 1:
+        this.star = 'Sol';
+        return;
+      
+      case 2:
+        this.star = 'Alpha Centauri';
+        return;
+      
+      case 3:
+        this.star = 'Brodo';
+        return;
+
+      default:
+          return;
+    }
+
   }
 
 
   componentDidMount(){
+
 
   }
 
@@ -37,7 +58,7 @@ class UserEdit extends React.Component{
   submitUser(e) {
     e.preventDefault();
 
-    if(this.currentPassword === this.state.currentPassword)
+    // if(this.currentPassword === this.state.currentPassword)
     this.props.updateUser(this.state.user)
     this.props.history.push("/profile")
   }
@@ -60,17 +81,22 @@ class UserEdit extends React.Component{
 
         <div className="phone-home">
           <input type="text" value={this.state.phone_number} onChange={this.update('phone_number')} />
-          <select name="" id=""></select>
+          <select onChange={this.update('star_system_id')} defaultValue={this.star}>
+            <option disabled>Home Star System</option>
+            <option value="1" id="Sol" >Sol</option>
+            <option value="2" id="Alpha Centauri">Alpha Centauri</option>
+            <option value="3" id="Brodo" >Brodo</option>
+          </select>
         </div>
 
         <div className="password-change">
-          <input type="text" placeholder="Current password"
-            value={this.state.currentPassword} onChange={this.update('currentPassword')} />
+          {/* <input type="password" placeholder="Current password"
+            value={this.state.currentPassword} onChange={this.update('currentPassword')} /> */}
 
-          <input type="text" placeholder="New password"
+          <input type="password" placeholder="New password"
             value={this.state.password} onChange={this.update('password')} />
 
-          <input type="text" placeholder="One more time!"
+          <input type="password" placeholder="One more time!"
             value={this.state.confirmPassword} onChange={this.update('confirmPassword')} />
         </div>
 
