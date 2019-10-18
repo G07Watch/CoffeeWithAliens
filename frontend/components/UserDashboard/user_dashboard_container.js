@@ -4,7 +4,7 @@ import UserDashboard from './user_dashboard';
 import { fetchHosts } from '../../actions/host_actions';
 
 const mapStateToProps = state =>{
-  let currentUser = state.session && state.session.currentUser;
+  let currentUser = state.session.currentUser;
   let userEvents = state.session && state.session.user_coffee_times;
   return({
     hosts: state.entities.hosts,
