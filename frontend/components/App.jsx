@@ -22,7 +22,7 @@ const App = () => (
   <Route path="/coffee_show/:id" component={CoffeeShowContainer}/>
  
 
-  <ProtectedRoute path="/user/edit"/>
+  <ProtectedRoute path="/user/edit" component={UserDashboardContainer} />
   <ProtectedRoute path="/profile" component={UserDashboardContainer}/>
   <ProtectedRoute path="/hosting" component={HostFormContainer} />
   <AuthRoute path="/login/" component={LoginFormContainer} />
