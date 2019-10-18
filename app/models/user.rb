@@ -27,11 +27,13 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
   after_initialize :ensure_first_name
-
+  
 
   belongs_to :star_system
 
+
   has_one :host
+
 
   has_many :coffee_schedules
 

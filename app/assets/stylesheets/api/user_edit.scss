@@ -1,0 +1,130 @@
+.edit-form-display{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  // border: 1px solid rgba(209, 57, 2, 0.918);
+}
+
+.edit-form-display h1{
+  height: fit-content;
+  font-size: 24px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  // margin-left: 5%;
+  margin-bottom: .6em;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(209, 57, 2, 0.918);
+  padding: 1em;
+}
+
+.edit-form h2{
+   color: black;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  // border-top: 1px solid rgba(209, 57, 2, 0.918);
+  border: 1px solid rgba(209, 57, 2, 0.918);
+  background-color:  rgb(246, 225, 197);
+  padding: 1em .5em;
+  text-align: left;
+  width: 95%;
+}
+
+.edit-form input{
+  width: 310px;
+    margin: auto;
+}
+
+.edit-form div label{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1em 0;
+  margin-right: 1em;
+}
+
+
+.change-pass{
+  border-top: 1px solid rgba(209, 57, 2, 0.918);
+  // border-bottom: 1px solid rgba(209, 57, 2, 0.918);
+}
+
+.user-id{
+  display: flex;
+  flex-direction: row;
+  // max-width: 1020px;
+}
+
+.fullname{
+  display: flex;
+  flex-direction: row;
+  //  max-width: 1020px;
+}
+
+
+.phone-home{ 
+   display: flex;
+  flex-direction: row;
+  //  max-width: 1020px;
+}
+
+#current-pass{
+    font-weight: bold;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1em 0;
+}
+
+#current-password-input{
+  width: 95%;
+ 
+}
+
+.password-change{
+  display: flex;
+  flex-direction: row;
+  //  max-width: 1020px;
+}
+
+#save{
+  margin-top: 1em;
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(209, 57, 2, 0.918);
+  height: fit-content;
+  width: 95%;
+  // max-width: 500px;
+  border: 2px orangered;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin-left: 1.5%;
+}
+
+.home-star{
+  display: block;
+  padding: 1em;
+  // height: 30px;
+  width: 325px;
+  // max-width: 500px;
+  color: black;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  // text-transform: none;
+}

@@ -20,34 +20,34 @@ class Api::UsersController < ApplicationController
     
     @user = User.find_by(id: params[:id])
 
-    if params[:new_password]
-      if @user.is_password?(@user.password)
-        @user.password=(params[:new_password])
-        @user = User.new(
-         id: params[:id],
-         nickname: params[:nickname],
-         email: params[:email], 
-         first_name: params[:first_name],
-         last_name: params[:last_name],
-         star_system_id: params[:star_system_id], 
-         is_host: params[:is_host],
-         phone_number: params[:phone_number]
+    if params[:user][:new_password]
+      if @user.is_password?(params[:user][:password])
+        @user.password=(params[:user][:new_password])
+        @user.update(
+         id: params[:user][:id],
+         nickname: params[:user][:nickname],
+         email: params[:user][:email], 
+         first_name: params[:user][:first_name],
+         last_name: params[:user][:last_name],
+         star_system_id: params[:user][:star_system_id], 
+         is_host: params[:user][:is_host],
+         phone_number: params[:user][:phone_number]
         )
       else
         render json: ["Invalid password"], status: 422
       end
     else
-      @user = User.new(
-         id: params[:id],
-         nickname: params[:nickname],
-         email: params[:email], 
-         first_name: params[:first_name],
-         last_name: params[:last_name],
-         star_system_id: params[:star_system_id], 
-         is_host: params[:is_host],
-         phone_number: params[:phone_number]
+      if @user.update(
+         id: params[:user][:id],
+         nickname: params[:user][:nickname],
+         email: params[:user][:email], 
+         first_name: params[:user][:first_name],
+         last_name: params[:user][:last_name],
+         star_system_id: params[:user][:star_system_id], 
+         is_host: params[:user][:is_host],
+         phone_number: params[:user][:phone_number]
         )
-      if @user.update
+
           render :show
       else
           render json: @user.errors.full_messages, status: 422 
@@ -68,6 +68,7 @@ class Api::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit( 
+      :password,
       :id, :nickname, :email, 
       :first_name, :last_name,
       :star_system_id, :is_host,

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import UserEdit from './user_edit';
-import { updateUser } from '../../actions/session_actions';
+import { updateUser, cleanErrors } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
   let currentUser = state.session.currentUser;
@@ -15,7 +15,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 
   return ({
-    updateUser: (user) => dispatch(updateUser(user))
+    updateUser: (user) => dispatch(updateUser(user)),
+    cleanErrors: () => dispatch(cleanErrors())
   })
 }
 
