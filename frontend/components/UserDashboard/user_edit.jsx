@@ -24,7 +24,7 @@ class UserEdit extends React.Component{
 
 
   componentDidMount(){
-    
+
   }
 
 
@@ -49,29 +49,29 @@ class UserEdit extends React.Component{
       <form onSubmit={this.submitUser}> 
 
         <div className="user-id">
-          <input type="text" value={this.state.nickname} onChange={this.updateUser('nickname')}/>
-          <input type="text" value={this.state.email} onChange={this.updateUser('email')}/>
+          <input type="text" value={this.state.nickname} onChange={this.update('nickname')}/>
+          <input type="text" value={this.state.email} onChange={this.update('email')}/>
         </div>
 
         <div className="fullname">
-          <input type="text" value={this.state.first_name} onChange={this.updateUser('first_name')} />
-          <input type="text" value={this.state.last_name} onChange={this.updateUser('last_name')} />
+          <input type="text" value={this.state.first_name} onChange={this.update('first_name')} />
+          <input type="text" value={this.state.last_name} onChange={this.update('last_name')} />
         </div>
 
         <div className="phone-home">
-          <input type="text" value={this.state.phone_number} onChange={this.updateUser('phone_number')} />
+          <input type="text" value={this.state.phone_number} onChange={this.update('phone_number')} />
           <select name="" id=""></select>
         </div>
 
         <div className="password-change">
           <input type="text" placeholder="Current password"
-            value={this.state.currentPassword} onChange={this.updateUser('currentPassword')} />
+            value={this.state.currentPassword} onChange={this.update('currentPassword')} />
 
           <input type="text" placeholder="New password"
-            value={this.state.password} onChange={this.updateUser('password')} />
+            value={this.state.password} onChange={this.update('password')} />
 
           <input type="text" placeholder="One more time!"
-            value={this.state.confirmPassword} onChange={this.updateUser('confirmPassword')} />
+            value={this.state.confirmPassword} onChange={this.update('confirmPassword')} />
         </div>
 
         <input type="submit" value="SAVE CHANGES" />
