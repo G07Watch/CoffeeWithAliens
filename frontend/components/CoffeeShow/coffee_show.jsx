@@ -14,6 +14,7 @@ class CoffeeShow extends React.Component{
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
       this.hasAllAttributes = this.hasAllAttributes.bind(this);
       this.submitButton = this.submitButton.bind(this);
+      this.hostPic = this.hostPic.bind(this);
     }
 
     componentDidMount(){
@@ -197,6 +198,21 @@ class CoffeeShow extends React.Component{
       //setting all render checks here
     }
 
+  hostPic(id) {
+    switch (id) {
+      case 1:
+        return window.garvinURL;
+
+      case 2:
+        return window.mysteryURL;
+
+      case 3:
+        return window.etURL;
+
+      default:
+        return null;
+    }
+  }
 
 
 
@@ -292,13 +308,16 @@ class CoffeeShow extends React.Component{
         facebook = <a className="facebook" href={this.host.facebook}>FACEBOOK</a>
       }
 
+      if(this.host.id){
+        
+
       hostProfile = <div className="host-profile">
 
         <h1 className="show-host-header">Meet your Host, {this.host.name}</h1>
 
         <div className="show-image-portrait">
 
-        <img className="show-host-image" src={window.mysteryURL} alt=""/>
+        <img className="show-host-image" src={this.hostPic(this.host.id)} alt=""/>
         </div>
 
         {facebook}

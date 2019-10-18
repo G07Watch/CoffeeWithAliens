@@ -40,13 +40,13 @@ class UserDashboard extends React.Component {
   hostPic(id){
     switch(id){
       case 1:
-        return window.mysteryURL;
+        return window.garvinURL;
       
       case 2: 
         return window.mysteryURL;
 
       case 3:
-        return window.mysteryURL;
+        return window.etURL;
 
       default: 
         return null;
