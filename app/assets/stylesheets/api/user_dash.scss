@@ -16,8 +16,54 @@
 }
 
 
+//DASH-NAV STYLING
+
+.dash-nav{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(228, 172, 98, 0.856);
+  padding: 1em;
+  color: black;
+  width: 100%;
+}
+
+.nav-block a{
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 25%;
+  margin-left: 15%;
+}
+
 //INTRO STYLING
 
+.dash-intro h1{
+  height: fit-content;
+  font-size: 24px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.dash-intro{
+  height: fit-content;
+  font-size: 20px;
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
 
 .user-schedule{
   margin-top: 1em;
@@ -27,20 +73,33 @@
   font-weight: 600;
   font-family: Helvetica;
   background-color: rgba(209, 57, 2, 0.918);
-  height: fit-content;
-  width: 80%;
+  // height: fit-content;
+  // width: 80%;
   // max-width: 500px;
   border: 2px orangered;
   border-radius: 10px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 1em;
+  padding: .5em;
 
 }
 
 
 
 //EVENT STYLING
+
+.dash-body h1{
+  height: fit-content;
+  font-size: 24px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: .6em;
+}
 
 .event-element{
   display: flex;

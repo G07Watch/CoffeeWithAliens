@@ -119,37 +119,38 @@ class UserDashboard extends React.Component {
 
 
 
-    if (this.hasAllAttributes()) {
+    // if (this.hasAllAttributes()) {
 
-      let dashIntro;
-      let dashBody;
-      let dashNav;
+    //   let dashIntro;
+    //   let dashBody;
+    //   let dashNav;
 
-      dashNav = <div>
-        <Link to="/profile">QUICK LOOK</Link>
-        <Link to="/profile">HISTORY</Link>
-        <Link to="/profile">ACCOUNT DETAILS</Link>
-      </div>
+    //   dashNav = <div>
+    //     <Link to="/profile">QUICK LOOK</Link>
+    //     <Link to="/profile">HISTORY</Link>
+    //     <Link to="/profile">ACCOUNT DETAILS</Link>
+    //   </div>
 
 
-      dashIntro = <div className="dash-intro">
-        <h1>Welcome home, {this.props.currentUser.nickname}</h1>
-        <h3>What are you thankful for this cycle?</h3>
-        <Link className="user-schedule" to="/coffee_schedule"> Sign up for a Coffee Time!</Link>
-      </div>
+    //   dashIntro = <div className="dash-intro">
+    //     <h1>Welcome home, {this.props.currentUser.nickname}</h1>
+    //     <h3>What are you thankful for this cycle?</h3>
+    //     <Link className="user-schedule" to="/coffee_schedule"> Sign up for a Coffee Time!</Link>
+    //   </div>
 
-      dashBody = <div className="dash-body">
-        <ul>
-          {this.state.coffeeEvents}
-        </ul>
-      </div>
+    //   dashBody = <div className="dash-body">
+        
+    //     <ul>
+    //       {this.state.coffeeEvents}
+    //     </ul>
+    //   </div>
 
-      console.log(dashBody);
-      this.state.dashIntro = dashIntro;
-      this.state.dashBody = dashBody;
-      this.state.dashNav = dashNav;
+    //   console.log(dashBody);
+    //   this.state.dashIntro = dashIntro;
+    //   this.state.dashBody = dashBody;
+    //   this.state.dashNav = dashNav;
    
-    }
+    // }
   }
 
   render(){
@@ -174,10 +175,12 @@ class UserDashboard extends React.Component {
       let dashBody;
       let dashNav;
 
-      dashNav = <div>
-        <Link to="/profile">QUICK LOOK</Link>
-        <Link to="/profile">HISTORY</Link>
-        <Link to="/profile">ACCOUNT DETAILS</Link>
+      dashNav = <div className="dash-nav">
+        <div className="nav-block">
+          <Link to="/profile">QUICK LOOK</Link>
+          <Link to="/profile">HISTORY</Link>
+          <Link to="/profile">ACCOUNT DETAILS</Link>
+        </div>
       </div>
 
 
@@ -188,6 +191,7 @@ class UserDashboard extends React.Component {
       </div>
 
       dashBody = <div className="dash-body">
+        <h1>Coffee times you're attending</h1>
         <ul>
           {this.state.coffeeEvents}
         </ul>
