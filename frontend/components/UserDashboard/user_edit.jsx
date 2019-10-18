@@ -19,8 +19,6 @@ class UserEdit extends React.Component{
       confirm_password: '',
     }
 
-    console.log(this.state);
-
     this.star;
 
     this.submitUser = this.submitUser.bind(this);
@@ -55,7 +53,6 @@ class UserEdit extends React.Component{
     
     return (e) => {
       this.setState({ [field]: e.target.value })
-      console.log(this.state)
       this.props.cleanErrors();
       this.state.errors = null;
     }

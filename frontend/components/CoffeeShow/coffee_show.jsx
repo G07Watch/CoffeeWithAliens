@@ -9,7 +9,6 @@ class CoffeeShow extends React.Component{
       this.state = {};
       this.host = {};
       this.star ={};
-      console.log(this.props.currentUser);
 
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
       this.hasAllAttributes = this.hasAllAttributes.bind(this);
@@ -163,15 +162,8 @@ class CoffeeShow extends React.Component{
 
       if (this.props.currentUser) {
         //this.props.coffeeSignUp(this.state.id, this.props.currentUser.id)
-        console.log("hi, I'm signing you up to have coffee!")
 
         return (
-          
-          // <Link to="/coffee_schedule"
-          // onClick={this.coffeeSubmit}
-          // >Sign Me Up</Link>
-
-          //TEMP
             <button className='coffee-signup-button'
             type="button" 
               onClick={this.coffeeSubmit()} >
@@ -244,7 +236,6 @@ class CoffeeShow extends React.Component{
     //After getting CoffeeShow data and Host data do the following:
 
     if (this.hasAllAttributes()){
-          // console.log('HAVE ALL ATTRIBUTES!')
 
       if(this.checkNotEmpty(this.props.currentUser)){
         ifUser=<div className='User'>
