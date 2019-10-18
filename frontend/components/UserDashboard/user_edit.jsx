@@ -6,6 +6,7 @@ class UserEdit extends React.Component{
     super(props);
 
     this.state={
+      id: this.props.currentUser.id,
       nickname: this.props.currentUser.nickname,
       email: this.props.currentUser.email,
       first_name: this.props.currentUser.first_name,

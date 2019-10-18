@@ -9,10 +9,11 @@ export const login = user => $.ajax({method: "POST", url: "api/session/", data: 
 export const logout = () => $.ajax({method: "DELETE", url: "api/session/"});
 
 
-export const update = () =>(
+export const update = (user) =>(
   $.ajax({
     method: 'PATCH',
-    url: 'stuuf'
+    url: `api/users/${user.id}`,
+    data: {user}
   })
 )
 
