@@ -177,16 +177,11 @@ class UserDashboard extends React.Component {
     
 
     if (document.location.hash = "#/users/edit"){
-      dashBody = 
-
+      dashBody = <UserEdit
        currentUser={this.props.currentUser} 
        updateUser={this.props.updateUser}
-       
-
-
-
-
-      this.state.dashBody = dashBody:
+       />
+      this.state.dashBody = dashBody
     }
 
       return (
