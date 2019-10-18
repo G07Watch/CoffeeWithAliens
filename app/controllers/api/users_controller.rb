@@ -17,13 +17,24 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.new(user_params)
+    
+    @user = User.find_by(id: params[:id])
 
-      if @user.update
-        render :show
+    if params[:new_password]
+      if @user.is_password?(@user.password)
+        @user.password=(params[:new_password])
+        @user = User.new(user_params)
       else
-        render json: @user.errors.full_messages, status: 422 
+        render json: ["Invalid password"], status: 422
       end
+    else
+      @user = User.new(user_params)
+      if @user.update
+          render :show
+      else
+          render json: @user.errors.full_messages, status: 422 
+      end
+    end
   end
 
   def destroy
@@ -40,9 +51,9 @@ class Api::UsersController < ApplicationController
   def user_params
     params.require(:user).permit( 
       :id, :nickname, :email, 
-      :first_name, :last_name, 
-      :password, :star_system_id,
-      :is_host, :phone_number)
+      :first_name, :last_name,
+      :star_system_id, :is_host,
+      :phone_number)
   end
 
 end

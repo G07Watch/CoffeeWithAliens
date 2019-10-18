@@ -189,7 +189,6 @@ class UserDashboard extends React.Component {
         </div>
       }
 
-      console.log(dashBody);
       this.state.dashIntro = dashIntro;
       this.state.dashBody = dashBody;
       this.state.dashNav = dashNav;
