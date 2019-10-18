@@ -64,7 +64,7 @@ if (this.hasAllAttributes()){
 
 ![alt text][logo]
 
-[logo]: "Guest View"
+[logo]: https://github.com/G07Watch/CoffeeWithAliens/blob/user_dash/app/assets/images/guest_view.png "Guest View"
 
 
 * Coffee Time page while signed in: 
@@ -72,4 +72,4 @@ if (this.hasAllAttributes()){
 
 ![alt text][User]
 
-[User]:  "Member View"
+[User]: https://github.com/G07Watch/CoffeeWithAliens/blob/user_dash/app/assets/images/user_view.png  "Member View"
