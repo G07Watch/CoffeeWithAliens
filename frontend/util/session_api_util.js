@@ -8,6 +8,16 @@ export const login = user => $.ajax({method: "POST", url: "api/session/", data: 
 
 export const logout = () => $.ajax({method: "DELETE", url: "api/session/"});
 
+
+export const update = user =>(
+  $.ajax({
+    method: 'PATCH',
+    url: `api/users/${user.id}`,
+    data: {user}
+  })
+)
+
+
 // window.signup = signup;
 // window.login = login;
 // window.logout = logout;

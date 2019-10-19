@@ -105,17 +105,34 @@
   font-weight: 600;
   font-family: Helvetica;
   background-color: rgba(209, 57, 2, 0.918);
+  // height: fit-content;
+  // width: 80%;
+  // max-width: 500px;
+  border: 2px orangered;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.coffee-signup-link{
+  text-decoration: none;
+  padding: 1em;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Helvetica;
+  background-color: rgba(209, 57, 2, 0.918);
   height: fit-content;
-  width: 100%;
+  width: 95%;
   // max-width: 500px;
   border: 2px orangered;
   border-radius: 10px;
   text-transform: uppercase;
-}
-
-.coffee-signup-link{
-  display: hidden;
-  text-decoration: none;
+  text-align: center;
+  max-width: 326.39px;
+  max-height: 63px;
 }
 
 .show-schedule{

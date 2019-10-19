@@ -38,21 +38,9 @@ user_three.save!
 
 host_one = Host.create(
   facebook: 'https://www.facebook.com/',
-  intro: "Hi I'm Garvin
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
-   quaerat, error dolorem mollitia voluptatibus assumenda.
-   Recusandae voluptate impedit labore aut nihil?",
-  story: "Born in Trinidad, raised in NYC.
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
-   quaerat, error dolorem mollitia voluptatibus assumenda.
-   Recusandae voluptate impedit labore aut nihil?",
-  topics: "Space travel, military strategy, philosophy
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
-   quaerat, error dolorem mollitia voluptatibus assumenda.
-   Recusandae voluptate impedit labore aut nihil?",
+  intro: "Hi I'm Garvin",
+  story: "Born in Trinidad, raised in NYC.",
+  topics: "Space travel, military strategy, philosophy",
   user_id: user_one.id
 )
 
@@ -60,21 +48,17 @@ user_one.update(is_host: true)
 
 host_two =  Host.create(
   facebook: '',
-  intro: 'ET is alien
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
-   quaerat, error dolorem mollitia voluptatibus assumenda.
-   Recusandae voluptate impedit labore aut nihil?',
-  story: 'Glad to be home.  Crashed.  Tired.  Coffee good.
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
-   quaerat, error dolorem mollitia voluptatibus assumenda.
-   Recusandae voluptate impedit labore aut nihil?',
-  topics: 'My trip far from home.  Also types of coffee.
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-  Molestiae ullam quae voluptatum dicta harum eligendi aliquid rerum possimus
-   quaerat, error dolorem mollitia voluptatibus assumenda.
-   Recusandae voluptate impedit labore aut nihil?',
+  intro: 'E.T. the Extra-Terrestrial is a 1982 American science fiction film produced and 
+  directed by Steven Spielberg, and written by Melissa Mathison. It features special effects by
+   Carlo Rambaldi and Dennis Muren, and stars Henry Thomas, Dee Wallace, Peter Coyote, Robert MacNaughton,
+    Drew Barrymore, and Pat Welsh. It tells the story of Elliott (Thomas), a boy who befriends an 
+    extraterrestrial, dubbed "E.T.", who is stranded on Earth. ',
+  story: 'The alien learns to speak English by repeating what Gertie says as she watches Sesame Street and, 
+  at Elliotts urging, dubs itself E.T. E.T. reads a comic strip where Buck Rogers, stranded, calls for
+   help by building a makeshift communication device and is inspired to try it himself. E.T. receives Elliotts
+   help in building a device to "phone home" by using a Speak & Spell toy. Michael notices that E.T.s health is
+   declining and that Elliott is referring to himself as "we".',
+  topics: 'My trip far from home.  Also types of coffee.',
   user_id: user_three.id 
 )
 
@@ -92,7 +76,7 @@ coffee_two = CoffeeTime.create(
   place: 'Earth',
   date: Time.now,    
   start_time: 11,
-  available_seats: 6,
+  available_seats: 2,
   host_id: host_one.id,
   star_system_id: 1
 )
@@ -101,7 +85,35 @@ coffee_three = CoffeeTime.create(
   place: 'Brodo Asogi',
   date: Time.now,    
   start_time: 8,
-  available_seats: 6,
+  available_seats: 1,
+  host_id: host_two.id,
+  star_system_id: 3
+)
+
+coffee_four = CoffeeTime.create(
+  place: 'Earth',
+  date: DateTime.new(2019,10,5.5),
+  start_time: 11.5,
+  available_seats: 5,
+  host_id: host_one.id,
+  star_system_id: 1
+)
+
+coffee_five = CoffeeTime.create(
+  place: 'Brodo Asogi',
+  date: DateTime.new(2019,11,5.5),    
+  start_time: 3,
+  available_seats: 4,
+  host_id: host_two.id,
+  star_system_id: 3
+)
+
+
+coffee_six = CoffeeTime.create(
+  place: 'Brodo Asogi',
+  date: DateTime.new(2019,10,7.5),    
+  start_time: 3,
+  available_seats: 3,
   host_id: host_two.id,
   star_system_id: 3
 )

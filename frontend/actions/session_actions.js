@@ -15,6 +15,13 @@ export const signup = user => dispatch =>(
   )
 );
 
+export const updateUser = user => dispatch =>(
+  SessionApiUtil.update(user)
+  .then(
+    user => dispatch(receiveCurrentUser(user)),
+    errors => dispatch(receiveErrors(errors))
+  )
+)
 
 export const receiveCurrentUser = user =>({
   type: RECEIVE_CURRENT_USER,

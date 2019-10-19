@@ -9,11 +9,11 @@ class CoffeeShow extends React.Component{
       this.state = {};
       this.host = {};
       this.star ={};
-      console.log(this.props.currentUser);
 
       this.checkNotEmpty = this.checkNotEmpty.bind(this);
       this.hasAllAttributes = this.hasAllAttributes.bind(this);
       this.submitButton = this.submitButton.bind(this);
+      this.hostPic = this.hostPic.bind(this);
     }
 
     componentDidMount(){
@@ -82,7 +82,10 @@ class CoffeeShow extends React.Component{
     coffeeSubmit(){
       return(e) =>{
         e.preventDefault();
-        this.props.coffeeSignUp(this.props.currentUser.id, this.state.id);
+        this.props.coffeeSignUp(this.props.currentUser.id, this.state.id)
+        .then(
+          this.props.history.push("/profile")
+        )
       }
     }
 
@@ -159,29 +162,21 @@ class CoffeeShow extends React.Component{
 
       if (this.props.currentUser) {
         //this.props.coffeeSignUp(this.state.id, this.props.currentUser.id)
-        console.log("hi, I'm signing you up to have coffee!")
 
         return (
-          
-          // <Link to="/coffee_schedule"
-          // onClick={this.coffeeSubmit}
-          // >Sign Me Up</Link>
-
-          //TEMP
-          <Link className='coffee-signup-link' to="/profile">
-            <input className='coffee-signup-button'
-            type="button" value="Sign Me Up"
-            onClick={this.coffeeSubmit()} />
-          </Link>
-          
+            <button className='coffee-signup-button'
+            type="button" 
+              onClick={this.coffeeSubmit()} >
+                Sign Me Up
+              </button>
+         
        )
       }
 
       else {
         return (
           <Link className='coffee-signup-link' to="/signup">
-            <input className='coffee-signup-button' 
-            type="button" value="Sign Me Up"/>
+            Sign Me Up
           </Link>
 
         )
@@ -194,6 +189,22 @@ class CoffeeShow extends React.Component{
       //setting all render checks here
     }
 
+  hostPic(id) {
+    switch (id) {
+      case 1:
+        return window.garvinURL;
+
+      case 2:
+        return window.etURL;
+    
+
+      case 3:
+        return window.mysteryURL;
+
+      default:
+        return null;
+    }
+  }
 
 
 
@@ -225,7 +236,6 @@ class CoffeeShow extends React.Component{
     //After getting CoffeeShow data and Host data do the following:
 
     if (this.hasAllAttributes()){
-          // console.log('HAVE ALL ATTRIBUTES!')
 
       if(this.checkNotEmpty(this.props.currentUser)){
         ifUser=<div className='User'>
@@ -289,13 +299,16 @@ class CoffeeShow extends React.Component{
         facebook = <a className="facebook" href={this.host.facebook}>FACEBOOK</a>
       }
 
+      if(this.host.id){
+        
+
       hostProfile = <div className="host-profile">
 
         <h1 className="show-host-header">Meet your Host, {this.host.name}</h1>
 
         <div className="show-image-portrait">
 
-        <img className="show-host-image" src={window.mysteryURL} alt=""/>
+        <img className="show-host-image" src={this.hostPic(this.host.id)} alt=""/>
         </div>
 
         {facebook}
@@ -313,9 +326,9 @@ class CoffeeShow extends React.Component{
       </div>
 
 
+      }
+
     }
-
-
     return(
       <div className="coffee-show">
         {sidebar}
@@ -323,7 +336,8 @@ class CoffeeShow extends React.Component{
       </div>
     )
     
-  }
+    }
+  
 }
 
 export default CoffeeShow;

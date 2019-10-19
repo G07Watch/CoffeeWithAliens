@@ -17,13 +17,42 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.new(user_params)
+    
+    @user = User.find_by(id: params[:id])
 
-      if @user.update
-        render :show
+    if params[:user][:new_password]
+      if @user.is_password?(params[:user][:password])
+        @user.password=(params[:user][:new_password])
+        @user.update(
+         id: params[:user][:id],
+         nickname: params[:user][:nickname],
+         email: params[:user][:email], 
+         first_name: params[:user][:first_name],
+         last_name: params[:user][:last_name],
+         star_system_id: params[:user][:star_system_id], 
+         is_host: params[:user][:is_host],
+         phone_number: params[:user][:phone_number]
+        )
       else
-        render json: @user.errors.full_messages, status: 422 
+        render json: ["Invalid password"], status: 422
       end
+    else
+      if @user.update(
+         id: params[:user][:id],
+         nickname: params[:user][:nickname],
+         email: params[:user][:email], 
+         first_name: params[:user][:first_name],
+         last_name: params[:user][:last_name],
+         star_system_id: params[:user][:star_system_id], 
+         is_host: params[:user][:is_host],
+         phone_number: params[:user][:phone_number]
+        )
+
+          render :show
+      else
+          render json: @user.errors.full_messages, status: 422 
+      end
+    end
   end
 
   def destroy
@@ -38,7 +67,12 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit( :id, :nickname, :email, :password, :star_system_id, :is_host, :phone_number)
+    params.require(:user).permit( 
+      :password,
+      :id, :nickname, :email, 
+      :first_name, :last_name,
+      :star_system_id, :is_host,
+      :phone_number)
   end
 
 end
