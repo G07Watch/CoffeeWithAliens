@@ -1,0 +1,226 @@
+
+.coffee-show{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1020px;
+  margin: auto;
+  background-color: beige;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32%;
+  height: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.host-profile{
+  display: flex;
+  flex-direction: column;
+  // align-content: center;
+  justify-content: space-between;
+  width: 64%;
+  margin-top: 3em;
+  margin-bottom: 10em;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+// Sidebar element styling
+
+.coffee-card{ 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid gray;
+  padding: 10px;
+  background-color: white;
+}
+
+.coffee-card h1{
+  height: fit-content;
+  font-size: 24px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.coffee-card h3{
+  height: fit-content;
+  font-size: 24px;
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.coffee-card p{
+  height: fit-content;
+  font-size: 16px;
+  color: gray;
+  font-family: Courier;
+  // font-weight: bold;
+  // text-transform: uppercase;
+  text-align: left;
+  overflow: auto;
+}
+
+.coffee-card hr{
+  border-bottom: 1px solid gray;
+  margin: 0.8em;
+}
+
+.User{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 1em;
+}
+
+.User h2{
+  padding-top: 1em;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.User input{
+  color: black;
+  background-color: rgba(240, 194, 134, 0.801);
+}
+
+.coffee-signup-button{
+  margin-top: 1em;
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Helvetica;
+  background-color: rgba(209, 57, 2, 0.918);
+  height: fit-content;
+  width: 100%;
+  // max-width: 500px;
+  border: 2px orangered;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.coffee-signup-link{
+  display: hidden;
+  text-decoration: none;
+}
+
+.show-schedule{
+  margin-top: 1em;
+  text-decoration: none;
+  color: rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  text-align: center;
+  
+}
+
+.show-exactly{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 1em;
+  padding: 2em;
+  color: rgba(230, 137, 16, 0.856);
+  background-color: rgb(246, 225, 197);
+  font-family: Courier;
+}
+
+.show-exactly hr {
+  border-bottom: 1px solid rgba(230, 137, 16, 0.856);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 0.8em auto;
+  width: 30%;
+}
+
+.show-exactly h4{
+  text-decoration: none;
+  text-align: center;
+  color:  rgba(230, 137, 16, 0.856);
+  font-family: Courier;  
+  font-size: 20px;
+  font-weight: 600;
+}
+.show-exactly p{
+  font-family: Courier;
+  font-weight: 600;
+}
+
+.show-pointer{
+  text-align: center;
+  font: outline;
+  text-decoration: solid;
+}
+
+//Host Profile element styling
+
+
+.show-host-header{
+  height: fit-content;
+  font-size: 30px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: 1000;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+.show-image-portrait{
+  margin: auto;
+  border: 2px solid gray;
+  width: 60%;
+  // height: 60%;
+  background-color: white;
+  padding-left: .5em;
+  padding-top: .5em;
+  padding-right: .5em;
+  padding-bottom: 1.5em;
+}
+
+.show-host-image{
+  image-rendering: auto;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+.facebook{
+  margin: auto;
+  // margin-top: 1em;
+  // margin-bottom: 1em;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-family: sans-serif;
+  background-color: darkblue;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.show-host-synopsis{
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid gray;
+  background-color: white;
+}
+
+.show-host-synopsis h3{
+  font-weight: bold;
+
+}

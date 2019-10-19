@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Meeting extends React.Component {
 
@@ -71,10 +71,15 @@ class Meeting extends React.Component {
         </div>
       </div>
         <div>
+
+          <Link className="coffee-show-link" to={`/coffee_show/${this.props.meeting.id}`} >
+
           < input type="button" className={this.state.hover ? "coffee-show-hover" : "coffee-show-norm" }
             value={this.state.hover ? "Check it out →" : "Count me in"}
             onMouseEnter={this.hover}
             onMouseLeave={this.hover}/>
+          </Link>
+
         </div>
     </div>
     )

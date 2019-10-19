@@ -1,6 +1,7 @@
 import {RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER} from "../../actions/session_actions";
 import merge from "lodash/merge";
 import { RECEIVE_USER, RECEIVE_HOST } from "../../actions/host_actions";
+import { RECEIVE_ALL_USER_COFFEE } from "../../actions/coffee_actions";
 const _nullUser = {
   currentUser: null
 };
@@ -24,6 +25,15 @@ const sessionReducer = (state = _nullUser, action) => {
     case RECEIVE_USER:
       let user = { user: action.hostUser }
       newState = merge({}, state, user);
+      return newState;
+
+    case RECEIVE_ALL_USER_COFFEE:
+      let allUsers = {};
+       Object.values(action.userCoffees).forEach(user =>{
+        allUsers[user.id]= user}
+      )
+      let coffeeTimes = { user_coffee_times: allUsers  }  
+      newState = merge({}, state, coffeeTimes)
       return newState;
 
     case LOGOUT_CURRENT_USER:

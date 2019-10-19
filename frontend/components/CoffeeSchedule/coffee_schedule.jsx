@@ -68,7 +68,7 @@ class CoffeeSchedule extends React.Component{
 
     if (coffeeMeets&& stars.length && 
       !(Object.entries(hosts).length === 0 && 
-      hosts.constructor === Object)) {
+      hosts.constructor === Object)) {  // if hosts not empty
 
 
       for ( let meetUp of coffeeMeets) {

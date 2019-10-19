@@ -37,6 +37,8 @@ class User < ApplicationRecord
 
   has_many :coffee_times, through: :coffee_schedules
 
+
+
   # FeGrip
 
   def self.find_by_credentials(email, password)

@@ -12,6 +12,13 @@ class Api::CoffeeTimesController < ApplicationController
   end
 
   def show
+    @coffee_time = CoffeeTime.find_by(id: params[:id])
+
+    if @coffee_time
+      render :show
+    else
+      render json: ["This is not the coffee time you are looking for"], status: 404
+    end
   end
 
   def create
@@ -21,6 +28,12 @@ class Api::CoffeeTimesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def coffee_time_params
+    params.require(:coffee_times).permit()
   end
 
 end
