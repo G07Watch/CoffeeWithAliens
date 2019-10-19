@@ -5,10 +5,17 @@ export const fetchUser = id => (
   })
 )
 
-export const fetchHost = (user_id, id) => (
+export const fetchHosts = () => (
   $.ajax({
     method: 'GET',
-    url: `api/users/${user_id}/hosts/${id}`
+    url: 'api/hosts'
+  })
+)
+
+export const fetchHost = (id) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/hosts/${id}`
   })
 )
 
@@ -18,7 +25,7 @@ export const createHost = host => (
     url: `api/users/${host.user_id}/hosts`,
     data: {host}
   })
-)
+);
 
 export const updateUser = user => (
   $.ajax({
@@ -42,3 +49,6 @@ export const deleteHost = host => (
     url: `api/users/${host.user_id}/hosts/${host.id}`
   })
 )
+
+
+window.fetchHosts = fetchHosts;

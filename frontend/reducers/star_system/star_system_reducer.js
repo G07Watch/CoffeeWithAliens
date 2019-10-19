@@ -8,9 +8,8 @@ const starSystemReducer = (state={}, action) =>{
 
   switch(action.type){
     case RECEIVE_ALL_STARSYSTEMS:
-      let starSystems = action.starSystems
       // action.starSystems.map(star=>({ [star.id]: star} ));
-      newState = merge({},state, starSystems);
+      newState = merge({}, state,{ stars: action.starSystems } );
       return newState;
 
     case RECEIVE_STARSYSTEM:

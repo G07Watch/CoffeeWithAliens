@@ -1,5 +1,3 @@
-json.starSystems @starSystems.each do |starSystem|
-  json.set! starSystem.id do
-     json.partial! 'api/star_systems/star_system' starSystem: starSystem
-  end
+json.array! @star_systems do |star_system|
+  json.partial! 'api/star_systems/star_system', star_system: star_system
 end

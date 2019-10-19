@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: coffee_times
+#
+#  id              :integer          not null, primary key
+#  place           :string
+#  date            :datetime
+#  start_time      :integer
+#  available_seats :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  host_id         :integer
+#  star_system_id  :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  date: 2019-10-11 16:23:02
+  start_time: 1
+  available_seats: 1
+
+two:
+  place: MyString
+  date: 2019-10-11 16:23:02
+  start_time: 1
+  available_seats: 1

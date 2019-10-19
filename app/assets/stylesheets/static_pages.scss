@@ -7,12 +7,13 @@
   background-color: beige;
   // display: flex;
   // flex-direction: row;
+  // justify-content: center;
   min-width: 300px;
-  min-height: 500px;
+  min-height: 100vh;
 }
 
 .App {
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,12 +25,13 @@
   background-color: rgba(185, 127, 51, 0.856);
   padding-top: 1em;
   padding-bottom: 1em;
-  padding-left: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: beige;
   font-family: 'Courier New', Courier, monospace;
   font-size: 26px;
   font-weight: 700;
-
+  overflow: visible;
 }
 
 .Home-link{
@@ -40,13 +42,21 @@
   font-weight: 700;
 }
 
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  // align-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .greeting {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  // position: absolute;
   top: 28px;
   right: 35px;
-  align-content: space-between;
+  align-content: space-evenly;
   background-color: transparent;
   font-family: 'Courier New', Courier, monospace;
   font-size: 19px;
@@ -54,6 +64,30 @@
   color: beige;
   letter-spacing: 2px;
 }
+
+.greeting-user {
+  display: flex;
+  flex-direction: row;
+  // position: absolute;
+  top: 28px;
+  right: 35px;
+  align-content: stretch;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+  font-weight: 700;
+  color: beige;
+  letter-spacing: 2px;
+}
+
+.greeting-user li{
+  margin-left: 15px;
+}
+
+.greeting-user button{
+  margin-left: 5px;
+}
+
 
 .signup-link-norm {
   right: 35px;
@@ -95,28 +129,14 @@
   margin: 2px 5px;
 }
 
-.greeting-user{
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 18px;
-  right: 35px;
-  align-content: space-between;
-  background-color: transparent;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 19px;
-  font-weight: 700;
-  color: beige;
-  letter-spacing: 2px;
-}
-
 .welcome {
-  position: relative;
-  right: 50%;
+//  position: relative;
+ left: 275px;
 }
 
-.Logout-link-norm {
+.signout-link-norm {
   right: 35px;
+  top: -1px;
   color: beige;
   padding: 0.2em 4px;
   border: 2px rgba(185, 127, 51, 0); 
@@ -130,7 +150,7 @@
   margin: 2px;
 }
 
-.Logout-link-hover {
+.signout-link-hover {
   cursor: pointer;
   right: 35px;
   color: beige;
@@ -144,4 +164,21 @@
   letter-spacing: 2px;
   text-decoration: none;
   margin: 2px;
+}
+
+.coffee-schedule-link {
+  // right: 35px;
+  color: beige;
+  padding: 0.2em 4px;
+  border: 2px rgba(185, 127, 51, 0); 
+  border-radius: 3px;
+  background-color:rgba(185, 127, 51, 0);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 15px;
 }

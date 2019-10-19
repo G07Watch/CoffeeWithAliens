@@ -27,6 +27,7 @@ class Greeting extends React.Component {
   render() {
     let currentUser = this.props.currentUser;
     let greeting = <div/>;
+    let welcome = <p/>;
     let hosting = 'user';
 
     if (this.props.hosting){
@@ -36,31 +37,44 @@ class Greeting extends React.Component {
     if (currentUser != null) {
       greeting = (
       <div className="greeting-user" key="greeting">
-        <p className="welcome">Welcome {currentUser.nickname}</p>
-        <button className="Logout" onClick={this.logout}
-        className={ this.state.hover ? "Logout-link-hover" : "Logout-link-norm" } 
+        <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link>
+        <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
+        <button className="signout" onClick={this.logout}
+        className={ this.state.hover ? "signout-link-hover" : "signout-link-norm" } 
         onMouseEnter={this.hoverOn}
         onMouseOut={this.hoverOff}
         
         >SIGN OUT</button>
 
 
-        <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
+        
       </div>);
+
+      welcome = <p className="welcome">Welcome {currentUser.nickname}</p>;
     } else {
       greeting = (
       <div className="greeting" key="greeting">
+        <Link to="/coffee_schedule" className="coffee-schedule-link">COFFEE SCHEDULE</Link>
         <Link to="/login/demo" className="demo-link">DEMO</Link>
         <Link to="/login" className="signin-link">SIGN IN</Link>
         <Link to="/signup" className={ this.state.hover ? "signup-link-hover" : "signup-link-norm" } 
         onMouseEnter={this.hoverOn}
         onMouseOut={this.hoverOff}
         >SIGN UP</Link>
+
+      
+
       </div>
       );
     }
 
-    return greeting;
+    return(
+      <div className="nav-bar">
+        <Link className="Home-link" to="/">Coffee With Aliens</Link>
+        {welcome}
+        {greeting}
+      </div>
+    )
   }
 }
 

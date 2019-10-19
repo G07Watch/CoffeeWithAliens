@@ -1,0 +1,1 @@
+json.extract! coffee_time, :id, :month, :place, :meet_date, :day, :start_time, :available_seats, :host_id, :star_system_id

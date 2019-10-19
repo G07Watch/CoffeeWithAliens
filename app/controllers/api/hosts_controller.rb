@@ -1,5 +1,16 @@
 class Api::HostsController < ApplicationController
 
+  def index
+    @hosts = Host.all
+
+    if @hosts
+      render :index
+    else
+      render json: @hosts.errors.full_messages, status: 404
+    end
+
+  end
+
   def create
     @host = Host.new(host_params)
     @user = User.find_by(id: params[:user_id])
@@ -15,7 +26,9 @@ class Api::HostsController < ApplicationController
 
 
   def show
-    @host = Host.find_by(user_id: params[:user_id])
+    # @host = User.find_by(id: params[:user_id]).host
+    @host = Host.find_by(id: params[:id])
+    # @user = @host.user 
   end
 
 
