@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import SessionForm from './session_form';
-import {signup} from '../../actions/session_actions';
+import {signup, cleanErrors} from '../../actions/session_actions';
 import {fetchStarSystems} from '../../actions/star_system_actions';
 
 const mapStateToProps = (state) =>{
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => {
 
   return({
     processForm: (user) => dispatch(signup(user)),
+    cleanErrors: ()=> dispatch(cleanErrors())
     // fetchStarSystems: () => dispatch(fetchStarSystems())
   })
 };

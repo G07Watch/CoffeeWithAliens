@@ -1,0 +1,84 @@
+
+.host-form-clipboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+.hosting-link-user{
+  position: relative;
+  top: 13px;
+  right: 250px;
+  color:beige;
+  border: 2px;
+  border-radius: 3px;
+  padding: 0.2em;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hosting-link-host{
+  display: none;
+}
+
+.host-form {
+   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.host-form header{
+  margin: 0px 0px 16px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgba(209, 57, 2, 0.918);
+}
+
+.host-form p {
+  margin: 0px 0px 16px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  padding: 12px;
+  
+}
+
+.host-form textarea{
+  margin: 0px 0px 16px 0px;
+  padding: 1em .5em;
+  width: 96.4%;
+  color: black;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+
+.host-submit-button {
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Helvetica;
+  background-color: rgba(209, 57, 2, 0.918);
+  height: fit-content;
+  width: 100%;
+  // max-width: 500px;
+  border: 2px orangered;
+  border-radius: 10px;
+}
+
+.host-errors{
+  text-decoration: none;
+  color: rgba(209, 57, 2, 0.918);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+}

@@ -18,6 +18,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.new(user_params)
+
       if @user.update
         render :show
       else
@@ -25,7 +26,7 @@ class Api::UsersController < ApplicationController
       end
   end
 
-  def delete
+  def destroy
     @user = User.new(user_params)
     if @user.delete
       render json: ["Account removal successful.  Come have coffee again sometime!"]

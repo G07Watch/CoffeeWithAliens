@@ -5,8 +5,10 @@ import {logout} from '../../actions/session_actions';
 
 const mapStateToProps = state => {
   let user = state.session.currentUser;
+  let host = state.session.currentUser && state.session.currentUser.is_host;
   return({
-    currentUser: user
+    currentUser: user,
+    hosting: host
   })
 };
 

@@ -18,7 +18,6 @@ class SessionForm extends React.Component{
         email: "mystery@gmail.com",
         password: "12345678"
       };
-      console.log(this.state)
     }
 
     else if(this.formType === "Log In"){
@@ -59,6 +58,10 @@ class SessionForm extends React.Component{
   }
   
 
+  componentWillUnmount(){
+    this.props.cleanErrors();
+  }
+
   
   render(){
 
@@ -67,11 +70,14 @@ class SessionForm extends React.Component{
 
     //ERROR RENDER LOGIC
 
-    if (this.props.errors){
-      errors = this.props.errors.map(
+    if (Array.isArray(this.props.errors)){
+      errors = <ul className="sess-errors">
+        {/* <h2>Error:</h2> */}
+       {this.props.errors.map(
         error =>(
-        <p key={error} className="sess-errors">Error: {error}</p>)
-        )
+        <p key={error} >{error}</p>)
+        )}
+      </ul>
       // errors = <p className="sess-errors">Error: {this.props.errors}</p>
       // window.alert(this.props.errors);
     }

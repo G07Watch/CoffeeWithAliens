@@ -31,6 +31,8 @@ class User < ApplicationRecord
 
   belongs_to :star_system
 
+  has_one :host
+
   # FeGrip
 
   def self.find_by_credentials(email, password)
