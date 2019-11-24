@@ -41,12 +41,12 @@ class Greeting extends React.Component {
         <Link to="/hosting" className={`hosting-link-${hosting}`}>HOSTING</Link>
         <Link to="/profile" className="user-dash-link">DASHBOARD</Link>
 
-        <button className="signout" onClick={this.logout}
+        <Link  className="signout" onClick={this.logout}
         className={ this.state.hover ? "signout-link-hover" : "signout-link-norm" } 
         onMouseEnter={this.hoverOn}
         onMouseOut={this.hoverOff}
         
-        >SIGN OUT</button>
+        >SIGN OUT</Link>
 
 
         
