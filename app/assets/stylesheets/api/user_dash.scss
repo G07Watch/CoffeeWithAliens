@@ -43,16 +43,6 @@
 
 //INTRO STYLING
 
-.dash-intro h1{
-  height: fit-content;
-  font-size: 24px;
-  color:  rgba(209, 57, 2, 0.918);
-  font-family: Courier;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: left;
-}
-
 .dash-intro{
   height: fit-content;
   font-size: 20px;
@@ -61,6 +51,21 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: left;
+}
+
+.dash-intro h1{
+  height: fit-content;
+  font-size: 24px;
+  color:  rgba(209, 57, 2, 0.918);
+  font-family: Courier;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 1em 1em 0;
+}
+
+.dash-intro h3{
+  padding: 1em 1em 1em 0;
 }
 
 .user-schedule{
