@@ -17,7 +17,7 @@ const App = () => (
   <h1 className="primary">
     <GreetingContainer/>
   </h1>
-
+  
   <Route path="/coffee_schedule" component={CoffeeScheduleContainer} />
   <Route path="/coffee_schedule/:star" component={CoffeeScheduleContainer}/>
   <Route path="/coffee_show/:id" component={CoffeeShowContainer}/>
