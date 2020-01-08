@@ -9,6 +9,7 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
 
 body {
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 ol, ul {
@@ -27,7 +28,7 @@ h2 + .user_review {
 /* This is useful when implementing a grid system so that all image elements
 will take up 100% width of their containers */
 img {
-  width: 100%
+  width: 100%;
 }
 
 

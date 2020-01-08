@@ -32,9 +32,14 @@
   font-size: 26px;
   font-weight: 700;
   overflow: visible;
+  height: 5%;
 }
 
 button:hover{
+  cursor: pointer;
+}
+
+a:hover{
   cursor: pointer;
 }
 
@@ -226,3 +231,48 @@ button:hover{
   margin: 2px 5px;
   margin-right: 15px;
 }
+
+.main-clipboard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  width: 100%;
+  margin: auto;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgba(185, 127, 51, 0.856);
+  width: auto;
+  height: 5%;
+}
+
+.icons{
+  font-family: 'Courier New', Courier, monospace;
+  text-emphasis: none;
+  text-decoration: none;
+  text-transform: none;
+  color: beige;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.icons img{
+  color: beige;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.home-splash{
+  width: 100%;
+  height: 90%;
+}
+
+// [class*=" devicon-"], [class^=devicon-] {
+// 	font-size: 40px;
+// }
