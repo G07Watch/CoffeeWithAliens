@@ -21,6 +21,9 @@
     <script type="text/javascript" >
         window.LinkedInURL = "<%= image_url('linkedin-3-32.ico') %>";
       </script>
+    <script type="text/javascript" >
+        window.splash = "<%= image_url('blog_item_02.jpg') %>";
+      </script>
     <link rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
@@ -28,6 +31,6 @@
 
   <body>
     <%= yield %>
-    <%= render "layouts/footer" %>
+    <%# <%= render "layouts/footer" %>
   </body>
 </html>

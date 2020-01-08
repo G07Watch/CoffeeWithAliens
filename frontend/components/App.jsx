@@ -11,13 +11,17 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import HostFormContainer from "./HostForm/host_form_container";
 import UserDashboardContainer from "./UserDashboard/user_dashboard_container";
 import UserEditContainer from "./UserDashboard/user_edit_container";
+import Home from "./Home/home"
 
 const App = () => (
 <div className="App">
   <h1 className="primary">
     <GreetingContainer/>
   </h1>
-  
+
+  <div className="main-clipboard">
+
+  <Route exact path="/" component={Home} />
   <Route path="/coffee_schedule" component={CoffeeScheduleContainer} />
   <Route path="/coffee_schedule/:star" component={CoffeeScheduleContainer}/>
   <Route path="/coffee_show/:id" component={CoffeeShowContainer}/>
@@ -29,6 +33,19 @@ const App = () => (
   <AuthRoute path="/login/" component={LoginFormContainer} />
   <AuthRoute path="/login/demo" component={DemoLoginContainer} />
   <AuthRoute path="/signup" component={SignupFormContainer} />
+
+  </div>
+  
+  <div class="footer">
+    <a class="icons" href="https://github.com/G07Watch">
+      <span class="label">Github</span>
+    </a>
+
+    <a class="icons" href="https://www.linkedin.com/in/garvin-ming/">
+      <span class="label">LinkedIn</span>
+    </a>
+  </div>
+  
 </div>);
 
 export default App;
