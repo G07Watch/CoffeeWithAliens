@@ -44,6 +44,10 @@ const App = () => (
     <a class="icons" href="https://www.linkedin.com/in/garvin-ming/">
       <span class="label">LinkedIn</span>
     </a>
+
+      <a class="icons" href="https://garvinming.netlify.com/">
+      <span class="label">Portfolio</span>
+    </a>
   </div>
   
 </div>);
