@@ -48,9 +48,9 @@ const App = () => (
       <a class="icons" href="https://garvinming.netlify.com/">
       <span class="label">Portfolio</span>
     </a>
-    
-    <a href="https://www.freepik.com/free-photos-vectors/business">
-        Business vector created by freepik - www.freepik.com
+
+    <a class="icons" href="https://www.freepik.com/free-photos-vectors/business">
+        Avatars by freepik.com
     </a>
   </div>
   
