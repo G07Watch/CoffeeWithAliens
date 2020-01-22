@@ -48,6 +48,10 @@ const App = () => (
       <a class="icons" href="https://garvinming.netlify.com/">
       <span class="label">Portfolio</span>
     </a>
+
+    <a class="icons" href="https://www.freepik.com/free-photos-vectors/business">
+        Avatars by freepik.com
+    </a>
   </div>
   
 </div>);
