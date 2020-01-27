@@ -36,6 +36,30 @@ user_three = User.new(
 
 user_three.save!
 
+user_four = User.new(
+  nickname: 'John',
+  email: 'John12@gmail.com',
+  password: '12345678',
+  star_system_id: star_one.id)
+
+user_four.save!
+
+user_five = User.new(
+  nickname: 'Sheryl',
+  email: 'lalaland@gmail.com',
+  password: '12345678',
+  star_system_id: star_one.id)
+
+user_five.save!
+
+user_six = User.new(
+  nickname: 'Mithos',
+  email: 'mhl@gmail.com',
+  password: '12345678',
+  star_system_id: star_one.id)
+
+user_six.save!
+
 host_one = Host.create(
   facebook: 'https://www.facebook.com/',
   intro: "Hi I'm Garvin",
