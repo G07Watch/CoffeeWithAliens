@@ -141,3 +141,21 @@ coffee_six = CoffeeTime.create(
   host_id: host_two.id,
   star_system_id: 3
 )
+
+coffee_seven = CoffeeTime.create(
+  place: 'Europa',
+  date: DateTime.new(2019,11,1.5),
+  start_time: 8.5,
+  available_seats: 6,
+  host_id: host_one.id,
+  star_system_id: 1
+)
+
+coffee_eight = CoffeeTime.create(
+  place: 'Centaurus Un',
+  date: DateTime.new(2019,11,1.5),
+  start_time: 13,
+  available_seats: 1,
+  host_id: host_one.id,
+  star_system_id: 2
+)
