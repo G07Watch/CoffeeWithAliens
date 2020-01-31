@@ -90,7 +90,7 @@ user_three.update(is_host: true)
 
 coffee_one = CoffeeTime.create(
   place: 'Earth',
-  date: DateTime.new(2019,11,1.5),
+  date: DateTime.new(2020,2,1.5),
   start_time: 11.5,
   available_seats: 6,
   host_id: host_one.id,
@@ -116,7 +116,7 @@ coffee_three = CoffeeTime.create(
 
 coffee_four = CoffeeTime.create(
   place: 'Earth',
-  date: DateTime.new(2019,10,5.5),
+  date: DateTime.new(202,2,5.5),
   start_time: 11.5,
   available_seats: 5,
   host_id: host_one.id,
@@ -125,7 +125,7 @@ coffee_four = CoffeeTime.create(
 
 coffee_five = CoffeeTime.create(
   place: 'Brodo Asogi',
-  date: DateTime.new(2019,11,5.5),    
+  date: DateTime.new(2020,2,5.5),    
   start_time: 3,
   available_seats: 4,
   host_id: host_two.id,
@@ -135,7 +135,7 @@ coffee_five = CoffeeTime.create(
 
 coffee_six = CoffeeTime.create(
   place: 'Brodo Asogi',
-  date: DateTime.new(2019,10,7.5),    
+  date: DateTime.new(2020,2,7.5),    
   start_time: 3,
   available_seats: 3,
   host_id: host_two.id,
@@ -144,7 +144,7 @@ coffee_six = CoffeeTime.create(
 
 coffee_seven = CoffeeTime.create(
   place: 'Europa',
-  date: DateTime.new(2019,11,1.5),
+  date: DateTime.new(2020,2,1.5),
   start_time: 8.5,
   available_seats: 6,
   host_id: host_one.id,
@@ -153,7 +153,7 @@ coffee_seven = CoffeeTime.create(
 
 coffee_eight = CoffeeTime.create(
   place: 'Centaurus Un',
-  date: DateTime.new(2019,11,1.5),
+  date: DateTime.new(2020,2,1.5),
   start_time: 13,
   available_seats: 1,
   host_id: host_one.id,
