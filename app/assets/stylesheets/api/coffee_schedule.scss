@@ -161,14 +161,26 @@
   padding: 40px;
 }
 
-.star .schedule-tile{
+
+.schedule-tile{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.star {
   display: flex;
   flex-direction: column;
-  width: 23%;
+  // width: 23%;
   min-width: 180px;
   // overflow: scroll;
   // justify-content: space-between;
   // box-sizing: inherit; // last
+}
+
+.schedule-card {
+  width: 23%;
+  min-width: 180px;
 }
 
 

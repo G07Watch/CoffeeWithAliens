@@ -43,7 +43,7 @@ class Meeting extends React.Component {
 
     // debugger
     return (
-    <div>
+    <div className="schedule-card">
      <div className="meeting">
        <div className="tile-top">
 
