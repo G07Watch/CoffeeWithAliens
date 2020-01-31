@@ -162,7 +162,15 @@
 }
 
 
-.schedule-tile{
+
+.schedule-tile ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.schedule-tile {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -181,6 +189,7 @@
 .schedule-card {
   width: 23%;
   min-width: 180px;
+  height: 264px;
 }
 
 
