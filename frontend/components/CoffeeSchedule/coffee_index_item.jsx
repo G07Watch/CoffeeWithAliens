@@ -10,6 +10,24 @@ class Meeting extends React.Component {
     }
 
     this.hover = this.hover.bind(this);
+    this.hostPic = this.hostPic.bind(this);
+  }
+
+  hostPic(id) {
+    switch (id) {
+      case 1:
+        return window.garvinURL;
+
+      case 2:
+        return window.etURL;
+
+
+      case 3:
+        return window.mysteryURL;
+
+      default:
+        return null;
+    }
   }
 
   hover(){
@@ -47,7 +65,13 @@ class Meeting extends React.Component {
      <div className="meeting">
        <div className="tile-top">
 
-        <div className="host-container">{this.props.hostName}</div>
+        <div className="host-container">
+          {this.props.hostName}
+
+          <img className="host-image-card" src={this.hostPic(this.props.hostId)} alt="" />
+
+
+        </div>
 
         <div className="date-time" >
           <p className="day">{this.props.meeting.day}</p>
