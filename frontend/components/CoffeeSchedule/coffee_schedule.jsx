@@ -120,6 +120,7 @@ class CoffeeSchedule extends React.Component{
               key={meeting.id}
               meeting={meeting}
               hostName={hostName}
+              hostId={hostId}
             />)
           })
 
