@@ -13,6 +13,8 @@ import UserDashboardContainer from "./UserDashboard/user_dashboard_container";
 import UserEditContainer from "./UserDashboard/user_edit_container";
 import Home from "./Home/home"
 
+// Note: Find a way to resize so all elements fit on screen at splash
+
 const App = () => (
 <div className="App">
   <h1 className="primary">
