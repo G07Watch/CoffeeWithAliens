@@ -38,7 +38,7 @@
   width: 100%;
 }
 
-.display-button{
+.display-button {
   display: block;
   color: rgba(230, 137, 16, 0.856);
   font-size: 1em;
@@ -49,6 +49,22 @@
   width: fit-content;
   padding: 0.5em 1.0em;
   border: 1px solid rgba(230, 137, 16, 0.856);
+  border-radius: 10px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.display-button:hover{
+  display: block;
+  color:  rgb(245, 242, 210);
+  font-size: 1em;
+  font-weight: 600;
+  font-family: Courier;
+  background-color: rgba(230, 137, 16, 0.856);
+  height: fit-content;
+  width: fit-content;
+  padding: 0.5em 1.0em;
+  border: 1px solid rgb(245, 242, 210);
   border-radius: 10px;
   letter-spacing: 0;
   text-transform: uppercase;
